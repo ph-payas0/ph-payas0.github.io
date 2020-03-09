@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/</loc>
+    
+    <lastmod>2020-03-09T01:55:16.355Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/</loc>
     
     <lastmod>2020-03-09T01:52:46.678Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://ph-payas0.github.io/about/index.html</loc>
     
     <lastmod>2020-02-04T01:30:48.808Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/</loc>
-    
-    <lastmod>2020-02-03T01:30:23.008Z</lastmod>
     
   </url>
   

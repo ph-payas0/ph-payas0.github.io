@@ -59,7 +59,7 @@
     <link href="https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/"/>
     <id>https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/</id>
     <published>2019-07-11T17:14:32.000Z</published>
-    <updated>2020-02-03T01:30:23.008Z</updated>
+    <updated>2020-03-09T01:55:16.355Z</updated>
     
     <summary type="html">
     
@@ -87,6 +87,10 @@
       <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
     
       <category term="python" scheme="https://ph-payas0.github.io/tags/python/"/>
+    
+      <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
+    
+      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
   </entry>
   
