@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-rooted!.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-root.png">
 <meta property="article:published_time" content="2020-02-20T10:35:26.000Z">
-<meta property="article:modified_time" content="2020-03-09T01:52:46.678Z">
+<meta property="article:modified_time" content="2020-03-09T01:59:24.949Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="pentest">
@@ -257,6 +257,7 @@
 <p>things that caught my attention is this web directories</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line"></span><br><span class="line">[18:13:55] 200 -   40B  - /admin/?/login</span><br><span class="line">[18:13:55] 200 -   40B  - /admin/                </span><br><span class="line">[18:13:55] 200 -   40B  - /admin/index.php</span><br></pre></td></tr></table></figure>
 
+<hr>
 <h2 id="Post-Exploitation"><a href="#Post-Exploitation" class="headerlink" title="Post - Exploitation"></a>Post - Exploitation</h2><h3 id="Create-account-and-Login"><a href="#Create-account-and-Login" class="headerlink" title="Create account and Login"></a>Create account and Login</h3><p>To test’ I created an account and login it too. Next,<br>I visited the <code>/admin/index.php</code> and says <code>You&#39;re not authorized to view this page</code> for me this is really weird, if you have experience in Web development you will notice that there was an misconfigured in this website.</p>
 <p><img src="/img/bank/admin.PNG" alt="HackTheBox-Bankrobber/admin.png" title="Admin/index.php"></p>
 <h3 id="Steal-Admin-creds-via-Cookies"><a href="#Steal-Admin-creds-via-Cookies" class="headerlink" title="Steal Admin creds via Cookies"></a>Steal Admin creds via Cookies</h3><p>Now I need to get the credentials of the admin. I try to look on the page source of the web page to look for hint but I did not see anything.<br>then I try the e-coin transfer in user page and this <code>alert</code> caught my attention.</p>
@@ -284,6 +285,7 @@
 <p>   ⇒ Due to recent hacking attemps on the server, Backdoorcheker features is only accessible from the localhost because it returns the following message when I try any commands:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">dir</span><br></pre></td></tr></table></figure>
 <p>There’s a possibility that this features is vulnerable to <a href="https://portswigger.net/web-security/sql-injection" target="_blank" rel="noopener">SQLi</a>.</p>
+<hr>
 <h2 id="Exploitation"><a href="#Exploitation" class="headerlink" title="Exploitation"></a>Exploitation</h2><h3 id="XSS-and-SQL-Injection"><a href="#XSS-and-SQL-Injection" class="headerlink" title="XSS and SQL Injection"></a>XSS and SQL Injection</h3><p>I try to intercept the <code>search users</code> function using <a href="https://portswigger.net/burp" target="_blank" rel="noopener">BurpSuite</a> and try SQL Injection.</p>
 <p><code>term=4</code> is my <code>user ID #</code> then sending this to repeater, I put this sql syntax to check how’s <code>backdoorchecker.php</code> work.</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment"># sql</span></span><br><span class="line">term=4' union all <span class="keyword">select</span> <span class="number">1</span>,<span class="keyword">LOAD_FILE</span>(<span class="string">'C:\\xampp\\htdocs\\admin\\backdoorchecker.php'</span>),<span class="number">3</span><span class="comment">-- -</span></span><br></pre></td></tr></table></figure>
@@ -307,6 +309,7 @@
 <p><img src="/img/bank/bank-initial-shell.png" alt="HackTheBox-Bankrobber/bank-initial-shell.png" title="Bank Initial shell"></p>
 <p>and finally I have now the <code>user.txt</code></p>
 <p><img src="/img/bank/bank-user.png" alt="HackTheBox-Bankrobber/bank-user.png" title="Bank USER"></p>
+<hr>
 <h2 id="Privilege-Escalation"><a href="#Privilege-Escalation" class="headerlink" title="Privilege Escalation"></a>Privilege Escalation</h2><h3 id="Recon"><a href="#Recon" class="headerlink" title="Recon"></a>Recon</h3><p>Doing some <a href="https://www.sisainfosec.com/blogs/reconnaissance-the-eagles-eye-of-cyber-security/" target="_blank" rel="noopener">Reconnaissance</a>, I used <a href="https://github.com/carlospolop/winpe" target="_blank" rel="noopener">winPE</a> or <code>Windows privilege escalation with cmd</code> it’s a tool similar to <a href="https://github.com/rebootuser/LinEnum" target="_blank" rel="noopener">LinEnum</a>.</p>
 <p>It can help with automating Penetration Tests. It performs a discovery on the environment it runs in and tries finding weaknesses to allow privilege escalation. Saving time and allowing more effort to be put toward getting root.</p>
 <h3 id="Process-and-Active-Connections"><a href="#Process-and-Active-Connections" class="headerlink" title="Process and Active Connections"></a>Process and Active Connections</h3><p>running this takes time. after 10-15 minutes I’ve got now the response.</p>

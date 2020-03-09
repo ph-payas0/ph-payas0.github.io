@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Quick Summary   → Wall is running a Web Application that vulnerable to RCE(Remote Code Execution), a classification of security vulnerabilities. RCE enables a remote attacker to execute arbitrary cod">
+    <meta name="description" content="Quick Summary   → Wall is my very first machine in HackTheBox that I hacked. It is running in Web Application that vulnerable to RCE(Remote Code Execution), a classification of security vulnerabiliti">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HackTheBox - Wall">
 <meta property="og:url" content="https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/index.html">
 <meta property="og:site_name" content="Payas0">
-<meta property="og:description" content="Quick Summary   → Wall is running a Web Application that vulnerable to RCE(Remote Code Execution), a classification of security vulnerabilities. RCE enables a remote attacker to execute arbitrary cod">
+<meta property="og:description" content="Quick Summary   → Wall is my very first machine in HackTheBox that I hacked. It is running in Web Application that vulnerable to RCE(Remote Code Execution), a classification of security vulnerabiliti">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://ph-payas0.github.io/img/wall/wall-detail.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/wall/Nmap.png">
@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/wall/blabla.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/wall/rooted!!.png">
 <meta property="article:published_time" content="2019-07-11T17:14:32.000Z">
-<meta property="article:modified_time" content="2020-03-09T01:55:16.355Z">
+<meta property="article:modified_time" content="2020-03-09T01:58:23.061Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="htb">
@@ -195,7 +195,7 @@
 
   <div class="content" itemprop="articleBody">
     <p><img src="/img/wall/wall-detail.png" alt="HackTheBox-Wall/Nmap.png" title="Wall machine details"></p>
-<h2 id="Quick-Summary"><a href="#Quick-Summary" class="headerlink" title="Quick Summary"></a>Quick Summary</h2><p>   → Wall is running a Web Application that vulnerable to <code>RCE</code>(Remote Code Execution), a classification of security vulnerabilities. <code>RCE</code> enables a remote attacker to execute arbitrary code, bypassing security authorization, and from this I can get in to the machine. First I fall on to the rabbit hole which is the <code>aa.php</code>, and <code>server-status</code> page. The tricky part of this machine was finding the hidden page of the web application because it’s not something normally shows up in the wordlists. I use the Burp Suite and edit the Request fo find some interesting and then i found the right page of the webapps. The vulnerability inside is a <code>SUID</code> binary which users can get a full privileges.</p>
+<h2 id="Quick-Summary"><a href="#Quick-Summary" class="headerlink" title="Quick Summary"></a>Quick Summary</h2><p>   → Wall is my very first machine in HackTheBox that I hacked. It is running in Web Application that vulnerable to <code>RCE</code>(Remote Code Execution), a classification of security vulnerabilities. <code>RCE</code> enables a remote attacker to execute arbitrary code, bypassing security authorization, and by abusing this vulnerabilities I manage to get in into the machine. First I fall on to the rabbit hole which is the <code>aa.php</code>, and <code>server-status</code> page. The tricky part of this machine was finding the hidden page of the web application because it’s not something normally shows up in the wordlists. I use the Burp Suite and edit the Request fo find some interesting and then i found the right page of the webapps. The vulnerability inside is a <code>SUID</code> binary which users can get a full privileges.</p>
 <h2 id="Penetration-Testing-Methodologies"><a href="#Penetration-Testing-Methodologies" class="headerlink" title="Penetration Testing Methodologies"></a>Penetration Testing Methodologies</h2><ol>
 <li><p><strong>Network Scanning</strong></p>
 <p>→ Nmap scan</p>
