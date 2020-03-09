@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-rooted!.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-root.png">
 <meta property="article:published_time" content="2020-02-20T10:35:26.000Z">
-<meta property="article:modified_time" content="2020-03-08T19:50:57.200Z">
+<meta property="article:modified_time" content="2020-03-09T00:27:05.016Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="pentest">
@@ -270,7 +270,7 @@
 <p><img src="/img/bank/bank-burp-send.png" alt="HackTheBox-Bankrobber/bank-burp-send.png" title="Bank burp2"></p>
 <p>after 5-10 minutes of waiting, I’ll get a response in my <code>nc</code> listener and it’s the username and password of the admin in <code>base64</code> code format.<br>Convert it to plaintext and I got now the admin creds.</p>
 <p><img src="/img/bank/bank-admin-creds.png" alt="HackTheBox-Bankrobber/bank-admin-creds.png" title="Bank Admin credentials"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">admin</span><br><span class="line">Hopelessromantic</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">username:   admin</span><br><span class="line">password:   Hopelessromantic</span><br></pre></td></tr></table></figure>
 
 <h3 id="Login-as-Admin"><a href="#Login-as-Admin" class="headerlink" title="Login as Admin"></a>Login as Admin</h3><p>Now that I have the admin credentials. I will login as admin, and find some interesting capabilities.<br>and there’s a <code>NOTES.TXT</code> inside of the Admin page.</p>
 <p><img src="/img/bank/bank-notes-web.png" alt="HackTheBox-Bankrobber/bank-notes-web.png" title="Bank Admin page"></p>
