@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-03-09T01:59:24.949Z</updated>
+  <updated>2020-03-16T02:54:29.198Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -17,11 +17,47 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HackTheBox-Postman</title>
+    <link href="https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/"/>
+    <id>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</id>
+    <published>2020-03-13T15:18:34.000Z</published>
+    <updated>2020-03-16T02:54:29.198Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/img/postman/postman1.png&quot; alt=&quot;HackTheBox-Postman/postman.png&quot; title=&quot;Postman details&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → This easy machine is very fit to all beginners to learn the basic of Penetration Testing. The machine have a vulnerable software – &lt;code&gt;Redis&lt;/code&gt;.&lt;br&gt;   Redis is unprotected without a password set up, and so forth. The simplest thing you can do in such a case, is to
+        
+      
+    
+    </summary>
+    
+    
+      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    
+    
+      <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
+    
+      <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
+    
+      <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
+    
+      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    
+      <category term="ssh" scheme="https://ph-payas0.github.io/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HackTheBox - Bankrobber</title>
     <link href="https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/"/>
     <id>https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/</id>
     <published>2020-02-20T10:35:26.000Z</published>
-    <updated>2020-03-09T01:59:24.949Z</updated>
+    <updated>2020-03-16T01:55:36.591Z</updated>
     
     <summary type="html">
     

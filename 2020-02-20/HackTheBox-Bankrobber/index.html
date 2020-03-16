@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-rooted!.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/bank/bank-root.png">
 <meta property="article:published_time" content="2020-02-20T10:35:26.000Z">
-<meta property="article:modified_time" content="2020-03-09T01:59:24.949Z">
+<meta property="article:modified_time" content="2020-03-16T01:55:36.591Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="pentest">
@@ -118,6 +118,8 @@
     <br/>
     <span id="actions">
       <ul>
+        
+        <li><a class="icon" href="/2020-03-13/HackTheBox-Postman/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" href="/2019-07-12/HackTheBox-Wall/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -243,7 +245,7 @@
 
 <h3 id="Nmap-results"><a href="#Nmap-results" class="headerlink" title="Nmap results"></a>Nmap results</h3><p>Which found opened ports 80, 443, 445 and 3306</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line"></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber </span><br><span class="line">❯ nmap -sV -sC -p- nmap-bankrobber -oN 10.10.10.154</span><br><span class="line">Starting Nmap 7.80 ( https://nmap.org ) at 2020-03-08 03:12 PST</span><br><span class="line">Nmap scan report <span class="keyword">for</span> 10.10.10.154</span><br><span class="line">Host is up (0.23s latency).</span><br><span class="line">Not shown: 996 filtered ports</span><br><span class="line">PORT     STATE SERVICE    VERSION</span><br><span class="line">80/tcp   open  tcpwrapped</span><br><span class="line">|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4</span><br><span class="line">|_http-title: E-coin</span><br><span class="line">443/tcp  open  tcpwrapped</span><br><span class="line">|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4</span><br><span class="line">|_http-title: Bad request!</span><br><span class="line">| ssl-cert: Subject: commonName=localhost</span><br><span class="line">| Not valid before: 2009-11-10T23:48:47</span><br><span class="line">|_Not valid after:  2019-11-08T23:48:47</span><br><span class="line">|_ssl-date: TLS randomness does not represent time</span><br><span class="line">| tls-alpn: </span><br><span class="line">|_  http/1.1</span><br><span class="line">445/tcp  open  tcpwrapped</span><br><span class="line">3306/tcp open  tcpwrapped</span><br><span class="line">Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port</span><br><span class="line">Device <span class="built_in">type</span>: general purpose|phone</span><br><span class="line">Running (JUST GUESSING): Microsoft Windows 2008|10|Phone (90%)</span><br><span class="line">OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows</span><br><span class="line">Aggressive OS guesses: Microsoft Windows Server 2008 R2 (90%), Microsoft Windows 10 1511 - 1607 (85%), Microsoft Windows 8.1 Update 1 (85%), Microsoft Windows Phone 7.5 or 8.0 (85%)</span><br><span class="line">No exact OS matches <span class="keyword">for</span> host (<span class="built_in">test</span> conditions non-ideal).</span><br><span class="line"></span><br><span class="line">Host script results:</span><br><span class="line">|_clock-skew: mean: 1h02m13s, deviation: 0s, median: 1h02m13s</span><br><span class="line">|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)</span><br><span class="line">| smb-security-mode: </span><br><span class="line">|   authentication_level: user</span><br><span class="line">|   challenge_response: supported</span><br><span class="line">|_  message_signing: disabled (dangerous, but default)</span><br><span class="line">| smb2-security-mode: </span><br><span class="line">|   2.02: </span><br><span class="line">|_    Message signing enabled but not required</span><br><span class="line">| smb2-time: </span><br><span class="line">|   date: 2020-03-07T20:15:16</span><br><span class="line">|_  start_date: 2020-03-07T10:51:24</span><br><span class="line"></span><br><span class="line">OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span><br><span class="line">Nmap <span class="keyword">done</span>: 1 IP address (1 host up) scanned <span class="keyword">in</span> 78.81 seconds</span><br><span class="line"></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Bankrobber took 1m19s </span><br><span class="line">❯</span><br></pre></td></tr></table></figure>
-
+<hr>
 <h2 id="Enumeration"><a href="#Enumeration" class="headerlink" title="Enumeration"></a>Enumeration</h2><p>I visited the web page in port 80 and it’s present a Bitcoin web page with Login and Register form.</p>
 <p><img src="/img/bank/web-page.gif" alt="HackTheBox-Bankrobber/web-page.gif" title="Bankrobber Web Page"></p>
 <h3 id="MySQL-on-port-3306"><a href="#MySQL-on-port-3306" class="headerlink" title="MySQL on port 3306"></a>MySQL on port 3306</h3><p>The MySQL port is open so I try to connect with it but it couldn’t</p>
@@ -346,6 +348,7 @@
 
 <p>and Finally rooted !<br>   ⇒ nt authority\system<br><img src="/img/bank/bank-rooted!.png" alt="HackTheBox-Bankrobber/bank-rooted!.png" title="Bank rooted"></p>
 <p>Get <code>root.txt</code><br><img src="/img/bank/bank-root.png" alt="HackTheBox-Bankrobber/bank-root.png" title="Bank rooted"></p>
+<hr>
 <p>Referrences:<br><a href="https://www.speedguide.net/port.php?port=910" target="_blank" rel="noopener">https://www.speedguide.net/port.php?port=910</a><br><a href="https://www.adminsub.net/tcp-udp-port-finder/910" target="_blank" rel="noopener">https://www.adminsub.net/tcp-udp-port-finder/910</a><br><a href="https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/" target="_blank" rel="noopener">https://astr0baby.wordpress.com/2013/10/17/customizing-custom-meterpreter-loader/</a><br><a href="https://buer.haus/2017/06/29/escalating-xss-in-phantomjs-image-rendering-to-ssrflocal-file-read/" target="_blank" rel="noopener">https://buer.haus/2017/06/29/escalating-xss-in-phantomjs-image-rendering-to-ssrflocal-file-read/</a></p>
 
   </div>
