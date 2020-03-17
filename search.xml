@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>HackTheBox-Postman</title>
+      <title>HackTheBox - Postman</title>
       <link href="/2020-03-13/HackTheBox-Postman/"/>
       <url>/2020-03-13/HackTheBox-Postman/</url>
       
@@ -29,6 +29,8 @@
             <tag> linux </tag>
             
             <tag> ssh </tag>
+            
+            <tag> linux - retired </tag>
             
         </tags>
       
@@ -63,7 +65,7 @@
             
             <tag> rce </tag>
             
-            <tag> windows </tag>
+            <tag> windows - retired </tag>
             
         </tags>
       
@@ -101,6 +103,8 @@
             <tag> rce </tag>
             
             <tag> linux </tag>
+            
+            <tag> retired </tag>
             
         </tags>
       
