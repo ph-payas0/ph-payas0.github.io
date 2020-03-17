@@ -30,7 +30,7 @@
             
             <tag> ssh </tag>
             
-            <tag> linux - retired </tag>
+            <tag> retired </tag>
             
         </tags>
       
@@ -65,7 +65,9 @@
             
             <tag> rce </tag>
             
-            <tag> windows - retired </tag>
+            <tag> windows </tag>
+            
+            <tag> retired </tag>
             
         </tags>
       

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-03-17T23:43:28.426Z</updated>
+  <updated>2020-03-17T23:53:38.362Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/"/>
     <id>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</id>
     <published>2020-03-13T15:18:34.000Z</published>
-    <updated>2020-03-17T23:43:28.426Z</updated>
+    <updated>2020-03-17T23:53:38.362Z</updated>
     
     <summary type="html">
     
@@ -50,7 +50,7 @@
     
       <category term="ssh" scheme="https://ph-payas0.github.io/tags/ssh/"/>
     
-      <category term="linux - retired" scheme="https://ph-payas0.github.io/tags/linux-retired/"/>
+      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
   </entry>
   
@@ -59,7 +59,7 @@
     <link href="https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/"/>
     <id>https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/</id>
     <published>2020-02-20T10:35:26.000Z</published>
-    <updated>2020-03-17T23:43:36.305Z</updated>
+    <updated>2020-03-17T23:51:34.130Z</updated>
     
     <summary type="html">
     
@@ -88,7 +88,9 @@
     
       <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
     
-      <category term="windows - retired" scheme="https://ph-payas0.github.io/tags/windows-retired/"/>
+      <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    
+      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
   </entry>
   
