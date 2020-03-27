@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-03-17T23:53:38.362Z</updated>
+  <updated>2020-03-27T18:38:11.231Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/"/>
     <id>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</id>
     <published>2020-03-13T15:18:34.000Z</published>
-    <updated>2020-03-17T23:53:38.362Z</updated>
+    <updated>2020-03-27T18:38:11.231Z</updated>
     
     <summary type="html">
     
@@ -59,7 +59,7 @@
     <link href="https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/"/>
     <id>https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/</id>
     <published>2020-02-20T10:35:26.000Z</published>
-    <updated>2020-03-17T23:51:34.130Z</updated>
+    <updated>2020-03-27T18:33:52.008Z</updated>
     
     <summary type="html">
     
@@ -68,7 +68,7 @@
         
         
           &lt;p&gt;&lt;img src=&quot;/img/bank/bank-detail1.png&quot; alt=&quot;HackTheBox-Bankrobber/bank-detail.png&quot; title=&quot;Bankrobber machine details&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Bankrobber is a Web Application that vulnerable to &lt;code&gt;XSS&lt;/code&gt;, &lt;code&gt;SQL Injection&lt;/code&gt; and &lt;code&gt;RCE&lt;/code&gt;, that I have to exploit to get the Admin credentials by using XSS. SQL Injection to study how’s the &lt;code&gt;backdoorchecker.php&lt;/code&gt; work,
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Insane machine – Bankrobber is a Web Application that vulnerable to &lt;code&gt;XSS&lt;/code&gt;, &lt;code&gt;SQL Injection&lt;/code&gt; and &lt;code&gt;RCE&lt;/code&gt; that I have to exploit to get the Admin credentials by using XSS.&lt;br&gt;   SQL Injection to study how’s the
         
       
     
