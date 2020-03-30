@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-03-30T02:01:40.031Z</updated>
+  <updated>2020-03-30T22:35:49.255Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/"/>
     <id>https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/</id>
     <published>2020-03-29T03:16:47.000Z</published>
-    <updated>2020-03-30T02:01:40.031Z</updated>
+    <updated>2020-03-30T22:35:49.255Z</updated>
     
     <summary type="html">
     
@@ -30,7 +30,7 @@
         
         
           &lt;p&gt;&lt;img src=&quot;/img/sniper/sniper-info2.png&quot; alt=&quot;HackTheBox-Sniper/sniper-info.png&quot; title=&quot;Sniper machine details&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Sniper is another windows machine that you can access in unintended method. The &lt;code&gt;PHP&lt;/code&gt; Web Application was supposed to be vulnerable into &lt;a href=&quot;https://www.acunetix.com/blog/articles/local-file-inclusion-lfi/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;LFI or
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Sniper is another windows machine that you can access in unintended method.&lt;br&gt;   The &lt;code&gt;PHP&lt;/code&gt; Web Application was supposed to be vulnerable into &lt;a href=&quot;https://www.acunetix.com/blog/articles/local-file-inclusion-lfi/&quot; target=&quot;_blank&quot;
         
       
     
@@ -65,7 +65,7 @@
     <link href="https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/"/>
     <id>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</id>
     <published>2020-03-13T15:18:34.000Z</published>
-    <updated>2020-03-30T01:46:14.737Z</updated>
+    <updated>2020-03-30T21:23:59.075Z</updated>
     
     <summary type="html">
     
@@ -81,7 +81,7 @@
     </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+      <category term="HackTheBox - PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox-PenTesting/"/>
     
     
       <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
@@ -103,7 +103,7 @@
     <link href="https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/"/>
     <id>https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/</id>
     <published>2020-02-20T10:35:26.000Z</published>
-    <updated>2020-03-30T01:46:09.234Z</updated>
+    <updated>2020-03-30T21:23:36.779Z</updated>
     
     <summary type="html">
     
@@ -119,7 +119,7 @@
     </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+      <category term="HackTheBox - PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox-PenTesting/"/>
     
     
       <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
@@ -143,7 +143,7 @@
     <link href="https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/"/>
     <id>https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/</id>
     <published>2019-07-11T17:14:32.000Z</published>
-    <updated>2020-03-30T01:46:23.329Z</updated>
+    <updated>2020-03-30T21:23:26.266Z</updated>
     
     <summary type="html">
     
@@ -160,6 +160,8 @@
     
     
       <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    
+      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
       <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>

@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/postman/postman-rooted.png">
 <meta property="og:image" content="https://www.hackthebox.eu/badge/image/128965">
 <meta property="article:published_time" content="2020-03-13T15:18:34.000Z">
-<meta property="article:modified_time" content="2020-03-30T01:46:14.737Z">
+<meta property="article:modified_time" content="2020-03-30T21:23:59.075Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="pentest">
@@ -174,7 +174,7 @@
       
     <div class="article-category">
         <i class="fas fa-archive"></i>
-        <a class="category-link" href="/categories/HackTheBox/">HackTheBox</a>
+        <a class="category-link" href="/categories/HackTheBox-PenTesting/">HackTheBox - PenTesting</a>
     </div>
 
 
@@ -246,7 +246,7 @@
 
 <p><img src="/img/postman/postman-dirsearch.png" alt="HackTheBox-Postman/postman-dirsearch.png" title="Dirsearch"></p>
 <p>So I have this following directories, everything is a normal web directories except on the <code>/upload/</code> directory which caught my attention.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line"></span><br><span class="line">[07:32:03] 301 -  310B  - /css  -&gt;  http://10.10.10.160/css/                                                      </span><br><span class="line">[07:32:18] 301 -  312B  - /fonts  -&gt;  http://10.10.10.160/fonts/                                      </span><br><span class="line">[07:32:24] 301 -  313B  - /images  -&gt;  http://10.10.10.160/images/     </span><br><span class="line">[<span class="number">07</span>:<span class="number">32</span>:<span class="number">26</span>] <span class="number">200</span> -    <span class="number">4</span>KB - /index.html                                                                          </span><br><span class="line">[07:32:29] 301 -  309B  - /js  -&gt;  http://10.10.10.160/js/                                              </span><br><span class="line">[07:33:26] 301 -  313B  - /upload  -&gt;  http://10.10.10.160/upload/</span><br><span class="line"></span><br><span class="line">[<span class="number">07</span>:<span class="number">33</span>:<span class="number">26</span>] <span class="number">200</span> -    <span class="number">8</span>KB - /upload/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line"></span><br><span class="line">[07:32:03] 301 -  310B  - /css  -&gt;  http://10.10.10.160/css/                                                      </span><br><span class="line">[07:32:18] 301 -  312B  - /fonts  -&gt;  http://10.10.10.160/fonts/                                      </span><br><span class="line">[07:32:24] 301 -  313B  - /images  -&gt;  http://10.10.10.160/images/     </span><br><span class="line">[07:32:26] 200 -    4KB - /index.html                                                                          </span><br><span class="line">[07:32:29] 301 -  309B  - /js  -&gt;  http://10.10.10.160/js/                                              </span><br><span class="line">[07:33:26] 301 -  313B  - /upload  -&gt;  http://10.10.10.160/upload/</span><br><span class="line"></span><br><span class="line">[07:33:26] 200 -    8KB - /upload/</span><br></pre></td></tr></table></figure>
 
 <p>Going to the <code>/upload/</code> directory we will see a lot of image there. I tried to look fo the interesting image’ but I realize that this one is a rabbit hole so moved on and go the next phase.</p>
 <h3 id="Upload-page"><a href="#Upload-page" class="headerlink" title="Upload page"></a>Upload page</h3><p><img src="/img/postman/postman-upload.png" alt="HackTheBox-Postman/postman-upload.png" title="Upload directory"></p>
