@@ -38,8 +38,9 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/wall/screen_readme.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/wall/blabla.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/wall/rooted!!.png">
+<meta property="og:image" content="https://www.hackthebox.eu/badge/image/128965">
 <meta property="article:published_time" content="2019-07-11T17:14:32.000Z">
-<meta property="article:modified_time" content="2020-03-17T23:43:43.361Z">
+<meta property="article:modified_time" content="2020-03-30T01:18:29.629Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="ctf">
 <meta property="article:tag" content="htb">
@@ -271,7 +272,7 @@
 <h2 id="Exploitation"><a href="#Exploitation" class="headerlink" title="Exploitation"></a>Exploitation</h2><p>We know that the Centreon version on this machine was vulnerable to RCE(<a href="https://www.sciencedirect.com/topics/computer-science/remote-code-execution" target="_blank" rel="noopener">Remote Code Execution</a>) attack. So I did search on Google to find an article about it and what I saw was article from creator (Askar) of this box.</p>
 <p><img src="/img/wall/google1.png" alt="HackTheBox-Wall/google1.png"></p>
 <h2 id="Exploit-Blog-for-Centreon"><a href="#Exploit-Blog-for-Centreon" class="headerlink" title="Exploit Blog for Centreon"></a>Exploit Blog for Centreon</h2><p>Centreon v19.04 Remote Code Execution. (CVE-2019-13024)</p>
-<a href="https://shells.systems/centreon-v19-04-remote-code-execution-cve-2019-13024/" class="link-preview" target="rel"><div class="link-area"><div class="og-image"><img src="https://shells.systems/wp-content/uploads/2019/06/post-exploit.png"></img></div><div class="descriptions"><div class="og-title">Centreon v19.04 Remote Code Execution (CVE-2019-13024) - Shells.Systems</div><div class="og-description">Estimated Reading Time:  6 minutes Summary about Centreon Ce…</div></div></div></a>
+<a href="https://shells.systems/centreon-v19-04-remote-code-execution-cve-2019-13024/" class="link-preview" target="rel"><div class="link-area"><div class="og-image"><img src="https://shells.systems/wp-content/uploads/2019/06/post-exploit.png"></img></div><div class="descriptions"><div class="og-title">Centreon v19.04 Remote Code Execution (CVE-2019-13024) - Shells.Systems</div><div class="og-description">Estimated Reading Time:  6 minutes Summary about Centreon Centreon is …</div></div></div></a>
 
 <hr>
 <p>The exploitation triggers by adding an arbitrary command in the <code>nagios_bin</code> parameter when setup a new configuration or update configuration for a poller.</p>
@@ -328,6 +329,8 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">www-data@Wall:&#x2F;etc$ &#x2F;tmp&#x2F;rootshell</span><br><span class="line">&#x2F;tmp&#x2F;rootshell</span><br><span class="line"># id</span><br><span class="line">id</span><br><span class="line">uid&#x3D;0(root) gid&#x3D;0(root) groups&#x3D;0(root),33(www-data),6000(centreon)</span><br><span class="line"># cat &#x2F;home&#x2F;shelby&#x2F;user.txt | wc -c</span><br><span class="line">cat &#x2F;home&#x2F;shelby&#x2F;user.txt | wc -c</span><br><span class="line">33</span><br><span class="line"># cat &#x2F;root&#x2F;root.txt | wc -c</span><br><span class="line">cat &#x2F;root&#x2F;root.txt | wc -c</span><br><span class="line">33</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
 <p><img src="/img/wall/rooted!!.png" alt="HackTheBox-Wall/rooted!!.png" title="Machine Pawned!!"></p>
 <p>Now that I’m root, I can now grab both flags – <code>user.txt</code> &amp; <code>root.txt</code> :)</p>
+<p>If you liked my writeup please leave a respect on my <a href="https://www.hackthebox.eu/profile/128965" target="_blank" rel="noopener">Profile</a></p>
+<p><img src="https://www.hackthebox.eu/badge/image/128965" alt="Payas0" title="Payas0"></p>
 
   </div>
 </article>
