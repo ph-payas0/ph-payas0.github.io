@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/registry/registry-v2.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/registry/registry-response-header.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/registry/registry-bolt-image.png">
-<meta property="og:image" content="https://ph-payas0.github.io/img/registry/registry-response-header.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/registry/registry-list.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/registry/registry-manifest.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/registry/registry-latest.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/registry/registry-rsa-key.png">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/registry/registry-pownyshell.png">
 <meta property="og:image" content="https://www.hackthebox.eu/badge/image/128965">
 <meta property="article:published_time" content="2020-04-04T19:04:24.000Z">
-<meta property="article:modified_time" content="2020-04-06T12:50:59.052Z">
+<meta property="article:modified_time" content="2020-04-06T23:05:17.708Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="linux">
 <meta property="article:tag" content="retired">
@@ -266,11 +266,11 @@
 <p><img src="/img/registry/registry-response-header.png" alt="HackTheBox-Registry" title="Registry JSON API"></p>
 <hr>
 <h2 id="Post-Exploitation"><a href="#Post-Exploitation" class="headerlink" title="Post - Exploitation"></a>Post - Exploitation</h2><p>Next, I search for <code>Docker api registry exploitation</code> and I didn’t failed. I found this awesome <a href="https://www.notsosecure.com/anatomy-of-a-hack-docker-registry/" target="_blank" rel="noopener">article</a> which help me to get a password for SSH Key by exploring each blobs file.</p>
-<p>So based on the method of the article, I look first at the <code>/_catalog</code> and there’s a docker repository called <code>&quot;bolt-image&quot;</code> and it is basically a collection of related images.</p>
+<p>So based on the method of the article, I look first at the <code>/v2/_catalog</code> and there’s a docker repository called <code>&quot;bolt-image&quot;</code> and it is basically a collection of related images.</p>
 <h3 id="Diving-the-Docker-Repository"><a href="#Diving-the-Docker-Repository" class="headerlink" title="Diving the Docker Repository"></a>Diving the Docker Repository</h3><p><img src="/img/registry/registry-bolt-image.png" alt="HackTheBox-Registry" title="Registry bolt-image"></p>
 <p>Next I added <code>/tags/list</code> and there was repository install called <code>latest</code></p>
-<p><img src="/img/registry/registry-response-header.png" alt="HackTheBox-Registry" title="Registry Repo list"></p>
-<p>trying to look at the <code>/manifest/</code></p>
+<p><img src="/img/registry/registry-list.png" alt="HackTheBox-Registry" title="Registry Repo list"></p>
+<p>trying to look at the <code>/manifest/v2</code></p>
 <p><img src="/img/registry/registry-manifest.png" alt="HackTheBox-Registry" title="Registry Latest"></p>
 <p>To download the file <code>latest</code> I added simply this in the url <code>/manifest/latest</code>.</p>
 <p><img src="/img/registry/registry-latest.png" alt="HackTheBox-Registry" title="Registry Latest"></p>
