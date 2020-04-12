@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-04-11T01:35:44.467Z</updated>
+  <updated>2020-04-12T00:35:00.489Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HackTheBox - Traverxec</title>
+    <link href="https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/"/>
+    <id>https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/</id>
+    <published>2020-04-10T20:41:29.000Z</published>
+    <updated>2020-04-12T00:35:00.489Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/img/traverxec/traverxec1.png&quot; alt=&quot;HackTheBox-Traverxec&quot; title=&quot;Traverxec machine details&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Traverxec is another beginner friendly machine that runs on Linux. The machine has two open ports which is port &lt;code&gt;22&lt;/code&gt; &amp;amp; &lt;code&gt;80&lt;/code&gt; that basically running a &lt;code&gt;SSH&lt;/code&gt; and &lt;code&gt;HTTP Service&lt;/code&gt;.  There is nothing to use on the website
+        
+      
+    
+    </summary>
+    
+    
+      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    
+      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    
+    
+      <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
+    
+      <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
+    
+      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    
+      <category term="ssh" scheme="https://ph-payas0.github.io/tags/ssh/"/>
+    
+      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
+      <category term="lfi" scheme="https://ph-payas0.github.io/tags/lfi/"/>
+    
+      <category term="traversal" scheme="https://ph-payas0.github.io/tags/traversal/"/>
+    
+      <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
+    
+  </entry>
   
   <entry>
     <title>HackTheBox - Registry</title>
