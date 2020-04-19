@@ -2,37 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/</loc>
-    
-    <lastmod>2020-04-12T00:35:00.489Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ph-payas0.github.io/2020-04-05/HackTheBox-Registry/</loc>
-    
-    <lastmod>2020-04-11T01:35:44.467Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/</loc>
-    
-    <lastmod>2020-04-01T01:30:22.404Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</loc>
     
-    <lastmod>2020-03-30T21:23:59.075Z</lastmod>
+    <lastmod>2020-04-19T22:09:57.775Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/</loc>
     
-    <lastmod>2020-03-30T21:23:36.779Z</lastmod>
+    <lastmod>2020-04-19T22:09:47.487Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/</loc>
+    
+    <lastmod>2020-04-19T22:09:33.504Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-04-05/HackTheBox-Registry/</loc>
+    
+    <lastmod>2020-04-19T22:09:25.623Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/</loc>
+    
+    <lastmod>2020-04-19T22:09:16.143Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-04-18/HackTheBox-Mango/</loc>
+    
+    <lastmod>2020-04-19T22:09:08.824Z</lastmod>
     
   </url>
   

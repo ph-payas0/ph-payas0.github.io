@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-04-12T00:35:00.489Z</updated>
+  <updated>2020-04-19T22:09:08.824Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -17,11 +17,52 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HackTheBox - Mango</title>
+    <link href="https://ph-payas0.github.io/2020-04-18/HackTheBox-Mango/"/>
+    <id>https://ph-payas0.github.io/2020-04-18/HackTheBox-Mango/</id>
+    <published>2020-04-18T01:18:53.000Z</published>
+    <updated>2020-04-19T22:09:08.824Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/img/mango/mango-machine.png&quot; alt=&quot;HackTheBox-Sniper&quot; title=&quot;Mango machine details&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Another awesome machine – &lt;code&gt;&amp;quot;Mango&amp;quot;&lt;/code&gt; is a medium difficulty box that was vulnerable into &lt;code&gt;NoSQL injection&lt;/code&gt; attack. I was stuck on the &lt;code&gt;main page&lt;/code&gt; and the &lt;code&gt;analytics page&lt;/code&gt; for an hour until i realize that was only a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    
+      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    
+    
+      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    
+      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
+      <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
+    
+      <category term="MongoDB" scheme="https://ph-payas0.github.io/tags/MongoDB/"/>
+    
+      <category term="NoSQL" scheme="https://ph-payas0.github.io/tags/NoSQL/"/>
+    
+      <category term="jjs" scheme="https://ph-payas0.github.io/tags/jjs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HackTheBox - Traverxec</title>
     <link href="https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/"/>
     <id>https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/</id>
     <published>2020-04-10T20:41:29.000Z</published>
-    <updated>2020-04-12T00:35:00.489Z</updated>
+    <updated>2020-04-19T22:09:16.143Z</updated>
     
     <summary type="html">
     
@@ -66,7 +107,7 @@
     <link href="https://ph-payas0.github.io/2020-04-05/HackTheBox-Registry/"/>
     <id>https://ph-payas0.github.io/2020-04-05/HackTheBox-Registry/</id>
     <published>2020-04-04T19:04:24.000Z</published>
-    <updated>2020-04-11T01:35:44.467Z</updated>
+    <updated>2020-04-19T22:09:25.623Z</updated>
     
     <summary type="html">
     
@@ -106,7 +147,7 @@
     <link href="https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/"/>
     <id>https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/</id>
     <published>2020-03-29T03:16:47.000Z</published>
-    <updated>2020-04-01T01:30:22.404Z</updated>
+    <updated>2020-04-19T22:09:33.504Z</updated>
     
     <summary type="html">
     
@@ -150,7 +191,7 @@
     <link href="https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/"/>
     <id>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</id>
     <published>2020-03-13T15:18:34.000Z</published>
-    <updated>2020-03-30T21:23:59.075Z</updated>
+    <updated>2020-04-19T22:09:57.775Z</updated>
     
     <summary type="html">
     
@@ -166,7 +207,9 @@
     </summary>
     
     
-      <category term="HackTheBox - PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox-PenTesting/"/>
+      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    
+      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
       <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
@@ -188,7 +231,7 @@
     <link href="https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/"/>
     <id>https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/</id>
     <published>2020-02-20T10:35:26.000Z</published>
-    <updated>2020-03-30T21:23:36.779Z</updated>
+    <updated>2020-04-19T22:09:47.487Z</updated>
     
     <summary type="html">
     
@@ -197,14 +240,17 @@
         
         
           &lt;p&gt;&lt;img src=&quot;/img/bank/bank-detail1.png&quot; alt=&quot;HackTheBox-Bankrobber/bank-detail.png&quot; title=&quot;Bankrobber machine details&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Insane machine – Bankrobber is a Web Application that vulnerable to &lt;code&gt;XSS&lt;/code&gt;, &lt;code&gt;SQL Injection&lt;/code&gt; and &lt;code&gt;RCE&lt;/code&gt; that I have to exploit to get the Admin credentials by using XSS.&lt;br&gt;   SQL Injection to study how’s the
+&lt;p&gt;Quick Summary&lt;/p&gt;
+&lt;p&gt;   → Insane machine – Bankrobber is a Web Application that vulnerable to &lt;code&gt;XSS&lt;/code&gt;, &lt;code&gt;SQL Injection&lt;/code&gt; and &lt;code&gt;RCE&lt;/code&gt; that I have to exploit to get the Admin credentials by using XSS.&lt;br&gt;   SQL Injection to study how’s the &lt;code&gt;backdoorchecker.php&lt;/code&gt; work, do command injection inside the machine from Web Application to get
         
       
     
     </summary>
     
     
-      <category term="HackTheBox - PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox-PenTesting/"/>
+      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    
+      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
       <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
