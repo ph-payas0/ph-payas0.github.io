@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ph-payas0.github.io/2020-04-18/HackTheBox-Mango/</loc>
+    
+    <lastmod>2020-04-20T20:01:07.075Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</loc>
     
     <lastmod>2020-04-19T22:09:57.775Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/</loc>
     
     <lastmod>2020-04-19T22:09:16.143Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ph-payas0.github.io/2020-04-18/HackTheBox-Mango/</loc>
-    
-    <lastmod>2020-04-19T22:09:08.824Z</lastmod>
     
   </url>
   
