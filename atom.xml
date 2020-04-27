@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-04-20T20:01:07.075Z</updated>
+  <updated>2020-04-27T00:52:33.362Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HackTheBox - Control</title>
+    <link href="https://ph-payas0.github.io/2020-04-26/HackTheBox-Control/"/>
+    <id>https://ph-payas0.github.io/2020-04-26/HackTheBox-Control/</id>
+    <published>2020-04-26T11:06:52.000Z</published>
+    <updated>2020-04-27T00:52:33.362Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/img/control/control-1.png&quot; alt=&quot;HackTheBox-Control&quot; title=&quot;Control machine details&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → This is really hard but a fan box machine. It has a vulnerable &lt;code&gt;PHP&lt;/code&gt; webapplication that you can access the admin panel by putting &lt;code&gt;X-Forwarded-For&lt;/code&gt; for &lt;code&gt;HTTP Header&lt;/code&gt; os using &lt;strong&gt;&lt;a href=&quot;https://portswigger.net/burp&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    
+      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    
+    
+      <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    
+      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
+      <category term="registry" scheme="https://ph-payas0.github.io/tags/registry/"/>
+    
+      <category term="sqli" scheme="https://ph-payas0.github.io/tags/sqli/"/>
+    
+      <category term="mysql" scheme="https://ph-payas0.github.io/tags/mysql/"/>
+    
+      <category term="http-header" scheme="https://ph-payas0.github.io/tags/http-header/"/>
+    
+      <category term="sqlmap" scheme="https://ph-payas0.github.io/tags/sqlmap/"/>
+    
+      <category term="webshell" scheme="https://ph-payas0.github.io/tags/webshell/"/>
+    
+      <category term="services" scheme="https://ph-payas0.github.io/tags/services/"/>
+    
+  </entry>
   
   <entry>
     <title>HackTheBox - Mango</title>
