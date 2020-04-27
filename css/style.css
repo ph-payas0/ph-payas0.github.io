@@ -437,8 +437,8 @@ body td {
 }
 @font-face {
   font-style: normal;
-  font-family: "iAWriterDuospace";
-  src: local("iA Writer Duospace"), url("../lib/iA-Writer/iAWriterDuospace.ttf") format("truetype");
+  font-family: "Cousine";
+  src: local("Cousine"), url("../lib/site-font/Cousine-Regular.ttf") format("truetype");
 }
 *,
 *:before,
@@ -472,10 +472,10 @@ body {
   background-color: #111215;
   color: #eaeaea;
   font-display: swap;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
   letter-spacing: 0.04em;
-  font-family: "iAWriter", "iA Writer Duospace", monospace;
+  font-family: "Cousine", "Cousine", monospace, extended;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   flex: 1;
@@ -846,7 +846,7 @@ body {
   }
 }
 .max-width {
-  max-width: 62rem;
+  max-width: 65rem;
 }
 @media (max-width: 480px) {
   .px3 {
@@ -1678,7 +1678,7 @@ article .content .caption {
   font-display: swap;
   font-weight: 400;
   font-size: 11.200000000000001px;
-  font-family: "iAWriter", "iA Writer Duospace", monospace;
+  font-family: "Cousine", "Cousine", monospace, extended;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   text-align: center;
@@ -1847,8 +1847,8 @@ pre {
   padding-bottom: 0;
   border: 1px dotted #666;
   border-radius: 4px;
-  font-size: 13.5px;
-  font-family: "iAWriter", "iA Writer Duospace", monospace;
+  font-size: 13px;
+  font-family: Monaco;
   line-height: 26px;
   -webkit-border-radius: 4px;
 }
@@ -1871,13 +1871,13 @@ code {
   padding: 18px 20px;
   border-radius: 4px;
   background: #15161a;
-  font-family: "iAWriter", "iA Writer Duospace", monospace;
+  font-family: "Mononoki", "Mononoki", monospace;
   -webkit-border-radius: 4px;
 }
 .highlight figcaption {
   margin: -5px 0 5px;
   color: #666;
-  font-size: 0.9em;
+  font-size: 0.7em;
   zoom: 1;
 }
 .highlight figcaption a {
