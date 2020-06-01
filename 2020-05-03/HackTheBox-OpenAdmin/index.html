@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/openA/openA-root.png">
 <meta property="og:image" content="https://www.hackthebox.eu/badge/image/128965">
 <meta property="article:published_time" content="2020-05-03T07:43:47.000Z">
-<meta property="article:modified_time" content="2020-05-05T10:06:14.960Z">
+<meta property="article:modified_time" content="2020-05-30T15:15:29.077Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="rce">
 <meta property="article:tag" content="linux">
@@ -97,6 +97,8 @@
     <br/>
     <span id="actions">
       <ul>
+        
+        <li><a class="icon" href="/2020-05-29/HackTheBox-Resolute/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" href="/2020-04-26/HackTheBox-Control/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -203,7 +205,7 @@
   <div class="content" itemprop="articleBody">
     <p><img src="/img/openA/open-admin.png" alt="HackTheBox-OpenAdmin" title="Open Admin"></p>
 <hr>
-<h2 id="Quick-Summary"><a href="#Quick-Summary" class="headerlink" title="Quick Summary"></a>Quick Summary</h2><p>   → another easy box machine that you can easily find the exploit and get the shell with <strong>RCE</strong> or <strong>Remote Code Execution</strong> if you know how to do with the exploit. The second phase is to find user in <code>mysql database</code> base on the <code>database</code> configuration then login user as <code>*Jimmy*</code>. <code>user.txt</code> still cannot get on this phase so I need to the first privilege escalation to get the user <code>*Joanna*</code> by enumerating the website that is running on the machine. Then the <code>root</code> part is very simple. The user has a privilege root to run <code>*nano*</code> which can execute directly a shell.</p>
+<h2 id="Quick-Summary"><a href="#Quick-Summary" class="headerlink" title="Quick Summary"></a>Quick Summary</h2><p>   → another easy box machine that you can easily find the exploit and get the shell with <strong>RCE</strong> or <strong>Remote Code Execution</strong> if you know how to do with the exploit. The second phase is to find user in <code>mysql database</code> base on the <code>database</code> configuration then login user as <em><code>Jimmy</code></em>. <code>user.txt</code> still cannot get on this phase so I need to the first privilege escalation to get the user <em><code>Joanna</code></em> by enumerating the website that is running on the machine. Then the <code>root</code> part is very simple. The user has a privilege root to run <em><code>nano</code></em> which can execute directly a shell.</p>
 <hr>
 <hr>
 <h2 id="Penetration-Testing-Methodologies"><a href="#Penetration-Testing-Methodologies" class="headerlink" title="Penetration Testing Methodologies"></a>Penetration Testing Methodologies</h2><ol>
