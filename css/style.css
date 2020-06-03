@@ -340,13 +340,13 @@ body .h2 {
   text-transform: none;
   letter-spacing: normal;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 body h3 {
   color: #eee;
   text-decoration: underline;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 body h4,
 body h5,
@@ -420,7 +420,7 @@ body table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: 14px;
+  font-size: -1em;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -429,7 +429,7 @@ body th {
   border-bottom: 1px dashed #666;
   color: #eee;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 0em;
 }
 body td {
   padding: 0 8px;
@@ -437,8 +437,8 @@ body td {
 }
 @font-face {
   font-style: normal;
-  font-family: "-apple-system, UniversLight";
-  src: local("-apple-system, UniversLight"), url("../lib/site-font/UniversLight.ttf") format("truetype");
+  font-family: "OxygenMono", monospace;
+  src: local("OxygenMono-Regular"), url("../lib/site-font/OxygenMono-Regular.ttf") format("truetype");
 }
 *,
 *:before,
@@ -472,10 +472,10 @@ body {
   background-color: #111215;
   color: #eaeaea;
   font-display: swap;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 200;
+  font-size: 1em;
   letter-spacing: 0.04em;
-  font-family: "-apple-system", "UniversLight", monospace;
+  font-family: "OxygenMono", monospace;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   flex: 1;
@@ -872,7 +872,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   color: #eaeaea;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   font-weight: 700;
   font-style: normal;
   font-size: 1.5rem;
@@ -1375,12 +1375,12 @@ article header .postdate {
 article .content h2:before {
   position: absolute;
   margin-left: 15px;
-  top: -3px;
+  top: 0px;
   left: -1rem;
   color: #66fcf1;
   content: "#";
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 article .content img,
 article .content video {
@@ -1677,8 +1677,8 @@ article .content .caption {
   color: #111215;
   font-display: swap;
   font-weight: 400;
-  font-size: 12.8px;
-  font-family: "-apple-system", "UniversLight", monospace;
+  font-size: 0.8em;
+  font-family: "OxygenMono", monospace;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   text-align: center;
@@ -1849,7 +1849,7 @@ pre {
   border: 1px dotted #666;
   border-radius: 4px;
   font-size: 13px;
-  font-family: Monaco;
+  font-family: "Monaco", "Monaco" monospace;
   line-height: 26px;
   -webkit-border-radius: 4px;
 }
@@ -1859,7 +1859,7 @@ pre code {
   border: none;
 }
 code {
-  padding: 2px 6px;
+  padding: 4px 6px;
   color: #ff69b4;
   background: #171717;
   font-family: Fira Mono;
@@ -1873,7 +1873,7 @@ code {
   padding: 18px 20px;
   border-radius: 4px;
   background: #15161a;
-  font-family: "Monaco", "Monaco", monospace;
+  font-family: "Monaco", "Monaco" monospace;
   -webkit-border-radius: 4px;
 }
 .highlight figcaption {
