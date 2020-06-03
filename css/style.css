@@ -437,7 +437,7 @@ body td {
 }
 @font-face {
   font-style: normal;
-  font-family: "Fira Mono", monospace;
+  font-family: "Fira Mono", Courier, monospace;
   src: local("Fira Mono"), url("../lib/site-font/FiraMono-Regular.ttf") format("truetype");
 }
 *,
@@ -472,10 +472,9 @@ body {
   background-color: #111215;
   color: #eaeaea;
   font-display: swap;
-  font-weight: 300;
   font-size: 15.5px;
   letter-spacing: 0.06em;
-  font-family: "Fira Mono", monospace;
+  font-family: "Fira Mono", Courier, monospace, extended;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   flex: 1;
@@ -1678,7 +1677,7 @@ article .content .caption {
   font-display: swap;
   font-weight: 400;
   font-size: 12.4px;
-  font-family: "Fira Mono", monospace;
+  font-family: "Fira Mono", Courier, monospace, extended;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   text-align: center;
@@ -1855,6 +1854,8 @@ pre {
 }
 pre code {
   display: block;
+  font-size: 13px;
+  font-family: Fira Mono;
   padding: 0;
   border: none;
 }
@@ -1873,7 +1874,7 @@ code {
   padding: 18px 20px;
   border-radius: 4px;
   background: #15161a;
-  font-family: "Monaco", "Monaco" monospace;
+  font-family: "Monaco", "Monaco" Courier, monospace, extended;
   -webkit-border-radius: 4px;
 }
 .highlight figcaption {
