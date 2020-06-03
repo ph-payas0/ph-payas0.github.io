@@ -420,7 +420,7 @@ body table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -429,7 +429,7 @@ body th {
   border-bottom: 1px dashed #666;
   color: #eee;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
 }
 body td {
   padding: 0 8px;
@@ -437,8 +437,8 @@ body td {
 }
 @font-face {
   font-style: normal;
-  font-family: "Cousine";
-  src: local("Cousine"), url("../lib/site-font/Cousine-Regular.ttf") format("truetype");
+  font-family: "-apple-system, UniversLight";
+  src: local("-apple-system, UniversLight"), url("../lib/site-font/UniversLight.ttf") format("truetype");
 }
 *,
 *:before,
@@ -472,10 +472,10 @@ body {
   background-color: #111215;
   color: #eaeaea;
   font-display: swap;
-  font-weight: 300;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 16px;
   letter-spacing: 0.04em;
-  font-family: "Cousine", "Cousine", monospace, extended;
+  font-family: "-apple-system", "UniversLight", monospace;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   flex: 1;
@@ -907,7 +907,7 @@ body {
 #header #nav ul {
   margin: 0;
   padding: 12px;
-  font-size: 14px;
+  font-size: 15px;
   list-style-type: none;
   line-height: 15px;
 }
@@ -1362,7 +1362,7 @@ article header .meta {
 }
 article header .meta * {
   color: #ccc;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 article header .author {
   text-transform: uppercase;
@@ -1677,8 +1677,8 @@ article .content .caption {
   color: #111215;
   font-display: swap;
   font-weight: 400;
-  font-size: 11.200000000000001px;
-  font-family: "Cousine", "Cousine", monospace, extended;
+  font-size: 12.8px;
+  font-family: "-apple-system", "UniversLight", monospace;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   text-align: center;
@@ -1860,10 +1860,11 @@ pre code {
 }
 code {
   padding: 2px 6px;
-  color: #dcdcdc;
+  color: #ff69b4;
   background: #171717;
-  border: 1px dotted #666;
-  border-radius: 2px;
+  font-family: Fira Mono;
+  font-size: 14.5px;
+  border-radius: 3px;
   -webkit-border-radius: 2px;
 }
 .highlight {
@@ -1872,7 +1873,7 @@ code {
   padding: 18px 20px;
   border-radius: 4px;
   background: #15161a;
-  font-family: "Fira Mono", "Fira Mono", monospace;
+  font-family: "Monaco", "Monaco", monospace;
   -webkit-border-radius: 4px;
 }
 .highlight figcaption {
