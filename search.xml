@@ -22,9 +22,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> retired </tag>
+            
+            <tag> windows </tag>
             
             <tag> smb </tag>
             
@@ -59,17 +59,17 @@
       
         <tags>
             
-            <tag> rce </tag>
-            
             <tag> linux </tag>
             
             <tag> retired </tag>
             
+            <tag> OpenNetAdmin </tag>
+            
+            <tag> rce </tag>
+            
             <tag> GTFObins </tag>
             
             <tag> mysql </tag>
-            
-            <tag> OpenNetAdmin </tag>
             
         </tags>
       
@@ -96,15 +96,15 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> retired </tag>
+            
+            <tag> mysql </tag>
+            
+            <tag> windows </tag>
             
             <tag> registry </tag>
             
             <tag> sqli </tag>
-            
-            <tag> mysql </tag>
             
             <tag> http-header </tag>
             
@@ -178,19 +178,19 @@
             
             <tag> cve </tag>
             
-            <tag> rce </tag>
+            <tag> ssh </tag>
             
             <tag> linux </tag>
             
-            <tag> ssh </tag>
-            
             <tag> retired </tag>
+            
+            <tag> rce </tag>
+            
+            <tag> GTFObins </tag>
             
             <tag> lfi </tag>
             
             <tag> traversal </tag>
-            
-            <tag> GTFObins </tag>
             
         </tags>
       
@@ -254,8 +254,6 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> retired </tag>
             
             <tag> php </tag>
@@ -267,6 +265,8 @@
             <tag> chm </tag>
             
             <tag> unintended </tag>
+            
+            <tag> windows </tag>
             
             <tag> powershell </tag>
             
@@ -297,13 +297,13 @@
             
             <tag> ctf </tag>
             
-            <tag> pentest </tag>
-            
             <tag> cve </tag>
             
-            <tag> linux </tag>
+            <tag> pentest </tag>
             
             <tag> ssh </tag>
+            
+            <tag> linux </tag>
             
             <tag> retired </tag>
             
@@ -336,15 +336,15 @@
             
             <tag> pentest </tag>
             
-            <tag> xss </tag>
-            
-            <tag> sql-injection </tag>
+            <tag> retired </tag>
             
             <tag> rce </tag>
             
             <tag> windows </tag>
             
-            <tag> retired </tag>
+            <tag> sql-injection </tag>
+            
+            <tag> xss </tag>
             
         </tags>
       
@@ -373,19 +373,19 @@
             
             <tag> ctf </tag>
             
-            <tag> htb </tag>
-            
-            <tag> pentest </tag>
-            
             <tag> cve </tag>
             
-            <tag> python </tag>
-            
-            <tag> rce </tag>
+            <tag> pentest </tag>
             
             <tag> linux </tag>
             
             <tag> retired </tag>
+            
+            <tag> rce </tag>
+            
+            <tag> htb </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
