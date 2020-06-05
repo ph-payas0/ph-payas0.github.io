@@ -420,7 +420,7 @@ body table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: 13.5px;
+  font-size: 13px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -429,7 +429,7 @@ body th {
   border-bottom: 1px dashed #666;
   color: #eee;
   font-weight: bold;
-  font-size: 14.5px;
+  font-size: 14px;
 }
 body td {
   padding: 0 8px;
@@ -437,8 +437,8 @@ body td {
 }
 @font-face {
   font-style: normal;
-  font-family: "Fira Mono", Courier, monospace;
-  src: local("Fira Mono"), url("../lib/site-font/FiraMono-Regular.ttf") format("truetype");
+  font-family: "Hack" monospace;
+  src: local("Hack"), url("../lib/site-font/Hack-Regular.ttf") format("truetype");
 }
 *,
 *:before,
@@ -472,9 +472,9 @@ body {
   background-color: #111215;
   color: #eaeaea;
   font-display: swap;
-  font-size: 15.5px;
+  font-size: 15px;
   letter-spacing: 0.06em;
-  font-family: "Fira Mono", Courier, monospace, extended;
+  font-family: Fira Mono;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   flex: 1;
@@ -1676,8 +1676,8 @@ article .content .caption {
   color: #111215;
   font-display: swap;
   font-weight: 400;
-  font-size: 12.4px;
-  font-family: "Fira Mono", Courier, monospace, extended;
+  font-size: 12px;
+  font-family: "Hack", "Hack", monospace, extended;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   text-align: center;
@@ -1874,7 +1874,7 @@ code {
   padding: 18px 20px;
   border-radius: 4px;
   background: #15161a;
-  font-family: "Monaco", "Monaco" Courier, monospace, extended;
+  font-family: Fira Mono;
   -webkit-border-radius: 4px;
 }
 .highlight figcaption {
