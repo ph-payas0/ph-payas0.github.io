@@ -59,17 +59,17 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
-            <tag> retired </tag>
-            
             <tag> OpenNetAdmin </tag>
             
             <tag> rce </tag>
             
             <tag> GTFObins </tag>
             
+            <tag> linux </tag>
+            
             <tag> mysql </tag>
+            
+            <tag> retired </tag>
             
         </tags>
       
@@ -96,13 +96,13 @@
       
         <tags>
             
-            <tag> retired </tag>
-            
             <tag> mysql </tag>
             
-            <tag> windows </tag>
+            <tag> retired </tag>
             
             <tag> registry </tag>
+            
+            <tag> windows </tag>
             
             <tag> sqli </tag>
             
@@ -139,11 +139,11 @@
       
         <tags>
             
+            <tag> GTFObins </tag>
+            
             <tag> linux </tag>
             
             <tag> retired </tag>
-            
-            <tag> GTFObins </tag>
             
             <tag> MongoDB </tag>
             
@@ -176,17 +176,17 @@
       
         <tags>
             
-            <tag> cve </tag>
+            <tag> rce </tag>
             
-            <tag> ssh </tag>
+            <tag> GTFObins </tag>
             
             <tag> linux </tag>
             
             <tag> retired </tag>
             
-            <tag> rce </tag>
+            <tag> cve </tag>
             
-            <tag> GTFObins </tag>
+            <tag> ssh </tag>
             
             <tag> lfi </tag>
             
@@ -295,6 +295,10 @@
       
         <tags>
             
+            <tag> linux </tag>
+            
+            <tag> retired </tag>
+            
             <tag> ctf </tag>
             
             <tag> cve </tag>
@@ -302,10 +306,6 @@
             <tag> pentest </tag>
             
             <tag> ssh </tag>
-            
-            <tag> linux </tag>
-            
-            <tag> retired </tag>
             
         </tags>
       
@@ -332,13 +332,13 @@
       
         <tags>
             
-            <tag> ctf </tag>
-            
-            <tag> pentest </tag>
+            <tag> rce </tag>
             
             <tag> retired </tag>
             
-            <tag> rce </tag>
+            <tag> ctf </tag>
+            
+            <tag> pentest </tag>
             
             <tag> windows </tag>
             
@@ -371,17 +371,17 @@
       
         <tags>
             
-            <tag> ctf </tag>
-            
-            <tag> cve </tag>
-            
-            <tag> pentest </tag>
+            <tag> rce </tag>
             
             <tag> linux </tag>
             
             <tag> retired </tag>
             
-            <tag> rce </tag>
+            <tag> ctf </tag>
+            
+            <tag> cve </tag>
+            
+            <tag> pentest </tag>
             
             <tag> htb </tag>
             
