@@ -1875,7 +1875,7 @@ code {
   padding: 18px 20px;
   border-radius: 4px;
   background: #15161a;
-  font-family: Fira Mono;
+  font-family: "Fira Mono", "Fira Mono", monospace;
   -webkit-border-radius: 4px;
 }
 .highlight figcaption {
