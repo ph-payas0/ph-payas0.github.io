@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/</loc>
+    <loc>https://ph-payas0.github.io/2020-05-03/HackTheBox-OpenAdmin/</loc>
     
-    <lastmod>2020-06-03T01:24:48.061Z</lastmod>
+    <lastmod>2020-06-09T01:38:41.835Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-05-03/HackTheBox-OpenAdmin/</loc>
+    <loc>https://ph-payas0.github.io/2020-06-04/HackTheBox-Nest/</loc>
     
-    <lastmod>2020-05-30T15:15:29.077Z</lastmod>
+    <lastmod>2020-06-09T01:38:25.195Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/</loc>
+    
+    <lastmod>2020-06-03T01:24:48.061Z</lastmod>
     
   </url>
   

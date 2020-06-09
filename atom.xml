@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>PΛYΛƧ0 🐱‍👤</title>
+  <title>PΛYΛƧ0</title>
   
   <subtitle>Coffee Maker &amp; Janitor</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-06-03T01:24:48.061Z</updated>
+  <updated>2020-06-09T01:38:25.195Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HackTheBox - Nest 🐦🐣</title>
+    <link href="https://ph-payas0.github.io/2020-06-04/HackTheBox-Nest/"/>
+    <id>https://ph-payas0.github.io/2020-06-04/HackTheBox-Nest/</id>
+    <published>2020-06-03T21:46:19.000Z</published>
+    <updated>2020-06-09T01:38:25.195Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/img/nest/nest-box.png&quot; alt=&quot;HackTheBox-Nest&quot; title=&quot;Nest&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → This machine is really awesome because it has a lot of enumeration especially on &lt;code&gt;SMBClient&lt;/code&gt; side. you need a strong knowledge of active directory. Rated as &lt;code&gt;easy machine&lt;/code&gt; but other says it is medium box because there is a debugging mode that beginner players have some
+        
+      
+    
+    </summary>
+    
+    
+      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    
+      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    
+    
+      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
+      <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    
+      <category term="smb" scheme="https://ph-payas0.github.io/tags/smb/"/>
+    
+      <category term="dotnetfiddle" scheme="https://ph-payas0.github.io/tags/dotnetfiddle/"/>
+    
+      <category term="smbclient" scheme="https://ph-payas0.github.io/tags/smbclient/"/>
+    
+      <category term="psexec" scheme="https://ph-payas0.github.io/tags/psexec/"/>
+    
+      <category term="visual studio" scheme="https://ph-payas0.github.io/tags/visual-studio/"/>
+    
+  </entry>
   
   <entry>
     <title>HackTheBox - Resolute</title>
@@ -62,7 +105,7 @@
     <link href="https://ph-payas0.github.io/2020-05-03/HackTheBox-OpenAdmin/"/>
     <id>https://ph-payas0.github.io/2020-05-03/HackTheBox-OpenAdmin/</id>
     <published>2020-05-03T07:43:47.000Z</published>
-    <updated>2020-05-30T15:15:29.077Z</updated>
+    <updated>2020-06-09T01:38:41.835Z</updated>
     
     <summary type="html">
     
