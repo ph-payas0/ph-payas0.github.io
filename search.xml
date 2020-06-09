@@ -32,9 +32,11 @@
             
             <tag> smbclient </tag>
             
-            <tag> psexec </tag>
+            <tag> vb.net </tag>
             
-            <tag> visual studio </tag>
+            <tag> decompiler </tag>
+            
+            <tag> assembly </tag>
             
         </tags>
       
@@ -43,7 +45,7 @@
     
     
     <entry>
-      <title>HackTheBox - Resolute</title>
+      <title>HackTheBox - Resolute 🗔🔥</title>
       <link href="/2020-05-29/HackTheBox-Resolute/"/>
       <url>/2020-05-29/HackTheBox-Resolute/</url>
       
@@ -80,7 +82,7 @@
     
     
     <entry>
-      <title>HackTheBox - OpenAdmin</title>
+      <title>HackTheBox - OpenAdmin 📦</title>
       <link href="/2020-05-03/HackTheBox-OpenAdmin/"/>
       <url>/2020-05-03/HackTheBox-OpenAdmin/</url>
       
@@ -117,7 +119,7 @@
     
     
     <entry>
-      <title>HackTheBox - Control</title>
+      <title>HackTheBox - Control ⚙️🖥️</title>
       <link href="/2020-04-26/HackTheBox-Control/"/>
       <url>/2020-04-26/HackTheBox-Control/</url>
       
@@ -160,7 +162,7 @@
     
     
     <entry>
-      <title>HackTheBox - Mango</title>
+      <title>HackTheBox - Mango 🥭🥭</title>
       <link href="/2020-04-18/HackTheBox-Mango/"/>
       <url>/2020-04-18/HackTheBox-Mango/</url>
       
@@ -197,7 +199,7 @@
     
     
     <entry>
-      <title>HackTheBox - Traverxec</title>
+      <title>HackTheBox - Traverxec 🗜️📂</title>
       <link href="/2020-04-11/HackTheBox-Traverxec/"/>
       <url>/2020-04-11/HackTheBox-Traverxec/</url>
       
@@ -238,7 +240,7 @@
     
     
     <entry>
-      <title>HackTheBox - Registry</title>
+      <title>HackTheBox - Registry 🧰🗂️</title>
       <link href="/2020-04-05/HackTheBox-Registry/"/>
       <url>/2020-04-05/HackTheBox-Registry/</url>
       
@@ -275,7 +277,7 @@
     
     
     <entry>
-      <title>HackTheBox - Sniper</title>
+      <title>HackTheBox - Sniper 🏷️🔫</title>
       <link href="/2020-03-29/HackTheBox-Sniper/"/>
       <url>/2020-03-29/HackTheBox-Sniper/</url>
       
@@ -316,7 +318,7 @@
     
     
     <entry>
-      <title>HackTheBox - Postman</title>
+      <title>HackTheBox - Postman 📮✉️</title>
       <link href="/2020-03-13/HackTheBox-Postman/"/>
       <url>/2020-03-13/HackTheBox-Postman/</url>
       
@@ -353,7 +355,7 @@
     
     
     <entry>
-      <title>HackTheBox - Bankrobber</title>
+      <title>HackTheBox - Bankrobber 💰💰</title>
       <link href="/2020-02-20/HackTheBox-Bankrobber/"/>
       <url>/2020-02-20/HackTheBox-Bankrobber/</url>
       
@@ -392,7 +394,7 @@
     
     
     <entry>
-      <title>HackTheBox - Wall</title>
+      <title>HackTheBox - Wall 🧱🔨</title>
       <link href="/2019-07-12/HackTheBox-Wall/"/>
       <url>/2019-07-12/HackTheBox-Wall/</url>
       

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-06-09T01:48:17.924Z</updated>
+  <updated>2020-06-09T21:54:30.986Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ph-payas0.github.io/2020-06-04/HackTheBox-Nest/"/>
     <id>https://ph-payas0.github.io/2020-06-04/HackTheBox-Nest/</id>
     <published>2020-06-03T21:46:19.000Z</published>
-    <updated>2020-06-09T01:48:17.924Z</updated>
+    <updated>2020-06-09T21:54:30.986Z</updated>
     
     <summary type="html">
     
@@ -53,18 +53,20 @@
     
       <category term="smbclient" scheme="https://ph-payas0.github.io/tags/smbclient/"/>
     
-      <category term="psexec" scheme="https://ph-payas0.github.io/tags/psexec/"/>
+      <category term="vb.net" scheme="https://ph-payas0.github.io/tags/vb-net/"/>
     
-      <category term="visual studio" scheme="https://ph-payas0.github.io/tags/visual-studio/"/>
+      <category term="decompiler" scheme="https://ph-payas0.github.io/tags/decompiler/"/>
+    
+      <category term="assembly" scheme="https://ph-payas0.github.io/tags/assembly/"/>
     
   </entry>
   
   <entry>
-    <title>HackTheBox - Resolute</title>
+    <title>HackTheBox - Resolute 🗔🔥</title>
     <link href="https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/"/>
     <id>https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/</id>
     <published>2020-05-28T18:26:29.000Z</published>
-    <updated>2020-06-03T01:24:48.061Z</updated>
+    <updated>2020-06-09T21:34:57.873Z</updated>
     
     <summary type="html">
     
@@ -101,11 +103,11 @@
   </entry>
   
   <entry>
-    <title>HackTheBox - OpenAdmin</title>
+    <title>HackTheBox - OpenAdmin 📦</title>
     <link href="https://ph-payas0.github.io/2020-05-03/HackTheBox-OpenAdmin/"/>
     <id>https://ph-payas0.github.io/2020-05-03/HackTheBox-OpenAdmin/</id>
     <published>2020-05-03T07:43:47.000Z</published>
-    <updated>2020-06-09T01:38:41.835Z</updated>
+    <updated>2020-06-09T21:38:38.906Z</updated>
     
     <summary type="html">
     
@@ -142,11 +144,11 @@
   </entry>
   
   <entry>
-    <title>HackTheBox - Control</title>
+    <title>HackTheBox - Control ⚙️🖥️</title>
     <link href="https://ph-payas0.github.io/2020-04-26/HackTheBox-Control/"/>
     <id>https://ph-payas0.github.io/2020-04-26/HackTheBox-Control/</id>
     <published>2020-04-26T11:06:52.000Z</published>
-    <updated>2020-04-27T21:45:52.700Z</updated>
+    <updated>2020-06-09T21:40:29.295Z</updated>
     
     <summary type="html">
     
@@ -189,11 +191,11 @@
   </entry>
   
   <entry>
-    <title>HackTheBox - Mango</title>
+    <title>HackTheBox - Mango 🥭🥭</title>
     <link href="https://ph-payas0.github.io/2020-04-18/HackTheBox-Mango/"/>
     <id>https://ph-payas0.github.io/2020-04-18/HackTheBox-Mango/</id>
     <published>2020-04-18T01:18:53.000Z</published>
-    <updated>2020-04-20T20:01:07.075Z</updated>
+    <updated>2020-06-09T21:41:00.778Z</updated>
     
     <summary type="html">
     
@@ -230,11 +232,11 @@
   </entry>
   
   <entry>
-    <title>HackTheBox - Traverxec</title>
+    <title>HackTheBox - Traverxec 🗜️📂</title>
     <link href="https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/"/>
     <id>https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/</id>
     <published>2020-04-10T20:41:29.000Z</published>
-    <updated>2020-04-19T22:09:16.143Z</updated>
+    <updated>2020-06-09T21:43:17.100Z</updated>
     
     <summary type="html">
     
@@ -275,11 +277,11 @@
   </entry>
   
   <entry>
-    <title>HackTheBox - Registry</title>
+    <title>HackTheBox - Registry 🧰🗂️</title>
     <link href="https://ph-payas0.github.io/2020-04-05/HackTheBox-Registry/"/>
     <id>https://ph-payas0.github.io/2020-04-05/HackTheBox-Registry/</id>
     <published>2020-04-04T19:04:24.000Z</published>
-    <updated>2020-04-19T22:09:25.623Z</updated>
+    <updated>2020-06-09T21:44:44.059Z</updated>
     
     <summary type="html">
     
@@ -315,11 +317,11 @@
   </entry>
   
   <entry>
-    <title>HackTheBox - Sniper</title>
+    <title>HackTheBox - Sniper 🏷️🔫</title>
     <link href="https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/"/>
     <id>https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/</id>
     <published>2020-03-29T03:16:47.000Z</published>
-    <updated>2020-04-19T22:09:33.504Z</updated>
+    <updated>2020-06-09T21:47:34.337Z</updated>
     
     <summary type="html">
     
@@ -359,11 +361,11 @@
   </entry>
   
   <entry>
-    <title>HackTheBox - Postman</title>
+    <title>HackTheBox - Postman 📮✉️</title>
     <link href="https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/"/>
     <id>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</id>
     <published>2020-03-13T15:18:34.000Z</published>
-    <updated>2020-04-19T22:09:57.775Z</updated>
+    <updated>2020-06-09T21:49:08.561Z</updated>
     
     <summary type="html">
     
@@ -399,11 +401,11 @@
   </entry>
   
   <entry>
-    <title>HackTheBox - Bankrobber</title>
+    <title>HackTheBox - Bankrobber 💰💰</title>
     <link href="https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/"/>
     <id>https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/</id>
     <published>2020-02-20T10:35:26.000Z</published>
-    <updated>2020-04-19T22:09:47.487Z</updated>
+    <updated>2020-06-09T21:52:39.577Z</updated>
     
     <summary type="html">
     
@@ -442,11 +444,11 @@
   </entry>
   
   <entry>
-    <title>HackTheBox - Wall</title>
+    <title>HackTheBox - Wall 🧱🔨</title>
     <link href="https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/"/>
     <id>https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/</id>
     <published>2019-07-11T17:14:32.000Z</published>
-    <updated>2020-03-30T21:23:26.266Z</updated>
+    <updated>2020-06-09T21:53:52.633Z</updated>
     
     <summary type="html">
     
