@@ -340,13 +340,13 @@ body .h2 {
   text-transform: none;
   letter-spacing: normal;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 body h3 {
   color: #eee;
-  text-decoration: underline;
+  text-decoration: blink;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 body h4,
 body h5,
@@ -1378,9 +1378,9 @@ article .content h2:before {
   top: 0px;
   left: -1rem;
   color: #66fcf1;
-  content: "#";
+  content: "$";
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 article .content img,
 article .content video {
@@ -1390,7 +1390,7 @@ article .content video {
   height: auto;
   -webkit-box-shadow: -1px 0px 4px 0px #696869;
   -moz-box-shadow: -1px 0px 4px 0px #696869;
-  box-shadow: -1px 0px 4px 0px #696869;
+  box-shadow: -2px 6px 8px 2px rgba(0,0,0,0.9);
 }
 article .content .video-container {
   position: relative;
@@ -1609,7 +1609,7 @@ article .content .caption {
   color: #eee;
 }
 .search-input {
-  padding: 4px 7px;
+  padding: 7px 12px;
   width: 100%;
   outline: none;
   border: solid 1px #ccc;
@@ -1849,7 +1849,7 @@ pre {
   border: 1px dotted #666;
   border-radius: 4px;
   font-size: 13px;
-  font-family: Monaco;
+  font-family: "Monaco", "Monaco", monospace;
   line-height: 26px;
   -webkit-border-radius: 4px;
 }
