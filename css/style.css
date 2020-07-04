@@ -1375,10 +1375,10 @@ article header .postdate {
 article .content h2:before {
   position: absolute;
   margin-left: 15px;
-  top: 0px;
+  bottom: 1.5px;
   left: -1rem;
   color: #66fcf1;
-  content: "$";
+  content: "❯";
   font-weight: bold;
   font-size: 1.1rem;
 }
@@ -1865,7 +1865,7 @@ code {
   color: #ff69b4;
   background: #171717;
   font-family: "Fira Mono", "Fira Mono", monospace;
-  font-size: 14.5px;
+  font-size: 14px;
   border-radius: 3px;
   -webkit-border-radius: 2px;
 }
