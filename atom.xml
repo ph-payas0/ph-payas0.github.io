@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-07-04T03:52:20.742Z</updated>
+  <updated>2020-07-04T04:01:00.298Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ph-payas0.github.io/2020-06-18/HackTheBox-ServMon/"/>
     <id>https://ph-payas0.github.io/2020-06-18/HackTheBox-ServMon/</id>
     <published>2020-06-18T02:21:03.000Z</published>
-    <updated>2020-07-04T03:52:20.742Z</updated>
+    <updated>2020-07-04T04:01:00.298Z</updated>
     
     <summary type="html">
     
@@ -31,12 +31,7 @@
         
           &lt;p&gt;&lt;img src=&quot;/img/servmon/servmon-box.png&quot; alt=&quot;HackTheBox-ServMon&quot; title=&quot;ServMon&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → &lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;Penetration-Testing-Methodologies&quot;&gt;&lt;a href=&quot;#Penetration-Testing-Methodologies&quot; class=&quot;headerlink&quot; title=&quot;Penetration Testing Methodologies&quot;&gt;&lt;/a&gt;Penetration Testing Methodologies&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Network Scanning&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;→ Nmap scan&lt;/p&gt;
-&lt;p&gt;→ discover
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Very nice box which is fit for beginners’ a machine that vulnerable to &lt;code&gt;directory traversal&lt;/code&gt; which the attacker can enumerate several files and gain access to this machine. I will say the privilege escalation part is quiet hard if you take the web server of
         
       
     
