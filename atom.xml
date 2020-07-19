@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-07-04T13:34:45.747Z</updated>
+  <updated>2020-07-19T00:29:10.948Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HackTheBox - ForwardSlash ⚔️</title>
+    <link href="https://ph-payas0.github.io/2020-07-03/HackTheBox-ForwardSlash/"/>
+    <id>https://ph-payas0.github.io/2020-07-03/HackTheBox-ForwardSlash/</id>
+    <published>2020-07-02T21:52:37.000Z</published>
+    <updated>2020-07-19T00:29:10.948Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/img/fslash/forward-slash.png&quot; alt=&quot;HackTheBox-ForwardSlash&quot; title=&quot;ForwardSlash&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A linux machine which vulnerable to &lt;code&gt;LFI&lt;/code&gt; or &lt;code&gt;Directory Traversal&lt;/code&gt; which the attacker can enumerate stuffs like &lt;code&gt;file://etc/passwd&lt;/code&gt; using &lt;code&gt;php-wrapper&lt;/code&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Penetration-Testing-Methodologies&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    
+      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    
+    
+      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
+      <category term="LFI" scheme="https://ph-payas0.github.io/tags/LFI/"/>
+    
+      <category term="directory-traversal" scheme="https://ph-payas0.github.io/tags/directory-traversal/"/>
+    
+      <category term="php-wrapper" scheme="https://ph-payas0.github.io/tags/php-wrapper/"/>
+    
+      <category term="Cryptography" scheme="https://ph-payas0.github.io/tags/Cryptography/"/>
+    
+      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>HackTheBox - ServMon 👾💻</title>
@@ -107,7 +150,7 @@
     <link href="https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/"/>
     <id>https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/</id>
     <published>2020-05-28T18:26:29.000Z</published>
-    <updated>2020-06-09T21:34:57.873Z</updated>
+    <updated>2020-07-06T23:14:22.527Z</updated>
     
     <summary type="html">
     
@@ -174,9 +217,9 @@
     
       <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
-    
       <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    
+      <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
     
       <category term="OpenNetAdmin" scheme="https://ph-payas0.github.io/tags/OpenNetAdmin/"/>
     
@@ -260,6 +303,8 @@
     
       <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
+      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    
       <category term="MongoDB" scheme="https://ph-payas0.github.io/tags/MongoDB/"/>
     
       <category term="NoSQL" scheme="https://ph-payas0.github.io/tags/NoSQL/"/>
@@ -267,8 +312,6 @@
       <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
     
       <category term="jjs" scheme="https://ph-payas0.github.io/tags/jjs/"/>
-    
-      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
   </entry>
   
@@ -303,9 +346,9 @@
     
       <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
-    
       <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    
+      <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
     
       <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
     

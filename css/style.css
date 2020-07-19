@@ -334,6 +334,7 @@ body .h2 {
   position: relative;
   padding-left: 18px;
   display: block;
+  font-family: "DM Mono", typescript, monospace;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
   color: #eee;
@@ -420,7 +421,7 @@ body table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: 12.5px;
+  font-size: 14px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -429,7 +430,7 @@ body th {
   border-bottom: 1px dashed #666;
   color: #eee;
   font-weight: bold;
-  font-size: 13.5px;
+  font-size: 15px;
 }
 body td {
   padding: 0 8px;
@@ -437,8 +438,8 @@ body td {
 }
 @font-face {
   font-style: normal;
-  font-family: "Fira Mono";
-  src: local("Fira Mono"), url("../lib/site-font/FiraMono-Regular.ttf") format("truetype");
+  font-family: "Inconsolata";
+  src: local("Inconsolata"), url("../lib/site-font/Inconsolata-Regular.ttf") format("truetype");
 }
 *,
 *:before,
@@ -472,9 +473,9 @@ body {
   background-color: #111215;
   color: #eaeaea;
   font-display: swap;
-  font-size: 14.5px;
+  font-size: 16px;
   letter-spacing: 0.06em;
-  font-family: "Fira Mono", "Fira Mono", monospace;
+  font-family: "Inconsolata", "Inconsolata", monospace;
   font-weight: thin;
   line-height: 1.725;
   text-rendering: geometricPrecision;
@@ -1678,8 +1679,8 @@ article .content .caption {
   color: #111215;
   font-display: swap;
   font-weight: 400;
-  font-size: 11.600000000000001px;
-  font-family: "Fira Mono", "Fira Mono", monospace;
+  font-size: 12.8px;
+  font-family: "Inconsolata", "Inconsolata", monospace;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   text-align: center;
@@ -1857,7 +1858,7 @@ pre {
 pre code {
   display: block;
   font-size: 13px;
-  font-family: "Fira Mono", "Fira Mono", monospace;
+  font-family: "DM Mono", typescript, monospace;
   padding: 0;
   border: none;
 }
@@ -1865,7 +1866,7 @@ code {
   padding: 4px 6px;
   color: #ff69b4;
   background: #171717;
-  font-family: "Fira Mono", "Fira Mono", monospace;
+  font-family: "DM Mono", typescript, monospace;
   font-size: 14px;
   border-radius: 3px;
   -webkit-border-radius: 2px;
@@ -1876,7 +1877,7 @@ code {
   padding: 18px 20px;
   border-radius: 4px;
   background: #15161a;
-  font-family: "Fira Mono", "Fira Mono", monospace;
+  font-family: "DM Mono", typescript, monospace;
   -webkit-border-radius: 4px;
 }
 .highlight figcaption {

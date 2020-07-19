@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ph-payas0.github.io/2020-07-03/HackTheBox-ForwardSlash/</loc>
+    
+    <lastmod>2020-07-19T00:29:10.948Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/</loc>
+    
+    <lastmod>2020-07-06T23:14:22.527Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ph-payas0.github.io/2020-06-18/HackTheBox-ServMon/</loc>
     
     <lastmod>2020-07-04T13:34:45.747Z</lastmod>
@@ -75,13 +89,6 @@
     <loc>https://ph-payas0.github.io/2020-05-03/HackTheBox-OpenAdmin/</loc>
     
     <lastmod>2020-06-09T21:38:38.906Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/</loc>
-    
-    <lastmod>2020-06-09T21:34:57.873Z</lastmod>
     
   </url>
   
