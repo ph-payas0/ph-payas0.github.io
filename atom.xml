@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-07-19T00:29:10.948Z</updated>
+  <updated>2020-07-20T02:07:20.392Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ph-payas0.github.io/2020-07-03/HackTheBox-ForwardSlash/"/>
     <id>https://ph-payas0.github.io/2020-07-03/HackTheBox-ForwardSlash/</id>
     <published>2020-07-02T21:52:37.000Z</published>
-    <updated>2020-07-19T00:29:10.948Z</updated>
+    <updated>2020-07-20T02:07:20.392Z</updated>
     
     <summary type="html">
     
@@ -31,9 +31,7 @@
         
           &lt;p&gt;&lt;img src=&quot;/img/fslash/forward-slash.png&quot; alt=&quot;HackTheBox-ForwardSlash&quot; title=&quot;ForwardSlash&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A linux machine which vulnerable to &lt;code&gt;LFI&lt;/code&gt; or &lt;code&gt;Directory Traversal&lt;/code&gt; which the attacker can enumerate stuffs like &lt;code&gt;file://etc/passwd&lt;/code&gt; using &lt;code&gt;php-wrapper&lt;/code&gt;. &lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;Penetration-Testing-Methodologies&quot;&gt;&lt;a
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A linux machine which vulnerable to &lt;code&gt;LFI&lt;/code&gt; or &lt;code&gt;Directory Traversal&lt;/code&gt; which the attacker can enumerate stuffs like &lt;code&gt;file://etc/passwd&lt;/code&gt; using &lt;code&gt;php-wrapper&lt;/code&gt;. With that method we can get the &lt;code&gt;php-scripts&lt;/code&gt; that contains
         
       
     

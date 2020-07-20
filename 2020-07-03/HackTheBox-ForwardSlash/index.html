@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Quick Summary   → A linux machine which vulnerable to LFI or Directory Traversal which the attacker can enumerate stuffs like file:&#x2F;&#x2F;etc&#x2F;passwd using php-wrapper.   Penetration Testing Methodologies">
+    <meta name="description" content="Quick Summary   → A linux machine which vulnerable to LFI or Directory Traversal which the attacker can enumerate stuffs like file:&#x2F;&#x2F;etc&#x2F;passwd using php-wrapper. With that method we can get the php">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HackTheBox - ForwardSlash ⚔️">
 <meta property="og:url" content="https://ph-payas0.github.io/2020-07-03/HackTheBox-ForwardSlash/index.html">
 <meta property="og:site_name" content="❯ PΛYΛƧ0">
-<meta property="og:description" content="Quick Summary   → A linux machine which vulnerable to LFI or Directory Traversal which the attacker can enumerate stuffs like file:&#x2F;&#x2F;etc&#x2F;passwd using php-wrapper.   Penetration Testing Methodologies">
+<meta property="og:description" content="Quick Summary   → A linux machine which vulnerable to LFI or Directory Traversal which the attacker can enumerate stuffs like file:&#x2F;&#x2F;etc&#x2F;passwd using php-wrapper. With that method we can get the php">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://ph-payas0.github.io/img/fslash/forward-slash.png">
 <meta property="og:image" content="https://ph-payas0.github.io/img/fslash/fslash-homepage.png">
@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://ph-payas0.github.io/img/fslash/fslash-base64.png">
 <meta property="og:image" content="https://www.hackthebox.eu/badge/image/128965">
 <meta property="article:published_time" content="2020-07-02T21:52:37.000Z">
-<meta property="article:modified_time" content="2020-07-19T00:29:10.948Z">
+<meta property="article:modified_time" content="2020-07-20T02:07:20.392Z">
 <meta property="article:author" content="medz">
 <meta property="article:tag" content="retired">
 <meta property="article:tag" content="LFI">
@@ -204,7 +204,7 @@
   <div class="content" itemprop="articleBody">
     <p><img src="/img/fslash/forward-slash.png" alt="HackTheBox-ForwardSlash" title="ForwardSlash"></p>
 <hr>
-<h2 id="Quick-Summary"><a href="#Quick-Summary" class="headerlink" title="Quick Summary"></a>Quick Summary</h2><p>   → A linux machine which vulnerable to <code>LFI</code> or <code>Directory Traversal</code> which the attacker can enumerate stuffs like <code>file://etc/passwd</code> using <code>php-wrapper</code>. </p>
+<h2 id="Quick-Summary"><a href="#Quick-Summary" class="headerlink" title="Quick Summary"></a>Quick Summary</h2><p>   → A linux machine which vulnerable to <code>LFI</code> or <code>Directory Traversal</code> which the attacker can enumerate stuffs like <code>file://etc/passwd</code> using <code>php-wrapper</code>. With that method we can get the <code>php-scripts</code> that contains credentials of <code>chiv</code> and get in to machine with <code>SSH</code>. In privilege escalation part I need to get the second user <code>Pain</code> which need some <code>cryptography</code> knowledge to get the passphrase to open his <code>backups</code> file. In root part <code>pain</code> is have sudo privilege to run <code>cryptsetup</code> then I analyze the <code>encrypter.py</code> codes and made a simple script which decrypt the <code>cyphertext</code> then after executing I finally got the magic words for creating backups. from there I got the <code>id_rsa</code> keys of root.</p>
 <hr>
 <h2 id="Penetration-Testing-Methodologies"><a href="#Penetration-Testing-Methodologies" class="headerlink" title="Penetration Testing Methodologies"></a>Penetration Testing Methodologies</h2><ol>
 <li><p><strong>Network Scanning</strong></p>
@@ -327,7 +327,7 @@
 <h2 id="Privilege-Escalation"><a href="#Privilege-Escalation" class="headerlink" title="Privilege Escalation"></a>Privilege Escalation</h2><h3 id="Cryptography"><a href="#Cryptography" class="headerlink" title="Cryptography"></a>Cryptography</h3><p>Inside pain’s directory there’s another <code>notes</code> by <code>chiv</code></p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># bash</span></span><br><span class="line"></span><br><span class="line">pain@forwardslash:~$ ls</span><br><span class="line">encryptorinator  note.txt  user.txt</span><br><span class="line">pain@forwardslash:~$ cat note.txt </span><br><span class="line">Pain, even though they got into our server, I made sure to encrypt any important files <span class="keyword">and</span> then did some crypto magic on the key... I gave you the key in person the other day, so unless these hackers are some crypto experts we should be good to go.</span><br><span class="line"></span><br><span class="line">-chiv</span><br><span class="line">pain@forwardslash:~$</span><br></pre></td></tr></table></figure>
 
-<p>I notice that <code>pain</code> can run below the following commands that have <code>sudo privileges</code> without passwod</p>
+<p>I notice that <code>pain</code> can run below the following commands that have <code>sudo privileges</code> without password</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta"># bash</span></span><br><span class="line"></span><br><span class="line">pain@forwardslash:~$ sudo -l</span><br><span class="line">Matching Defaults entries <span class="keyword">for</span> pain on forwardslash:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User pain may <span class="built_in">run</span> the following commands on forwardslash:</span><br><span class="line">    (root) NOPASSWD: /sbin/cryptsetup luksOpen *</span><br><span class="line">    (root) NOPASSWD: /bin/mount /dev/mapper/backup ./mnt/</span><br><span class="line">    (root) NOPASSWD: /bin/umount ./mnt/</span><br></pre></td></tr></table></figure>
 
 
