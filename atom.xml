@@ -187,11 +187,11 @@
   </entry>
   
   <entry>
-    <title>HackTheBox - Resolute 🗔🔥</title>
+    <title>HackTheBox - Resolute 📟 🔥</title>
     <link href="https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/"/>
     <id>https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/</id>
     <published>2020-05-28T18:26:29.000Z</published>
-    <updated>2020-07-06T23:14:22.527Z</updated>
+    <updated>2020-07-27T13:04:32.578Z</updated>
     
     <summary type="html">
     
@@ -265,53 +265,6 @@
       <category term="OpenNetAdmin" scheme="https://ph-payas0.github.io/tags/OpenNetAdmin/"/>
     
       <category term="mysql" scheme="https://ph-payas0.github.io/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HackTheBox - Control ⚙️💻</title>
-    <link href="https://ph-payas0.github.io/2020-04-26/HackTheBox-Control/"/>
-    <id>https://ph-payas0.github.io/2020-04-26/HackTheBox-Control/</id>
-    <published>2020-04-26T11:06:52.000Z</published>
-    <updated>2020-07-04T04:07:31.050Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;/img/control/control-1.png&quot; alt=&quot;HackTheBox-Control&quot; title=&quot;Control machine details&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → This is really hard but a fan box machine. It has a vulnerable &lt;code&gt;PHP&lt;/code&gt; webapplication that you can access the admin panel by putting &lt;code&gt;X-Forwarded-For&lt;/code&gt; in &lt;code&gt;HTTP Header&lt;/code&gt; using &lt;strong&gt;&lt;a href=&quot;https://portswigger.net/burp&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
-    
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
-    
-    
-      <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
-    
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
-    
-      <category term="mysql" scheme="https://ph-payas0.github.io/tags/mysql/"/>
-    
-      <category term="registry" scheme="https://ph-payas0.github.io/tags/registry/"/>
-    
-      <category term="sqli" scheme="https://ph-payas0.github.io/tags/sqli/"/>
-    
-      <category term="http-header" scheme="https://ph-payas0.github.io/tags/http-header/"/>
-    
-      <category term="sqlmap" scheme="https://ph-payas0.github.io/tags/sqlmap/"/>
-    
-      <category term="webshell" scheme="https://ph-payas0.github.io/tags/webshell/"/>
-    
-      <category term="services" scheme="https://ph-payas0.github.io/tags/services/"/>
     
   </entry>
   
@@ -490,7 +443,7 @@
     <link href="https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/"/>
     <id>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</id>
     <published>2020-03-13T15:18:34.000Z</published>
-    <updated>2020-06-09T21:49:08.561Z</updated>
+    <updated>2020-08-11T18:41:57.850Z</updated>
     
     <summary type="html">
     
@@ -498,8 +451,8 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/postman/postman1.png&quot; alt=&quot;HackTheBox-Postman/postman.png&quot; title=&quot;Postman details&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → This easy machine is very fit to all beginners to learn the basic of Penetration Testing. The machine have a vulnerable software – &lt;code&gt;Redis&lt;/code&gt;.&lt;br&gt;   Redis is unprotected without a password set up, and so forth. The simplest thing you can do in such a case, is to
+          &lt;p&gt;&lt;img src=&quot;/img/postman/postman1.png&quot; alt=&quot;HackTheBox-Postman&quot; title=&quot;Postman details&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → This easy machine is very fit to all beginners to learn the basic of Penetration Testing. The machine have a vulnerable software – &lt;code&gt;Redis&lt;/code&gt;.&lt;br&gt;   Redis is unprotected without a password set up, and so forth. The simplest thing you can do in such a case, is to write random
         
       
     
