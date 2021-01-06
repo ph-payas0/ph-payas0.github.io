@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-11-11T17:11:44.913Z</updated>
+  <updated>2020-12-13T16:10:32.105Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ph-payas0.github.io/2020-07-15/HackTheBox-Sauna/"/>
     <id>https://ph-payas0.github.io/2020-07-15/HackTheBox-Sauna/</id>
     <published>2020-07-15T15:23:18.000Z</published>
-    <updated>2020-11-11T17:11:44.913Z</updated>
+    <updated>2020-12-13T16:10:32.105Z</updated>
     
     <summary type="html">
     
@@ -31,7 +31,7 @@
         
           &lt;p&gt;&lt;img src=&quot;/img/sauna/sauna.png&quot; alt=&quot;HackTheBox-Book&quot; title=&quot;Sauna&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A fun box machine running on Windows and Active directory installed on it. The website running on &lt;code&gt;port&lt;/code&gt; 80 has given some usernames on &lt;code&gt;abous-us&lt;/code&gt; page. I do brute force web directories like I always did on website enumeration but I didn’t find anything. Running
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A fun box machine running on Windows with great Active directory on it! The website running on &lt;code&gt;port&lt;/code&gt; 80 has given some usernames on &lt;code&gt;abous-us&lt;/code&gt; page. I do brute force web directories like I always did on website enumeration but I didn’t find anything. Running
         
       
     
