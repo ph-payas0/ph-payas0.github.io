@@ -2,136 +2,621 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-07-15/HackTheBox-Sauna/</loc>
-    
-    <lastmod>2020-12-13T16:10:32.105Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ph-payas0.github.io/2020-07-08/HackTheBox-Book/</loc>
-    
-    <lastmod>2020-08-15T17:04:13.286Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</loc>
-    
-    <lastmod>2020-08-11T19:11:37.602Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/</loc>
-    
-    <lastmod>2020-07-27T13:04:32.578Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ph-payas0.github.io/about/index.html</loc>
     
-    <lastmod>2020-07-27T12:59:38.320Z</lastmod>
+    <lastmod>2024-12-09</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/</loc>
+    <loc>https://ph-payas0.github.io/2024-10-22/USB/android/HID-Attacks-using-Android-Device/</loc>
     
-    <lastmod>2020-07-27T12:57:21.336Z</lastmod>
+    <lastmod>2024-12-09</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-07-03/HackTheBox-ForwardSlash/</loc>
+    <loc>https://ph-payas0.github.io/2019-07-12/HackTheBox/PenTesting/HackTheBox-Wall/</loc>
     
-    <lastmod>2020-07-20T02:07:20.392Z</lastmod>
+    <lastmod>2024-12-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-06-18/HackTheBox-ServMon/</loc>
+    <loc>https://ph-payas0.github.io/2020-07-15/HackTheBox/PenTesting/HackTheBox-Sauna/</loc>
     
-    <lastmod>2020-07-04T13:34:45.747Z</lastmod>
+    <lastmod>2020-12-13</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-06-04/HackTheBox-Nest/</loc>
+    <loc>https://ph-payas0.github.io/2020-07-08/HackTheBox/PenTesting/HackTheBox-Book/</loc>
     
-    <lastmod>2020-06-09T21:54:30.986Z</lastmod>
+    <lastmod>2020-08-15</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/</loc>
+    <loc>https://ph-payas0.github.io/2020-03-13/HackTheBox/PenTesting/HackTheBox-Postman/</loc>
     
-    <lastmod>2020-06-09T21:53:52.633Z</lastmod>
+    <lastmod>2020-08-11</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/</loc>
+    <loc>https://ph-payas0.github.io/2020-05-29/HackTheBox/PenTesting/HackTheBox-Resolute/</loc>
     
-    <lastmod>2020-06-09T21:52:39.577Z</lastmod>
+    <lastmod>2020-07-27</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-04-05/HackTheBox-Registry/</loc>
+    <loc>https://ph-payas0.github.io/2020-03-29/HackTheBox/PenTesting/HackTheBox-Sniper/</loc>
     
-    <lastmod>2020-06-09T21:44:44.059Z</lastmod>
+    <lastmod>2020-07-27</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/</loc>
+    <loc>https://ph-payas0.github.io/2020-07-03/HackTheBox/PenTesting/HackTheBox-ForwardSlash/</loc>
     
-    <lastmod>2020-06-09T21:43:17.100Z</lastmod>
+    <lastmod>2020-07-20</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-04-18/HackTheBox-Mango/</loc>
+    <loc>https://ph-payas0.github.io/2020-06-18/HackTheBox/PenTesting/HackTheBox-ServMon/</loc>
     
-    <lastmod>2020-06-09T21:41:00.778Z</lastmod>
+    <lastmod>2020-07-04</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ph-payas0.github.io/2020-05-03/HackTheBox-OpenAdmin/</loc>
+    <loc>https://ph-payas0.github.io/2020-06-04/HackTheBox/PenTesting/HackTheBox-Nest/</loc>
     
-    <lastmod>2020-06-09T21:38:38.906Z</lastmod>
+    <lastmod>2020-06-09</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-02-20/HackTheBox/PenTesting/HackTheBox-Bankrobber/</loc>
+    
+    <lastmod>2020-06-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-04-05/HackTheBox/PenTesting/HackTheBox-Registry/</loc>
+    
+    <lastmod>2020-06-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-04-11/HackTheBox/PenTesting/HackTheBox-Traverxec/</loc>
+    
+    <lastmod>2020-06-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-04-18/HackTheBox/PenTesting/HackTheBox-Mango/</loc>
+    
+    <lastmod>2020-06-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/2020-05-03/HackTheBox/PenTesting/HackTheBox-OpenAdmin/</loc>
+    
+    <lastmod>2020-06-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/projects/index.html</loc>
     
-    <lastmod>2020-02-04T01:32:46.295Z</lastmod>
+    <lastmod>2020-02-04</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/index.html</loc>
     
-    <lastmod>2020-02-02T19:36:58.482Z</lastmod>
+    <lastmod>2020-02-02</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/categories/index.html</loc>
     
-    <lastmod>2020-01-30T08:32:36.076Z</lastmod>
+    <lastmod>2020-01-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/search/index.html</loc>
     
-    <lastmod>2020-01-30T07:02:57.000Z</lastmod>
+    <lastmod>2020-01-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://ph-payas0.github.io/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/android/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/hid/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/usb/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/LFI/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/SQL-truncate/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/javascript/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/Local-File-Read/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/Logrotate/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/linux/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/retired/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/ctf/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/pentest/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/sql-injection/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/xss/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/rce/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/windows/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/directory-traversal/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/php-wrapper/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/Cryptography/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/MongoDB/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/NoSQL/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/GTFObins/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/jjs/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/cve/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/ssh/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/OpenNetAdmin/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/mysql/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/dotnetfiddle/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/smb/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/smbclient/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/vb-net/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/decompiler/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/assembly/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/ftp/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/nvms-1000/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/nsclient/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/traversal/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/docker/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/registry/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/cms/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/restic/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/php/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/lfi/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/rfi/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/chm/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/unintended/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/powershell/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/htb/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/python/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/python-impackets/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/GetNPUsers/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/Evil-WinRM/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/WinPEAS/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/Ldap/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/dns/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/dll/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/metasploit/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://ph-payas0.github.io/categories/USB/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/categories/HackTheBox/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/categories/USB/android/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/categories/HackTheBox/PenTesting/</loc>
+    <lastmod>2024-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
 </urlset>

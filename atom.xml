@@ -1,610 +1,613 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>❯ PΛYΛƧ0</title>
+  <title>❯ ＰＡＹＡＳ０</title>
   
   <subtitle>Coffee Maker &amp; Janitor</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="https://ph-payas0.github.io/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2020-12-13T16:10:32.105Z</updated>
+  <updated>2024-12-09T18:54:32.945Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
-    <name>medz</name>
+    <name>Medz</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HID-Attacks-using-Android-Device</title>
+    <link href="https://ph-payas0.github.io/2024-10-22/USB/android/HID-Attacks-using-Android-Device/"/>
+    <id>https://ph-payas0.github.io/2024-10-22/USB/android/HID-Attacks-using-Android-Device/</id>
+    <published>2024-10-21T16:38:52.000Z</published>
+    <updated>2024-12-09T18:54:32.945Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Your-Android-as-Rubber-Ducky-against-targeted-Android-device-or-PC&quot;&gt;&lt;a href=&quot;#Your-Android-as-Rubber-Ducky-against-targeted-Android-device-or-PC&quot; class=&quot;headerlink&quot; title=&quot;Your Android as Rubber Ducky against targeted Android device or PC&quot;&gt;&lt;/a&gt;Your Android as Rubber Ducky against targeted Android device or PC&lt;/h2&gt;&lt;p&gt;I learned basic &lt;code&gt;Android Hacking&lt;/code&gt; when I started my career in &lt;code&gt;CyberSecurity&lt;/code&gt;. When I was in college, I attended a seminar about how people can be</summary>
+        
+      
+    
+    
+    
+    <category term="USB" scheme="https://ph-payas0.github.io/categories/USB/"/>
+    
+    <category term="android" scheme="https://ph-payas0.github.io/categories/USB/android/"/>
+    
+    
+    <category term="android" scheme="https://ph-payas0.github.io/tags/android/"/>
+    
+    <category term="hid" scheme="https://ph-payas0.github.io/tags/hid/"/>
+    
+    <category term="usb" scheme="https://ph-payas0.github.io/tags/usb/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HackTheBox - Sauna 🔥💥</title>
-    <link href="https://ph-payas0.github.io/2020-07-15/HackTheBox-Sauna/"/>
-    <id>https://ph-payas0.github.io/2020-07-15/HackTheBox-Sauna/</id>
+    <link href="https://ph-payas0.github.io/2020-07-15/HackTheBox/PenTesting/HackTheBox-Sauna/"/>
+    <id>https://ph-payas0.github.io/2020-07-15/HackTheBox/PenTesting/HackTheBox-Sauna/</id>
     <published>2020-07-15T15:23:18.000Z</published>
     <updated>2020-12-13T16:10:32.105Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/sauna/sauna.png&quot; alt=&quot;HackTheBox-Book&quot; title=&quot;Sauna&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/sauna/sauna.png&quot; alt=&quot;HackTheBox-Book&quot; title=&quot;Sauna&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A fun box machine running on Windows with great Active directory on it! The website running on &lt;code&gt;port&lt;/code&gt; 80 has given some usernames on &lt;code&gt;abous-us&lt;/code&gt; page. I do brute force web directories like I always did on website enumeration but I didn’t find anything. Running
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A fun box machine running on Windows with great Active directory on it! The website running on &lt;code&gt;port&lt;/code&gt; 80 has given some usernames on &lt;code&gt;abous-us&lt;/code&gt; page. I do brute force web directories like I always did on website enumeration but I didn’t find anything. Running</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
     
-      <category term="python-impackets" scheme="https://ph-payas0.github.io/tags/python-impackets/"/>
+    <category term="python-impackets" scheme="https://ph-payas0.github.io/tags/python-impackets/"/>
     
-      <category term="GetNPUsers" scheme="https://ph-payas0.github.io/tags/GetNPUsers/"/>
+    <category term="GetNPUsers" scheme="https://ph-payas0.github.io/tags/GetNPUsers/"/>
     
-      <category term="Evil-WinRM" scheme="https://ph-payas0.github.io/tags/Evil-WinRM/"/>
+    <category term="Evil-WinRM" scheme="https://ph-payas0.github.io/tags/Evil-WinRM/"/>
     
-      <category term="WinPEAS" scheme="https://ph-payas0.github.io/tags/WinPEAS/"/>
+    <category term="WinPEAS" scheme="https://ph-payas0.github.io/tags/WinPEAS/"/>
     
-      <category term="Ldap" scheme="https://ph-payas0.github.io/tags/Ldap/"/>
+    <category term="Ldap" scheme="https://ph-payas0.github.io/tags/Ldap/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - Book 📚 📖</title>
-    <link href="https://ph-payas0.github.io/2020-07-08/HackTheBox-Book/"/>
-    <id>https://ph-payas0.github.io/2020-07-08/HackTheBox-Book/</id>
+    <link href="https://ph-payas0.github.io/2020-07-08/HackTheBox/PenTesting/HackTheBox-Book/"/>
+    <id>https://ph-payas0.github.io/2020-07-08/HackTheBox/PenTesting/HackTheBox-Book/</id>
     <published>2020-07-08T00:52:03.000Z</published>
     <updated>2020-08-15T17:04:13.286Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/book/book.png&quot; alt=&quot;HackTheBox-Book&quot; title=&quot;Book&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/book/book.png&quot; alt=&quot;HackTheBox-Book&quot; title=&quot;Book&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A fun box machine that was vulnerable to &lt;code&gt;sql truncate&lt;/code&gt; and &lt;code&gt;local file read&lt;/code&gt; via javascript injection. As the attacker I was able to get the admin by bypassing the limit characters of &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt;. I created another account to send pdf files
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A fun box machine that was vulnerable to &lt;code&gt;sql truncate&lt;/code&gt; and &lt;code&gt;local file read&lt;/code&gt; via javascript injection. As the attacker I was able to get the admin by bypassing the limit characters of &lt;code&gt;username&lt;/code&gt; and &lt;code&gt;password&lt;/code&gt;. I created another account to send pdf files</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="LFI" scheme="https://ph-payas0.github.io/tags/LFI/"/>
     
-      <category term="LFI" scheme="https://ph-payas0.github.io/tags/LFI/"/>
+    <category term="SQL truncate" scheme="https://ph-payas0.github.io/tags/SQL-truncate/"/>
     
-      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    <category term="javascript" scheme="https://ph-payas0.github.io/tags/javascript/"/>
     
-      <category term="SQL truncate" scheme="https://ph-payas0.github.io/tags/SQL-truncate/"/>
+    <category term="Local File Read" scheme="https://ph-payas0.github.io/tags/Local-File-Read/"/>
     
-      <category term="javascript" scheme="https://ph-payas0.github.io/tags/javascript/"/>
+    <category term="Logrotate" scheme="https://ph-payas0.github.io/tags/Logrotate/"/>
     
-      <category term="Local File Read" scheme="https://ph-payas0.github.io/tags/Local-File-Read/"/>
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
-      <category term="Logrotate" scheme="https://ph-payas0.github.io/tags/Logrotate/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - ForwardSlash ⚔️</title>
-    <link href="https://ph-payas0.github.io/2020-07-03/HackTheBox-ForwardSlash/"/>
-    <id>https://ph-payas0.github.io/2020-07-03/HackTheBox-ForwardSlash/</id>
+    <link href="https://ph-payas0.github.io/2020-07-03/HackTheBox/PenTesting/HackTheBox-ForwardSlash/"/>
+    <id>https://ph-payas0.github.io/2020-07-03/HackTheBox/PenTesting/HackTheBox-ForwardSlash/</id>
     <published>2020-07-02T21:52:37.000Z</published>
     <updated>2020-07-20T02:07:20.392Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/fslash/forward-slash.png&quot; alt=&quot;HackTheBox-ForwardSlash&quot; title=&quot;ForwardSlash&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/fslash/forward-slash.png&quot; alt=&quot;HackTheBox-ForwardSlash&quot; title=&quot;ForwardSlash&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A linux machine which vulnerable to &lt;code&gt;LFI&lt;/code&gt; or &lt;code&gt;Directory Traversal&lt;/code&gt; which the attacker can enumerate stuffs like &lt;code&gt;file://etc/passwd&lt;/code&gt; using &lt;code&gt;php-wrapper&lt;/code&gt;. With that method we can get the &lt;code&gt;php-scripts&lt;/code&gt; that contains
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → A linux machine which vulnerable to &lt;code&gt;LFI&lt;/code&gt; or &lt;code&gt;Directory Traversal&lt;/code&gt; which the attacker can enumerate stuffs like &lt;code&gt;file://etc/passwd&lt;/code&gt; using &lt;code&gt;php-wrapper&lt;/code&gt;. With that method we can get the &lt;code&gt;php-scripts&lt;/code&gt; that contains</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="LFI" scheme="https://ph-payas0.github.io/tags/LFI/"/>
     
-      <category term="LFI" scheme="https://ph-payas0.github.io/tags/LFI/"/>
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
-      <category term="directory-traversal" scheme="https://ph-payas0.github.io/tags/directory-traversal/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="php-wrapper" scheme="https://ph-payas0.github.io/tags/php-wrapper/"/>
+    <category term="directory-traversal" scheme="https://ph-payas0.github.io/tags/directory-traversal/"/>
     
-      <category term="Cryptography" scheme="https://ph-payas0.github.io/tags/Cryptography/"/>
+    <category term="php-wrapper" scheme="https://ph-payas0.github.io/tags/php-wrapper/"/>
     
-      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    <category term="Cryptography" scheme="https://ph-payas0.github.io/tags/Cryptography/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - ServMon 👾💻</title>
-    <link href="https://ph-payas0.github.io/2020-06-18/HackTheBox-ServMon/"/>
-    <id>https://ph-payas0.github.io/2020-06-18/HackTheBox-ServMon/</id>
+    <link href="https://ph-payas0.github.io/2020-06-18/HackTheBox/PenTesting/HackTheBox-ServMon/"/>
+    <id>https://ph-payas0.github.io/2020-06-18/HackTheBox/PenTesting/HackTheBox-ServMon/</id>
     <published>2020-06-18T02:21:03.000Z</published>
     <updated>2020-07-04T13:34:45.747Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/servmon/servmon-box.png&quot; alt=&quot;HackTheBox-ServMon&quot; title=&quot;ServMon&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/servmon/servmon-box.png&quot; alt=&quot;HackTheBox-ServMon&quot; title=&quot;ServMon&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Very nice box which is fit for beginners’ a machine that vulnerable to &lt;code&gt;directory traversal&lt;/code&gt; which the attacker can enumerate several files and gain access to this machine. I will say the privilege escalation part is quiet hard if you take the web server of
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Very nice box which is fit for beginners’ a machine that vulnerable to &lt;code&gt;directory traversal&lt;/code&gt; which the attacker can enumerate several files and gain access to this machine. I will say the privilege escalation part is quiet hard if you take the web server of</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
     
-      <category term="ftp" scheme="https://ph-payas0.github.io/tags/ftp/"/>
+    <category term="ftp" scheme="https://ph-payas0.github.io/tags/ftp/"/>
     
-      <category term="nvms-1000" scheme="https://ph-payas0.github.io/tags/nvms-1000/"/>
+    <category term="nvms-1000" scheme="https://ph-payas0.github.io/tags/nvms-1000/"/>
     
-      <category term="nsclient++" scheme="https://ph-payas0.github.io/tags/nsclient/"/>
+    <category term="nsclient++" scheme="https://ph-payas0.github.io/tags/nsclient/"/>
     
-      <category term="traversal" scheme="https://ph-payas0.github.io/tags/traversal/"/>
+    <category term="traversal" scheme="https://ph-payas0.github.io/tags/traversal/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - Nest 🕊️🐣</title>
-    <link href="https://ph-payas0.github.io/2020-06-04/HackTheBox-Nest/"/>
-    <id>https://ph-payas0.github.io/2020-06-04/HackTheBox-Nest/</id>
+    <link href="https://ph-payas0.github.io/2020-06-04/HackTheBox/PenTesting/HackTheBox-Nest/"/>
+    <id>https://ph-payas0.github.io/2020-06-04/HackTheBox/PenTesting/HackTheBox-Nest/</id>
     <published>2020-06-03T21:46:19.000Z</published>
     <updated>2020-06-09T21:54:30.986Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/nest/nest-box.png&quot; alt=&quot;HackTheBox-Nest&quot; title=&quot;Nest&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/nest/nest-box.png&quot; alt=&quot;HackTheBox-Nest&quot; title=&quot;Nest&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → This machine is really awesome because it has a lot of enumeration especially on &lt;code&gt;SMBClient&lt;/code&gt; side. you need a strong knowledge of active directory. Rated as &lt;code&gt;easy machine&lt;/code&gt; but other says it is medium box because there is a debugging mode that beginner players have some
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → This machine is really awesome because it has a lot of enumeration especially on &lt;code&gt;SMBClient&lt;/code&gt; side. you need a strong knowledge of active directory. Rated as &lt;code&gt;easy machine&lt;/code&gt; but other says it is medium box because there is a debugging mode that beginner players have some</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
     
-      <category term="dotnetfiddle" scheme="https://ph-payas0.github.io/tags/dotnetfiddle/"/>
+    <category term="dotnetfiddle" scheme="https://ph-payas0.github.io/tags/dotnetfiddle/"/>
     
-      <category term="smb" scheme="https://ph-payas0.github.io/tags/smb/"/>
+    <category term="smb" scheme="https://ph-payas0.github.io/tags/smb/"/>
     
-      <category term="smbclient" scheme="https://ph-payas0.github.io/tags/smbclient/"/>
+    <category term="smbclient" scheme="https://ph-payas0.github.io/tags/smbclient/"/>
     
-      <category term="vb.net" scheme="https://ph-payas0.github.io/tags/vb-net/"/>
+    <category term="vb.net" scheme="https://ph-payas0.github.io/tags/vb-net/"/>
     
-      <category term="decompiler" scheme="https://ph-payas0.github.io/tags/decompiler/"/>
+    <category term="decompiler" scheme="https://ph-payas0.github.io/tags/decompiler/"/>
     
-      <category term="assembly" scheme="https://ph-payas0.github.io/tags/assembly/"/>
+    <category term="assembly" scheme="https://ph-payas0.github.io/tags/assembly/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - Resolute 📟 🔥</title>
-    <link href="https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/"/>
-    <id>https://ph-payas0.github.io/2020-05-29/HackTheBox-Resolute/</id>
+    <link href="https://ph-payas0.github.io/2020-05-29/HackTheBox/PenTesting/HackTheBox-Resolute/"/>
+    <id>https://ph-payas0.github.io/2020-05-29/HackTheBox/PenTesting/HackTheBox-Resolute/</id>
     <published>2020-05-28T18:26:29.000Z</published>
     <updated>2020-07-27T13:04:32.578Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/Resolute/htb-Resolute.png&quot; alt=&quot;HackTheBox-OpenAdmin&quot; title=&quot;RESOLUTE&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/Resolute/htb-Resolute.png&quot; alt=&quot;HackTheBox-OpenAdmin&quot; title=&quot;RESOLUTE&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Resolute run as medium machine but an easy box’ in the first phase you easily find the &lt;code&gt;users&lt;/code&gt; of the box and 1 &lt;code&gt;password&lt;/code&gt; by using &lt;code&gt;enum4linux&lt;/code&gt;. I run &lt;strong&gt;&lt;code&gt;hydra&lt;/code&gt;&lt;/strong&gt; to bruteforce the &lt;code&gt;users&lt;/code&gt; using 1
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Resolute run as medium machine but an easy box’ in the first phase you easily find the &lt;code&gt;users&lt;/code&gt; of the box and 1 &lt;code&gt;password&lt;/code&gt; by using &lt;code&gt;enum4linux&lt;/code&gt;. I run &lt;strong&gt;&lt;code&gt;hydra&lt;/code&gt;&lt;/strong&gt; to bruteforce the &lt;code&gt;users&lt;/code&gt; using 1</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
     
-      <category term="smb" scheme="https://ph-payas0.github.io/tags/smb/"/>
+    <category term="smb" scheme="https://ph-payas0.github.io/tags/smb/"/>
     
-      <category term="dns" scheme="https://ph-payas0.github.io/tags/dns/"/>
+    <category term="dns" scheme="https://ph-payas0.github.io/tags/dns/"/>
     
-      <category term="dll" scheme="https://ph-payas0.github.io/tags/dll/"/>
+    <category term="dll" scheme="https://ph-payas0.github.io/tags/dll/"/>
     
-      <category term="metasploit" scheme="https://ph-payas0.github.io/tags/metasploit/"/>
+    <category term="metasploit" scheme="https://ph-payas0.github.io/tags/metasploit/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - OpenAdmin 📦</title>
-    <link href="https://ph-payas0.github.io/2020-05-03/HackTheBox-OpenAdmin/"/>
-    <id>https://ph-payas0.github.io/2020-05-03/HackTheBox-OpenAdmin/</id>
+    <link href="https://ph-payas0.github.io/2020-05-03/HackTheBox/PenTesting/HackTheBox-OpenAdmin/"/>
+    <id>https://ph-payas0.github.io/2020-05-03/HackTheBox/PenTesting/HackTheBox-OpenAdmin/</id>
     <published>2020-05-03T07:43:47.000Z</published>
     <updated>2020-06-09T21:38:38.906Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/openA/open-admin.png&quot; alt=&quot;HackTheBox-OpenAdmin&quot; title=&quot;Open Admin&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/openA/open-admin.png&quot; alt=&quot;HackTheBox-OpenAdmin&quot; title=&quot;Open Admin&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → another easy box machine that you can easily find the exploit and get the shell with &lt;strong&gt;RCE&lt;/strong&gt; or &lt;strong&gt;Remote Code Execution&lt;/strong&gt; if you know how to do with the exploit. The second phase is to find user in &lt;code&gt;mysql database&lt;/code&gt; base on the
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → another easy box machine that you can easily find the exploit and get the shell with &lt;strong&gt;RCE&lt;/strong&gt; or &lt;strong&gt;Remote Code Execution&lt;/strong&gt; if you know how to do with the exploit. The second phase is to find user in &lt;code&gt;mysql database&lt;/code&gt; base on the</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
     
-      <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
+    <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
     
-      <category term="OpenNetAdmin" scheme="https://ph-payas0.github.io/tags/OpenNetAdmin/"/>
+    <category term="OpenNetAdmin" scheme="https://ph-payas0.github.io/tags/OpenNetAdmin/"/>
     
-      <category term="mysql" scheme="https://ph-payas0.github.io/tags/mysql/"/>
+    <category term="mysql" scheme="https://ph-payas0.github.io/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - Mango 🥭🥭</title>
-    <link href="https://ph-payas0.github.io/2020-04-18/HackTheBox-Mango/"/>
-    <id>https://ph-payas0.github.io/2020-04-18/HackTheBox-Mango/</id>
+    <link href="https://ph-payas0.github.io/2020-04-18/HackTheBox/PenTesting/HackTheBox-Mango/"/>
+    <id>https://ph-payas0.github.io/2020-04-18/HackTheBox/PenTesting/HackTheBox-Mango/</id>
     <published>2020-04-18T01:18:53.000Z</published>
     <updated>2020-06-09T21:41:00.778Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/mango/mango-machine.png&quot; alt=&quot;HackTheBox-Sniper&quot; title=&quot;Mango machine details&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/mango/mango-machine.png&quot; alt=&quot;HackTheBox-Sniper&quot; title=&quot;Mango machine details&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Another awesome machine – &lt;code&gt;&amp;quot;Mango&amp;quot;&lt;/code&gt; is a medium difficulty box that was vulnerable into &lt;code&gt;NoSQL injection&lt;/code&gt; attack. I was stuck on the &lt;code&gt;main page&lt;/code&gt; and the &lt;code&gt;analytics page&lt;/code&gt; for an hour until i realize that was only a
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Another awesome machine – &lt;code&gt;&amp;quot;Mango&amp;quot;&lt;/code&gt; is a medium difficulty box that was vulnerable into &lt;code&gt;NoSQL injection&lt;/code&gt; attack. I was stuck on the &lt;code&gt;main page&lt;/code&gt; and the &lt;code&gt;analytics page&lt;/code&gt; for an hour until i realize that was only a</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
-      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="MongoDB" scheme="https://ph-payas0.github.io/tags/MongoDB/"/>
+    <category term="MongoDB" scheme="https://ph-payas0.github.io/tags/MongoDB/"/>
     
-      <category term="NoSQL" scheme="https://ph-payas0.github.io/tags/NoSQL/"/>
+    <category term="NoSQL" scheme="https://ph-payas0.github.io/tags/NoSQL/"/>
     
-      <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
+    <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
     
-      <category term="jjs" scheme="https://ph-payas0.github.io/tags/jjs/"/>
+    <category term="jjs" scheme="https://ph-payas0.github.io/tags/jjs/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - Traverxec 🗜️📂</title>
-    <link href="https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/"/>
-    <id>https://ph-payas0.github.io/2020-04-11/HackTheBox-Traverxec/</id>
+    <link href="https://ph-payas0.github.io/2020-04-11/HackTheBox/PenTesting/HackTheBox-Traverxec/"/>
+    <id>https://ph-payas0.github.io/2020-04-11/HackTheBox/PenTesting/HackTheBox-Traverxec/</id>
     <published>2020-04-10T20:41:29.000Z</published>
     <updated>2020-06-09T21:43:17.100Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/traverxec/traverxec1.png&quot; alt=&quot;HackTheBox-Traverxec&quot; title=&quot;Traverxec machine details&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/traverxec/traverxec1.png&quot; alt=&quot;HackTheBox-Traverxec&quot; title=&quot;Traverxec machine details&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Traverxec is another beginner friendly machine that runs on Linux. The machine has two open ports which is port &lt;code&gt;22&lt;/code&gt; &amp;amp; &lt;code&gt;80&lt;/code&gt; that basically running a &lt;code&gt;SSH&lt;/code&gt; and &lt;code&gt;HTTP Service&lt;/code&gt;.  There is nothing to use on the website
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Traverxec is another beginner friendly machine that runs on Linux. The machine has two open ports which is port &lt;code&gt;22&lt;/code&gt; &amp;amp; &lt;code&gt;80&lt;/code&gt; that basically running a &lt;code&gt;SSH&lt;/code&gt; and &lt;code&gt;HTTP Service&lt;/code&gt;.  There is nothing to use on the website</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
     
-      <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
+    <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
     
-      <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
+    <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
     
-      <category term="ssh" scheme="https://ph-payas0.github.io/tags/ssh/"/>
+    <category term="ssh" scheme="https://ph-payas0.github.io/tags/ssh/"/>
     
-      <category term="traversal" scheme="https://ph-payas0.github.io/tags/traversal/"/>
+    <category term="traversal" scheme="https://ph-payas0.github.io/tags/traversal/"/>
     
-      <category term="lfi" scheme="https://ph-payas0.github.io/tags/lfi/"/>
+    <category term="lfi" scheme="https://ph-payas0.github.io/tags/lfi/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - Registry 🧰🗂️</title>
-    <link href="https://ph-payas0.github.io/2020-04-05/HackTheBox-Registry/"/>
-    <id>https://ph-payas0.github.io/2020-04-05/HackTheBox-Registry/</id>
+    <link href="https://ph-payas0.github.io/2020-04-05/HackTheBox/PenTesting/HackTheBox-Registry/"/>
+    <id>https://ph-payas0.github.io/2020-04-05/HackTheBox/PenTesting/HackTheBox-Registry/</id>
     <published>2020-04-04T19:04:24.000Z</published>
     <updated>2020-06-09T21:44:44.059Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/registry/registry-info.png&quot; alt=&quot;HackTheBox-Registry&quot; title=&quot;Registry machine details&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → My very first Hard box is now retired. A machine where you can exploit if you know what the technology is used. The initial scan has give me a big hint that this machine is using &lt;a href=&quot;https://www.docker.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Docker&lt;/a&gt; and 3rd party
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/registry/registry-info.png&quot; alt=&quot;HackTheBox-Registry&quot; title=&quot;Registry machine details&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → My very first Hard box is now retired. A machine where you can exploit if you know what the technology is used. The initial scan has give me a big hint that this machine is using &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; and 3rd party server named &lt;code&gt;REGISTRY</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
-      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="docker" scheme="https://ph-payas0.github.io/tags/docker/"/>
+    <category term="docker" scheme="https://ph-payas0.github.io/tags/docker/"/>
     
-      <category term="registry" scheme="https://ph-payas0.github.io/tags/registry/"/>
+    <category term="registry" scheme="https://ph-payas0.github.io/tags/registry/"/>
     
-      <category term="cms" scheme="https://ph-payas0.github.io/tags/cms/"/>
+    <category term="cms" scheme="https://ph-payas0.github.io/tags/cms/"/>
     
-      <category term="restic" scheme="https://ph-payas0.github.io/tags/restic/"/>
+    <category term="restic" scheme="https://ph-payas0.github.io/tags/restic/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - Sniper 🏷️🎯</title>
-    <link href="https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/"/>
-    <id>https://ph-payas0.github.io/2020-03-29/HackTheBox-Sniper/</id>
+    <link href="https://ph-payas0.github.io/2020-03-29/HackTheBox/PenTesting/HackTheBox-Sniper/"/>
+    <id>https://ph-payas0.github.io/2020-03-29/HackTheBox/PenTesting/HackTheBox-Sniper/</id>
     <published>2020-03-29T03:16:47.000Z</published>
     <updated>2020-07-27T12:57:21.336Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/sniper/sniper-info2.png&quot; alt=&quot;HackTheBox-Sniper/sniper-info.png&quot; title=&quot;Sniper machine details&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Sniper is another windows machine that you can access in unintended method.&lt;br&gt;   The &lt;code&gt;PHP&lt;/code&gt; Web Application was supposed to be vulnerable into &lt;a href=&quot;https://www.acunetix.com/blog/articles/local-file-inclusion-lfi/&quot; target=&quot;_blank&quot;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/sniper/sniper-info2.png&quot; alt=&quot;HackTheBox-Sniper/sniper-info.png&quot; title=&quot;Sniper machine details&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Sniper is another windows machine that you can access in unintended method.&lt;br&gt;   The &lt;code&gt;PHP&lt;/code&gt; Web Application was supposed to be vulnerable into &lt;a href=&quot;https://www.acunetix.com/blog/articles/local-file-inclusion-lfi/&quot;&gt;LFI or Local File Inclusion&lt;/a&gt;</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
     
-      <category term="php" scheme="https://ph-payas0.github.io/tags/php/"/>
+    <category term="php" scheme="https://ph-payas0.github.io/tags/php/"/>
     
-      <category term="lfi" scheme="https://ph-payas0.github.io/tags/lfi/"/>
+    <category term="lfi" scheme="https://ph-payas0.github.io/tags/lfi/"/>
     
-      <category term="rfi" scheme="https://ph-payas0.github.io/tags/rfi/"/>
+    <category term="rfi" scheme="https://ph-payas0.github.io/tags/rfi/"/>
     
-      <category term="chm" scheme="https://ph-payas0.github.io/tags/chm/"/>
+    <category term="chm" scheme="https://ph-payas0.github.io/tags/chm/"/>
     
-      <category term="unintended" scheme="https://ph-payas0.github.io/tags/unintended/"/>
+    <category term="unintended" scheme="https://ph-payas0.github.io/tags/unintended/"/>
     
-      <category term="powershell" scheme="https://ph-payas0.github.io/tags/powershell/"/>
+    <category term="powershell" scheme="https://ph-payas0.github.io/tags/powershell/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - Postman 📮✉️</title>
-    <link href="https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/"/>
-    <id>https://ph-payas0.github.io/2020-03-13/HackTheBox-Postman/</id>
+    <link href="https://ph-payas0.github.io/2020-03-13/HackTheBox/PenTesting/HackTheBox-Postman/"/>
+    <id>https://ph-payas0.github.io/2020-03-13/HackTheBox/PenTesting/HackTheBox-Postman/</id>
     <published>2020-03-13T15:18:34.000Z</published>
     <updated>2020-08-11T19:11:37.602Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/postman/postman1.png&quot; alt=&quot;HackTheBox-Postman&quot; title=&quot;Postman details&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → This easy machine is very fit to all beginners to learn the basic of Penetration Testing. The machine have a vulnerable software – &lt;code&gt;Redis&lt;/code&gt;.&lt;br&gt;   Redis is unprotected without a password set up, and so forth. The simplest thing you can do in such a case, is to write random
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/postman/postman1.png&quot; alt=&quot;HackTheBox-Postman&quot; title=&quot;Postman details&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → This easy machine is very fit to all beginners to learn the basic of Penetration Testing. The machine have a vulnerable software – &lt;code&gt;Redis&lt;/code&gt;.&lt;br&gt;   Redis is unprotected without a password set up, and so forth. The simplest thing you can do in such a case, is to write random</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
-      <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
     
-      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
     
-      <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
+    <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
     
-      <category term="ssh" scheme="https://ph-payas0.github.io/tags/ssh/"/>
+    <category term="ssh" scheme="https://ph-payas0.github.io/tags/ssh/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - Bankrobber 💰💰</title>
-    <link href="https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/"/>
-    <id>https://ph-payas0.github.io/2020-02-20/HackTheBox-Bankrobber/</id>
+    <link href="https://ph-payas0.github.io/2020-02-20/HackTheBox/PenTesting/HackTheBox-Bankrobber/"/>
+    <id>https://ph-payas0.github.io/2020-02-20/HackTheBox/PenTesting/HackTheBox-Bankrobber/</id>
     <published>2020-02-20T10:35:26.000Z</published>
     <updated>2020-06-09T21:52:39.577Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/bank/bank-detail1.png&quot; alt=&quot;HackTheBox-Bankrobber/bank-detail.png&quot; title=&quot;Bankrobber machine details&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/bank/bank-detail1.png&quot; alt=&quot;HackTheBox-Bankrobber/bank-detail.png&quot; title=&quot;Bankrobber machine details&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Quick Summary&lt;/p&gt;
-&lt;p&gt;   → Insane machine – Bankrobber is a Web Application that vulnerable to &lt;code&gt;XSS&lt;/code&gt;, &lt;code&gt;SQL Injection&lt;/code&gt; and &lt;code&gt;RCE&lt;/code&gt; that I have to exploit to get the Admin credentials by using XSS.&lt;br&gt;   SQL Injection to study how’s the &lt;code&gt;backdoorchecker.php&lt;/code&gt; work, do command injection inside the machine from Web Application to get
+&lt;p&gt;   → Insane machine – Bankrobber is a Web Application that vulnerable to &lt;code&gt;XSS&lt;/code&gt;, &lt;code&gt;SQL Injection&lt;/code&gt; and &lt;code&gt;RCE&lt;/code&gt; that I have to exploit to get the Admin credentials by using XSS.&lt;br&gt;   SQL Injection to study how’s the &lt;code&gt;backdoorchecker.php&lt;/code&gt; work, do command injection inside the machine from Web Application to get</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
+    <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
     
-      <category term="sql-injection" scheme="https://ph-payas0.github.io/tags/sql-injection/"/>
+    <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
     
-      <category term="xss" scheme="https://ph-payas0.github.io/tags/xss/"/>
+    <category term="sql-injection" scheme="https://ph-payas0.github.io/tags/sql-injection/"/>
     
-      <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
+    <category term="xss" scheme="https://ph-payas0.github.io/tags/xss/"/>
     
-      <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
     
   </entry>
   
   <entry>
     <title>HackTheBox - Wall 🧱🔨</title>
-    <link href="https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/"/>
-    <id>https://ph-payas0.github.io/2019-07-12/HackTheBox-Wall/</id>
+    <link href="https://ph-payas0.github.io/2019-07-12/HackTheBox/PenTesting/HackTheBox-Wall/"/>
+    <id>https://ph-payas0.github.io/2019-07-12/HackTheBox/PenTesting/HackTheBox-Wall/</id>
     <published>2019-07-11T17:14:32.000Z</published>
-    <updated>2020-06-09T21:53:52.633Z</updated>
+    <updated>2024-12-05T18:48:48.243Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;img src=&quot;/img/wall/wall-detail.png&quot; alt=&quot;HackTheBox-Wall/Nmap.png&quot; title=&quot;Wall machine details&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Wall is my very first machine on HackTheBox that I hacked. It is running in Web Application that vulnerable to &lt;code&gt;RCE&lt;/code&gt;(Remote Code Execution), a classification of security vulnerabilities. &lt;code&gt;RCE&lt;/code&gt; enables a remote attacker to execute arbitrary code,
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/img/wall/wall-detail.png&quot; alt=&quot;HackTheBox-Wall/Nmap.png&quot; title=&quot;Wall machine details&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Summary&quot;&gt;&lt;a href=&quot;#Quick-Summary&quot; class=&quot;headerlink&quot; title=&quot;Quick Summary&quot;&gt;&lt;/a&gt;Quick Summary&lt;/h2&gt;&lt;p&gt;   → Wall is my very first machine on HackTheBox that I hacked. It is running in Web Application that vulnerable to &lt;code&gt;RCE&lt;/code&gt;(Remote Code Execution), a classification of security vulnerabilities. &lt;code&gt;RCE&lt;/code&gt; enables a remote attacker to execute arbitrary code,</summary>
         
       
     
-    </summary>
     
     
-      <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
+    <category term="HackTheBox" scheme="https://ph-payas0.github.io/categories/HackTheBox/"/>
     
-      <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
+    <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-      <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
-      <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-      <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
+    <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
     
-      <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
     
-      <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
     
-      <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
+    <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
     
-      <category term="htb" scheme="https://ph-payas0.github.io/tags/htb/"/>
+    <category term="htb" scheme="https://ph-payas0.github.io/tags/htb/"/>
     
-      <category term="python" scheme="https://ph-payas0.github.io/tags/python/"/>
+    <category term="python" scheme="https://ph-payas0.github.io/tags/python/"/>
     
   </entry>
   
