@@ -6,7 +6,7 @@
   <link href="https://ph-payas0.github.io/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2024-12-09T18:54:32.945Z</updated>
+  <updated>2024-12-10T18:37:47.067Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>HID-Attacks-using-Android-Device</title>
+    <title>New Kali Instance 🍥</title>
+    <link href="https://ph-payas0.github.io/2024-12-11/Boring-things/New-Kali-Instance/"/>
+    <id>https://ph-payas0.github.io/2024-12-11/Boring-things/New-Kali-Instance/</id>
+    <published>2024-12-10T17:35:32.000Z</published>
+    <updated>2024-12-10T18:37:47.067Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Automate-Installing-your-Tools-in-new-Kali-Environment&quot;&gt;&lt;a href=&quot;#Automate-Installing-your-Tools-in-new-Kali-Environment&quot; class=&quot;headerlink&quot; title=&quot;Automate Installing your Tools in new Kali Environment&quot;&gt;&lt;/a&gt;Automate Installing your Tools in new Kali Environment&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/img/kali-instances/debian.png&quot; alt=&quot;Debian-Logo&quot;&gt;&lt;/p&gt;
+&lt;p&gt;There are things that we really can’t avoid happening while we’re working, such as the breakdown of something important to us, and it’s even worse if we</summary>
+        
+      
+    
+    
+    
+    <category term="Boring things" scheme="https://ph-payas0.github.io/categories/Boring-things/"/>
+    
+    
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    
+    <category term="python" scheme="https://ph-payas0.github.io/tags/python/"/>
+    
+    <category term="automation" scheme="https://ph-payas0.github.io/tags/automation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HID-Attacks-using-Android-Device 🤖 👾</title>
     <link href="https://ph-payas0.github.io/2024-10-22/USB/android/HID-Attacks-using-Android-Device/"/>
     <id>https://ph-payas0.github.io/2024-10-22/USB/android/HID-Attacks-using-Android-Device/</id>
     <published>2024-10-21T16:38:52.000Z</published>
-    <updated>2024-12-09T18:54:32.945Z</updated>
+    <updated>2024-12-10T17:31:20.054Z</updated>
     
     
       

@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ph-payas0.github.io/about/index.html</loc>
+    <loc>https://ph-payas0.github.io/2024-12-11/Boring-things/New-Kali-Instance/</loc>
     
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://ph-payas0.github.io/2024-10-22/USB/android/HID-Attacks-using-Android-Device/</loc>
+    
+    <lastmod>2024-12-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/about/index.html</loc>
     
     <lastmod>2024-12-09</lastmod>
     
@@ -184,7 +193,7 @@
 
   <url>
     <loc>https://ph-payas0.github.io/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -192,399 +201,406 @@
   
   <url>
     <loc>https://ph-payas0.github.io/tags/android/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/hid/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/usb/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/LFI/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/SQL-truncate/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/javascript/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/Local-File-Read/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/Logrotate/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/linux/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/retired/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/ctf/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/pentest/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/sql-injection/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/xss/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/rce/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/windows/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/directory-traversal/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/php-wrapper/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/Cryptography/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/MongoDB/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/NoSQL/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/GTFObins/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/jjs/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/cve/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/ssh/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/OpenNetAdmin/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/mysql/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/dotnetfiddle/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/smb/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/smbclient/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/vb-net/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/decompiler/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/assembly/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/ftp/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/nvms-1000/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/nsclient/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/traversal/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/docker/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/registry/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/cms/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/restic/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/php/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/lfi/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/rfi/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/chm/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/unintended/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/powershell/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/htb/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/python/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/python-impackets/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/GetNPUsers/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/Evil-WinRM/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/WinPEAS/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/Ldap/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/dns/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/dll/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/tags/metasploit/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/tags/automation/</loc>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -593,28 +609,35 @@
   
   <url>
     <loc>https://ph-payas0.github.io/categories/USB/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/categories/HackTheBox/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/categories/USB/android/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ph-payas0.github.io/categories/HackTheBox/PenTesting/</loc>
-    <lastmod>2024-12-09</lastmod>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ph-payas0.github.io/categories/Boring-things/</loc>
+    <lastmod>2024-12-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
