@@ -6,7 +6,7 @@
   <link href="https://ph-payas0.github.io/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2024-12-10T17:31:20.054Z</updated>
+  <updated>2025-07-07T06:53:25.169Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -17,11 +17,84 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>HID-Attacks-using-Android-Device 🤖 👾</title>
+    <title>One Liner and Automated Tools For Hunting Collections</title>
+    <link href="https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/"/>
+    <id>https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/</id>
+    <published>2025-04-17T06:40:51.000Z</published>
+    <updated>2025-07-07T06:53:25.169Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Some-of-my-One-Liner-and-Automated-tools-collections&quot;&gt;&lt;a href=&quot;#Some-of-my-One-Liner-and-Automated-tools-collections&quot; class=&quot;headerlink&quot; title=&quot;Some of my One Liner and Automated tools collections&quot;&gt;&lt;/a&gt;Some of my One Liner and Automated tools collections&lt;/h2&gt;&lt;p&gt;Many experienced and penetration testers, bug hunter or other people that work in offensive security use well-crafted one-liners to automate specific parts of their workflow — from passive recon to vulnerability</summary>
+        
+      
+    
+    
+    
+    <category term="tools" scheme="https://ph-payas0.github.io/categories/tools/"/>
+    
+    <category term="automation" scheme="https://ph-payas0.github.io/categories/tools/automation/"/>
+    
+    
+    <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
+    
+    <category term="offensive security" scheme="https://ph-payas0.github.io/tags/offensive-security/"/>
+    
+    <category term="bug bounty" scheme="https://ph-payas0.github.io/tags/bug-bounty/"/>
+    
+    <category term="tool" scheme="https://ph-payas0.github.io/tags/tool/"/>
+    
+    <category term="cli" scheme="https://ph-payas0.github.io/tags/cli/"/>
+    
+    <category term="gui-tool" scheme="https://ph-payas0.github.io/tags/gui-tool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Practical Guide For Reconnaissance</title>
+    <link href="https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/"/>
+    <id>https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/</id>
+    <published>2025-02-09T05:52:15.000Z</published>
+    <updated>2025-07-07T03:57:50.545Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Reconnaissance-A-Guide-for-Web-App-Security-Testing&quot;&gt;&lt;a href=&quot;#Reconnaissance-A-Guide-for-Web-App-Security-Testing&quot; class=&quot;headerlink&quot; title=&quot;Reconnaissance: A Guide for Web App Security Testing&quot;&gt;&lt;/a&gt;Reconnaissance: A Guide for Web App Security Testing&lt;/h2&gt;&lt;p&gt;Reconnaissance is everything. It’s the phase where hunters identify their target’s digital footprint — subdomains, endpoints, urls, technologies, and other surface-level exposures that can lead to deeper vulnerabilities.&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="tools" scheme="https://ph-payas0.github.io/categories/tools/"/>
+    
+    <category term="automation" scheme="https://ph-payas0.github.io/categories/tools/automation/"/>
+    
+    
+    <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
+    
+    <category term="offensive security" scheme="https://ph-payas0.github.io/tags/offensive-security/"/>
+    
+    <category term="bug bounty" scheme="https://ph-payas0.github.io/tags/bug-bounty/"/>
+    
+    <category term="tool" scheme="https://ph-payas0.github.io/tags/tool/"/>
+    
+    <category term="cli" scheme="https://ph-payas0.github.io/tags/cli/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HID Attacks using Android Device 🤖 👾</title>
     <link href="https://ph-payas0.github.io/2024-10-22/USB/android/HID-Attacks-using-Android-Device/"/>
     <id>https://ph-payas0.github.io/2024-10-22/USB/android/HID-Attacks-using-Android-Device/</id>
     <published>2024-10-21T16:38:52.000Z</published>
-    <updated>2024-12-10T17:31:20.054Z</updated>
+    <updated>2025-07-02T15:47:03.590Z</updated>
     
     
       
@@ -102,9 +175,9 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
-    
     <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
     <category term="python-impackets" scheme="https://ph-payas0.github.io/tags/python-impackets/"/>
     
@@ -123,7 +196,7 @@
     <link href="https://ph-payas0.github.io/2020-07-08/HackTheBox/PenTesting/HackTheBox-Book/"/>
     <id>https://ph-payas0.github.io/2020-07-08/HackTheBox/PenTesting/HackTheBox-Book/</id>
     <published>2020-07-08T00:52:03.000Z</published>
-    <updated>2020-08-15T17:04:13.286Z</updated>
+    <updated>2025-06-25T18:29:51.528Z</updated>
     
     
       
@@ -143,6 +216,8 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
     <category term="LFI" scheme="https://ph-payas0.github.io/tags/LFI/"/>
     
     <category term="SQL truncate" scheme="https://ph-payas0.github.io/tags/SQL-truncate/"/>
@@ -154,8 +229,6 @@
     <category term="Logrotate" scheme="https://ph-payas0.github.io/tags/Logrotate/"/>
     
     <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
-    
-    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
   </entry>
   
@@ -184,11 +257,11 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
     <category term="LFI" scheme="https://ph-payas0.github.io/tags/LFI/"/>
     
     <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
-    
-    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
     <category term="directory-traversal" scheme="https://ph-payas0.github.io/tags/directory-traversal/"/>
     
@@ -223,9 +296,9 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
-    
     <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
     <category term="ftp" scheme="https://ph-payas0.github.io/tags/ftp/"/>
     
@@ -262,9 +335,9 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
-    
     <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
     <category term="dotnetfiddle" scheme="https://ph-payas0.github.io/tags/dotnetfiddle/"/>
     
@@ -305,9 +378,9 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
-    
     <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
     <category term="smb" scheme="https://ph-payas0.github.io/tags/smb/"/>
     
@@ -344,11 +417,11 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
     
     <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-    <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
     <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
     
@@ -383,9 +456,9 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
-    
     <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
     <category term="MongoDB" scheme="https://ph-payas0.github.io/tags/MongoDB/"/>
     
@@ -422,11 +495,11 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
+    <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
     
     <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
-    <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
     <category term="GTFObins" scheme="https://ph-payas0.github.io/tags/GTFObins/"/>
     
@@ -464,9 +537,9 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
-    
     <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
     <category term="docker" scheme="https://ph-payas0.github.io/tags/docker/"/>
     
@@ -502,9 +575,9 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
-    
     <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
     <category term="php" scheme="https://ph-payas0.github.io/tags/php/"/>
     
@@ -544,13 +617,13 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
-    
-    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
-    
     <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
     
     <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
+    
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
     <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
     
@@ -583,8 +656,6 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
-    
     <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
     
     <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
@@ -596,6 +667,8 @@
     <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
     
     <category term="windows" scheme="https://ph-payas0.github.io/tags/windows/"/>
+    
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
     
   </entry>
   
@@ -623,15 +696,15 @@
     <category term="PenTesting" scheme="https://ph-payas0.github.io/categories/HackTheBox/PenTesting/"/>
     
     
-    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
-    
-    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
-    
     <category term="ctf" scheme="https://ph-payas0.github.io/tags/ctf/"/>
     
     <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
     
     <category term="rce" scheme="https://ph-payas0.github.io/tags/rce/"/>
+    
+    <category term="retired" scheme="https://ph-payas0.github.io/tags/retired/"/>
+    
+    <category term="linux" scheme="https://ph-payas0.github.io/tags/linux/"/>
     
     <category term="cve" scheme="https://ph-payas0.github.io/tags/cve/"/>
     

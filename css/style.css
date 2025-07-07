@@ -348,7 +348,7 @@ body h3 {
   text-decoration: blink;
   font-weight: 500;
   font-size: 1.1rem;
-  font-family: "DM Mono", monospace;
+  font-family: "Hack", monospace;
 }
 body h4,
 body h5,
@@ -439,8 +439,8 @@ body td {
 }
 @font-face {
   font-style: normal;
-  font-family: "Dico Mono";
-  src: local("DicoMono"), url("../lib/site-font/DicoMono-Regular.ttf") format("truetype");
+  font-family: "Monaco";
+  src: local("Monaco"), url("../lib/site-font/Monaco.ttf") format("truetype");
 }
 *,
 *:before,
@@ -476,7 +476,7 @@ body {
   font-display: swap;
   font-size: 16px;
   letter-spacing: 0.06em;
-  font-family: "DicoMono", "DicoMono";
+  font-family: "Monaco", "Monaco", typescript, monospace;
   font-weight: thin;
   line-height: 1.725;
   text-rendering: geometricPrecision;
@@ -1531,10 +1531,11 @@ article .content .caption {
   bottom: 0;
   margin-bottom: 10px;
   width: 100%;
-  color: #666;
+  color: #fff;
   vertical-align: top;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
+  font-family: "DicoMono", typescript;
 }
 #footer ul {
   margin: 0;
@@ -1550,6 +1551,7 @@ article .content .caption {
 }
 #footer li a {
   margin-right: 15px;
+  font-size: 13px;
 }
 #footer li:last-child {
   margin-right: 0;
@@ -1568,6 +1570,7 @@ article .content .caption {
 }
 #footer .footer-left {
   height: 20px;
+  font-size: 13px;
   vertical-align: middle;
   line-height: 20px;
 }
@@ -1590,7 +1593,7 @@ article .content .caption {
 }
 .pagination {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
   text-align: center;
 }
@@ -1681,7 +1684,7 @@ article .content .caption {
   font-display: swap;
   font-weight: 400;
   font-size: 12.8px;
-  font-family: "DicoMono", "DicoMono";
+  font-family: "Monaco", "Monaco", typescript, monospace;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   text-align: center;

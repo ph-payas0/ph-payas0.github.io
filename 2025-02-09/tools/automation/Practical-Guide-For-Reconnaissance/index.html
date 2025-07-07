@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.2.1/baffle.min.js"></script>
+    <meta name="description" content="Reconnaissance: A Guide for Web App Security TestingReconnaissance is everything. It’s the phase where hunters identify their target’s digital footprint — subdomains, endpoints, urls, technologies, an">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Practical Guide For Reconnaissance">
+<meta property="og:url" content="https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/index.html">
+<meta property="og:site_name" content="❯ ＰＡＹＡＳ０">
+<meta property="og:description" content="Reconnaissance: A Guide for Web App Security TestingReconnaissance is everything. It’s the phase where hunters identify their target’s digital footprint — subdomains, endpoints, urls, technologies, an">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/reconn.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/tomcat.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/camera.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/footage.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/shodan-use-cases.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/yandex.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/fofa.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/fofa-search.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/fofa-results.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/dorks-1.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/sensitive-info.png">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/urlscan.png">
+<meta property="og:image" content="https://opengraph.githubassets.com/c873a1f0ce7bc690f2d0c4554f891ec88e7ac2a668e883d839a2d4533db25a92/BullsEye0/dorks-eye">
+<meta property="og:image" content="https://opengraph.githubassets.com/3d78295404d2f7cd3471c6dc0091c4caa3160cad6106cb762d3c2a516e7d125f/Atharv834/S3BucketMisconf">
+<meta property="og:image" content="https://opengraph.githubassets.com/62e5d663fe7d1f8f50642763d9554186cb0fe5410523f719303c0121b9f51f18/mexploit30/java2s3">
+<meta property="og:image" content="https://ph-payas0.github.io/img/Reconn/dji-wayback.png">
+<meta property="og:image" content="https://opengraph.githubassets.com/9a50dd6ba4e3514441d32d64e78a6da7b3b582c22fcf3d93cd772595afe20ede/byt3hx/jsleak">
+<meta property="og:image" content="https://www.hackthebox.eu/badge/image/128965">
+<meta property="article:published_time" content="2025-02-09T05:52:15.000Z">
+<meta property="article:modified_time" content="2025-07-07T03:57:50.545Z">
+<meta property="article:author" content="Medz">
+<meta property="article:tag" content="pentest">
+<meta property="article:tag" content="offensive security">
+<meta property="article:tag" content="bug bounty">
+<meta property="article:tag" content="tool">
+<meta property="article:tag" content="cli">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ph-payas0.github.io/img/Reconn/reconn.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon-1.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Practical Guide For Reconnaissance</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="❯ ＰＡＹＡＳ０" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2025-04-17/tools/automation/collections-for-hunting/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2024-10-22/USB/android/HID-Attacks-using-Android-Device/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&text=Practical Guide For Reconnaissance"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&title=Practical Guide For Reconnaissance"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&is_video=false&description=Practical Guide For Reconnaissance"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Practical Guide For Reconnaissance&body=Check out this article: https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&title=Practical Guide For Reconnaissance"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&title=Practical Guide For Reconnaissance"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&title=Practical Guide For Reconnaissance"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&title=Practical Guide For Reconnaissance"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&name=Practical Guide For Reconnaissance&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&t=Practical Guide For Reconnaissance"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reconnaissance-A-Guide-for-Web-App-Security-Testing"><span class="toc-number">1.</span> <span class="toc-text">Reconnaissance: A Guide for Web App Security Testing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you%E2%80%99ll-learn"><span class="toc-number">1.1.</span> <span class="toc-text">What you’ll learn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you%E2%80%99ll-need"><span class="toc-number">1.2.</span> <span class="toc-text">What you’ll need</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tools-Cli"><span class="toc-number">1.3.</span> <span class="toc-text">Tools &#x2F; Cli</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Reconn-Phase"><span class="toc-number">2.</span> <span class="toc-text">The Reconn Phase</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%AA-Practical-Use-Cases"><span class="toc-number">2.1.</span> <span class="toc-text">🧪 Practical Use Cases</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URLScan"><span class="toc-number">3.</span> <span class="toc-text">URLScan</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-query-in-URLScan"><span class="toc-number">3.1.</span> <span class="toc-text">Basic query in URLScan</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Censys"><span class="toc-number">4.</span> <span class="toc-text">Censys</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%92%BB-Python-Using-Censys-CLI-for-Recon"><span class="toc-number">4.1.</span> <span class="toc-text">💻 Python: Using Censys CLI for Recon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%8D-Censys-CLI-Usage"><span class="toc-number">4.2.</span> <span class="toc-text">🔍 Censys CLI Usage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Combining-CLI-Tools-for-Deep-Recon-and-Content-Discovery"><span class="toc-number">5.</span> <span class="toc-text">Combining CLI Tools for Deep Recon and Content Discovery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%B0-Key-Tools-in-This-Phase"><span class="toc-number">5.1.</span> <span class="toc-text">🧰 Key Tools in This Phase</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9A%80-Sample-Recon-Workflow"><span class="toc-number">5.2.</span> <span class="toc-text">🚀 Sample Recon Workflow</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%94%A5-Passive-Recon-Chain-of-tools"><span class="toc-number">6.</span> <span class="toc-text">🔥 Passive Recon Chain of tools:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%97%BA%EF%B8%8F-Domain-Enumeration"><span class="toc-number">6.1.</span> <span class="toc-text">🗺️ Domain Enumeration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%A5-Filter-hosts-in-a-target"><span class="toc-number">6.2.</span> <span class="toc-text">🔥 Filter hosts in a target</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%BE-Screenshot-to-save-time"><span class="toc-number">6.3.</span> <span class="toc-text">🧾 Screenshot to save time</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%97%83%EF%B8%8F-Wayback-Gau-Uro-Httpx-GF"><span class="toc-number">6.4.</span> <span class="toc-text">🗃️ Wayback + Gau + Uro + Httpx + GF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%8D-Find-APIs-JS-Endpoints-from-Archived-URLs"><span class="toc-number">6.5.</span> <span class="toc-text">🔍 Find APIs + JS Endpoints from Archived URLs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%90-JS-Secrets-Auth-Token-Discovery"><span class="toc-number">6.6.</span> <span class="toc-text">🔐 JS Secrets &amp; Auth Token Discovery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%A0-4-Directory-Wordlist-Fuzzing-from-Extracted-Paths"><span class="toc-number">6.7.</span> <span class="toc-text">🧠 4. Directory &amp; Wordlist Fuzzing from Extracted Paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9A%99%EF%B8%8F-5-Custom-Param-Discovery-Fuzzing"><span class="toc-number">6.8.</span> <span class="toc-text">⚙️ 5. Custom Param Discovery + Fuzzing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%AF-6-Deep-Crawl-JS-Extraction-with-Katana"><span class="toc-number">6.9.</span> <span class="toc-text">🎯 6. Deep Crawl + JS Extraction with Katana</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9A%A1-7-Live-Hosts-Favicon-Hashing-Asset-Fingerprinting"><span class="toc-number">6.10.</span> <span class="toc-text">⚡ 7. Live Hosts + Favicon Hashing (Asset Fingerprinting)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%90-Hunt-for-API-Keys"><span class="toc-number">6.11.</span> <span class="toc-text">🔐 Hunt for API Keys</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Wait-are-we-done-Let%E2%80%99s-go-into-more-complex"><span class="toc-number">7.</span> <span class="toc-text">Wait are we done ? Let’s go into more complex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8D-Automating-Google-Dorking-with-DorkEye"><span class="toc-number">7.1.</span> <span class="toc-text">📍 Automating Google Dorking with DorkEye</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%98%81%EF%B8%8F-Using-S3Misconfig-for-Fast-Bucket-Enumeration"><span class="toc-number">7.2.</span> <span class="toc-text">☁️ Using S3Misconfig for Fast Bucket Enumeration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A6-Finding-S3-Buckets-with-HTTPX-and-Nuclei"><span class="toc-number">7.3.</span> <span class="toc-text">📦 Finding S3 Buckets with HTTPX and Nuclei</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8C%A9%EF%B8%8F-Extracting-S3-URLs-from-JavaScript-Files"><span class="toc-number">7.4.</span> <span class="toc-text">🌩️ Extracting S3 URLs from JavaScript Files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%99%A8%EF%B8%8F-Using-java2s3-tool-to-find-s3-urls-in-js-files"><span class="toc-number">7.5.</span> <span class="toc-text">♨️ Using java2s3 tool to find s3 urls in js files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%97%82%EF%B8%8F-Web-Archive-Enumeration"><span class="toc-number">7.6.</span> <span class="toc-text">🗂️ Web Archive Enumeration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A5-Efficient-Data-Retrieval-with-cURL"><span class="toc-number">7.7.</span> <span class="toc-text">📥 Efficient Data Retrieval with cURL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A6-JavaScript-File-Collection-Using-LazyEgg"><span class="toc-number">7.8.</span> <span class="toc-text">📦 JavaScript File Collection Using LazyEgg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9A%80-Active-Crawling-with-Katana"><span class="toc-number">7.9.</span> <span class="toc-text">🚀 Active Crawling with Katana</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%90%8C-Passive-Crawling-with-GAU"><span class="toc-number">7.10.</span> <span class="toc-text">🐌 Passive Crawling with GAU</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%90%9B-Refining-Results-with-HTTPX"><span class="toc-number">7.11.</span> <span class="toc-text">🐛 Refining Results with HTTPX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9D-Extracting-Sensitive-Information-with-JSLeak-tool"><span class="toc-number">7.12.</span> <span class="toc-text">📝 Extracting Sensitive Information with JSLeak tool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8C%90-Reconn-with-Nuclei-and-look-for-possible-vulnerabilities"><span class="toc-number">7.13.</span> <span class="toc-text">🌐 Reconn with Nuclei and look for possible vulnerabilities</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%92%8E-Another-Subdomain-Enumeration-but-with-Custom-Wordlists"><span class="toc-number">7.14.</span> <span class="toc-text">💎 Another Subdomain Enumeration but with Custom Wordlists</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9A-Waybackurls-GF-Patterns-for-Hidden-Endpoints"><span class="toc-number">7.15.</span> <span class="toc-text">📚 Waybackurls + GF Patterns for Hidden Endpoints</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9B%8F%EF%B8%8F-Parameter-Mining-with-Arjun"><span class="toc-number">7.16.</span> <span class="toc-text">⛏️ Parameter Mining with Arjun</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9B%A2%EF%B8%8F-Find-Live-Subdomains"><span class="toc-number">7.17.</span> <span class="toc-text">🛢️ Find Live Subdomains</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A1-Scan-for-Admin-Panels"><span class="toc-number">7.18.</span> <span class="toc-text">📡 Scan for Admin Panels</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A4-Open-Redirect-Testing-with-gau"><span class="toc-number">7.19.</span> <span class="toc-text">📤 Open Redirect Testing with gau</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Keynote"><span class="toc-number">8.</span> <span class="toc-text">Keynote</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">9.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+        <div class="content index py4">
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <embed src="/html/Kalimba.mp3" loop="true" autostart="true" width="2" height="0">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Practical Guide For Reconnaissance
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">❯ ＰＡＹＡＳ０</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-02-09T05:52:15.000Z" itemprop="datePublished">09-02-2025</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/tools/">tools</a> › <a class="category-link" href="/categories/tools/automation/">automation</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/bug-bounty/" rel="tag">bug bounty</a>, <a class="tag-link-link" href="/tags/cli/" rel="tag">cli</a>, <a class="tag-link-link" href="/tags/offensive-security/" rel="tag">offensive security</a>, <a class="tag-link-link" href="/tags/pentest/" rel="tag">pentest</a>, <a class="tag-link-link" href="/tags/tool/" rel="tag">tool</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Reconnaissance-A-Guide-for-Web-App-Security-Testing"><a href="#Reconnaissance-A-Guide-for-Web-App-Security-Testing" class="headerlink" title="Reconnaissance: A Guide for Web App Security Testing"></a>Reconnaissance: A Guide for Web App Security Testing</h2><p>Reconnaissance is everything. It’s the phase where hunters identify their target’s digital footprint — subdomains, endpoints, urls, technologies, and other surface-level exposures that can lead to deeper vulnerabilities.</p>
+<h3 id="What-you’ll-learn"><a href="#What-you’ll-learn" class="headerlink" title="What you’ll learn"></a>What you’ll learn</h3><p>In this article’ I will share some simple ways to fastest our reconn to the target. This guide is to help beginners and intermediate-level security practitioners, build a field-tested methodology for the reconnaissance phase of security assessments. It focuses on techniques proven effective in identifying exposed assets, services, and potential attack vectors across dynamic environments — including production, staging, and externally-facing systems. Rather than abstract theory, the content is grounded in actionable steps applicable to both offensive engagements and vulnerability research.</p>
+<h3 id="What-you’ll-need"><a href="#What-you’ll-need" class="headerlink" title="What you’ll need"></a>What you’ll need</h3><p>Well’ your prepared operating system, either Windows, Linux or Mac. As long as you have the prerequisites – <code>Python</code> (better if you have both Python3 and Python2), <code>Go</code>, <code>NodeJS</code>, <code>Git</code>, and <code>npm</code>, installed on your machine.</p>
+<h3 id="Tools-Cli"><a href="#Tools-Cli" class="headerlink" title="Tools &#x2F; Cli"></a>Tools &#x2F; Cli</h3><p>List of tools&#x2F;cli that we need for your reconn.<br>Or you can go to this link <a target="_blank" rel="noopener" href="https://github.com/KingOfBugbounty/KingOfBugBountyTips">KingOfBugBountyTips</a></p>
+</br>
+
+<table>
+<thead>
+<tr>
+<th>Tools</th>
+<th>Cli</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Shodan</td>
+<td>anew</td>
+</tr>
+<tr>
+<td>IntelX</td>
+<td>amass</td>
+</tr>
+<tr>
+<td>Censys</td>
+<td>subfinder</td>
+</tr>
+<tr>
+<td>crt.sh</td>
+<td>assetfinder</td>
+</tr>
+<tr>
+<td>FoFa</td>
+<td>dnsx</td>
+</tr>
+<tr>
+<td>Zap Proxy</td>
+<td>massdns</td>
+</tr>
+<tr>
+<td>SecurityTrails</td>
+<td>puredns</td>
+</tr>
+<tr>
+<td>URLScan</td>
+<td>httpx</td>
+</tr>
+<tr>
+<td></td>
+<td>naabu</td>
+</tr>
+<tr>
+<td></td>
+<td>hakrawler</td>
+</tr>
+<tr>
+<td></td>
+<td>waybackurls</td>
+</tr>
+<tr>
+<td></td>
+<td>gau</td>
+</tr>
+<tr>
+<td></td>
+<td>nuclei</td>
+</tr>
+<tr>
+<td></td>
+<td>Short Name Scanner (IIS)</td>
+</tr>
+<tr>
+<td></td>
+<td>anew</td>
+</tr>
+<tr>
+<td></td>
+<td>qsreplace</td>
+</tr>
+<tr>
+<td></td>
+<td>chaos</td>
+</tr>
+<tr>
+<td></td>
+<td>notify</td>
+</tr>
+<tr>
+<td></td>
+<td>ffuf</td>
+</tr>
+<tr>
+<td></td>
+<td>gowitness</td>
+</tr>
+<tr>
+<td></td>
+<td>gobuster</td>
+</tr>
+<tr>
+<td></td>
+<td>dirbuster</td>
+</tr>
+<tr>
+<td></td>
+<td>LinkFinder</td>
+</tr>
+<tr>
+<td></td>
+<td>SecretFinder</td>
+</tr>
+<tr>
+<td></td>
+<td>uro</td>
+</tr>
+<tr>
+<td></td>
+<td>Arjun</td>
+</tr>
+<tr>
+<td></td>
+<td>Corsy</td>
+</tr>
+<tr>
+<td></td>
+<td>Param</td>
+</tr>
+<tr>
+<td></td>
+<td>gf</td>
+</tr>
+<tr>
+<td></td>
+<td>httprobe</td>
+</tr>
+<tr>
+<td></td>
+<td>gf pattern</td>
+</tr>
+<tr>
+<td></td>
+<td>feroxbuster</td>
+</tr>
+<tr>
+<td></td>
+<td>urldedupe</td>
+</tr>
+<tr>
+<td></td>
+<td>DorkEye</td>
+</tr>
+<tr>
+<td></td>
+<td>S3BucketMisconf</td>
+</tr>
+<tr>
+<td></td>
+<td>java2s3</td>
+</tr>
+</tbody></table>
+<br>
+
+<p>I won’t be discussing all <code>CLI</code> and <code>tools</code> in this topic’ only the ones I frequently use during my reconn phase. However, it’s much better if you install all the tools mentioned.</p>
+</br>
+
+<hr>
+<h2 id="The-Reconn-Phase"><a href="#The-Reconn-Phase" class="headerlink" title="The Reconn Phase"></a>The Reconn Phase</h2><p>We will start our recon phase using Shodan.</p>
+<blockquote>
+<p>is a search engine that scans and indexes internet-connected devices — from web servers, APIs, industrial control systems, and webcams to IoT devices. Unlike Google, which indexes content, Shodan indexes services, ports, banners, and device metadata.</p>
+</blockquote>
+<p><img src="/img/Reconn/reconn.png" alt="Shodan Front Page"></p>
+<p>This makes it incredibly useful in the recon phase, especially when you want to:</p>
+<ul>
+<li><p>Identify exposed services and ports</p>
+</li>
+<li><p>Discover forgotten or shadow assets</p>
+</li>
+<li><p>Detect misconfigured devices or applications</p>
+</li>
+<li><p>Monitor internet-facing infrastructure</p>
+</li>
+</ul>
+<h3 id="🧪-Practical-Use-Cases"><a href="#🧪-Practical-Use-Cases" class="headerlink" title="🧪 Practical Use Cases"></a>🧪 Practical Use Cases</h3><table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Find exposed Web Server</td>
+<td><code>title:&quot;Tomcat&quot;</code></td>
+</tr>
+<tr>
+<td>Discover staging environments</td>
+<td><code>hostname:&quot;staging.target.com&quot;</code></td>
+</tr>
+<tr>
+<td>Check expired&#x2F;self-signed SSL</td>
+<td><code>ssl.cert.expired:true</code></td>
+</tr>
+<tr>
+<td>Identify old tech stacks</td>
+<td><code>product:&quot;Apache&quot; version:&quot;2.2&quot;</code></td>
+</tr>
+<tr>
+<td>Map org-wide IPs</td>
+<td><code>org:&quot;Target Inc&quot;</code> or ASN lookup</td>
+</tr>
+<tr>
+<td>Passive port scan</td>
+<td><code>hostname:&quot;api.target.com&quot;</code></td>
+</tr>
+<tr>
+<td>IoT leakage</td>
+<td><code>product:&quot;webcamxp&quot;</code> or <code>title:&quot;Camera&quot;</code></td>
+</tr>
+</tbody></table>
+<hr>
+<br>
+
+<p><strong>|</strong> 🔐 OffSec Tip<br>Shodan queries are passive — they don’t touch the target. Ideal for <code>stealth recon</code> or<br>checking scope boundaries. However, some results may be outdated, so verify findings before exploitation.</p>
+<p><img src="/img/Reconn/tomcat.png"></p>
+<p>You can also search for exposed CCTV:</p>
+<p><img src="/img/Reconn/camera.png"></p>
+<br>
+
+<p>browse on image tab and you’ll some footage:<br><img src="/img/Reconn/footage.png"></p>
+<br>
+
+
+<p>Alternatively we can use <code>shodan cli</code>. Right on your terminal:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install -U --user shodan</span><br></pre></td></tr></table></figure>
+
+
+<p>Once installed shodan cli, you need to setup your API token. You can find your own API token on their website just create an account:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shodan init &lt;YOUR_API_KEY&gt;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><strong>Command Overview</strong></p>
+<p><img src="/img/Reconn/shodan-use-cases.png"></p>
+<p><strong>Searching for your Target</strong></p>
+<p>-&gt; For example we will targeting <code>Yandex</code>. On your terminal run:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shodan host 158.160.167.21 <span class="comment"># Public IP of yandex. You can search on shodan web interface to find IP address</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/Reconn/yandex.png"></p>
+<p><strong>Search for Login page</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shodan search <span class="string">&#x27;http.title:&quot;Login&quot; yandex.com&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>then you will get another IP own by Yandex</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">51.250.98.174   443     preprod.scontrol.silky-hands.ru HTTP/1.1 200 OK\r\nServer: nginx\r\nDate: Thu, 26 Jun 2025 04:43:28 GMT\r\nContent-Type: text/html; charset=UTF-8\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nVary: Accept-Encoding\r\nSet-Cookie: _csrf-backend=2edd1a0e95da31a4abe1873eb6836eb2b1663bdb504721556afce62bce840643a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22irnO7jqsIFpBZD0Ji9--Ft86kzBg2gyN%22%3B%7D; path=/; HttpOnly; SameSite=Lax\r\nAlt-Svc: h3=&quot;:443&quot;; ma=86400\r\nX-XSS-Protection: 1; mode=block\r\nX-Content-Type-Options: nosniff\r\nReferrer-Policy: no-referrer-when-downgrade\r\nContent-Security-Policy: default-src &#x27;self&#x27;  https: wss: data: blob: &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;; frame-ancestors &#x27;self&#x27; http://webvisor.com http://*.webvisor.com https://*.yandex.ru https://*.yandex.com;\r\nPermissions-Policy: interest-cohort=()\r\nStrict-Transport-Security: max-age=63072000; includeSubDomains; preload\r\nX-Frame-Options: SAMEORIGIN\r\n\r\n</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<p>Now we will move to <strong>FoFa</strong></p>
+<p><strong>|</strong> FOFA is another powerful recon tool — often compared to Shodan</p>
+<blockquote>
+<p>(Fingerprint of All) is a cyber asset search engine, similar to Shodan and Censys, used for finding internet-facing systems and identifying their technologies.</p>
+</blockquote>
+<p><img src="/img/Reconn/fofa.png"></p>
+<p>Let’s try the basic <code>FoFa</code> search syntax:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">app=&quot;Tomcat&quot; &amp;&amp; country=&quot;PH&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/Reconn/fofa-search.png"></p>
+<p><img src="/img/Reconn/fofa-results.png"></p>
+<p>Other some basic query examples:</p>
+<p>By Domain:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">domain=<span class="string">&quot;target.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Searching for Login:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title=<span class="string">&quot;Login&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Searching for used backend:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">header=<span class="string">&quot;X-Powered-By: PHP&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Searching for Title:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">body=<span class="string">&quot;admin&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Searching for Sub-domains:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cert=<span class="string">&quot;*.target.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Searching for Web App:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">app=<span class="string">&quot;ThinkPHP&quot;</span> &amp;&amp; country=<span class="string">&quot;PH&quot;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>Next, let’s play with <strong>URLs</strong>:</p>
+<p>Lets go from basics. The <code>inurl</code> operator helps refine Google searches by filtering results that contain specific words or patterns within the URL. With the power of <code>Google dorks</code> for reconn phase, this is useful for finding.</p>
+<p>Example, let’s say:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">inurl: &quot;/admin/dashboard&quot; site:gov.ph</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/Reconn/dorks-1.png"></p>
+<p>Results will not only give with <code>dashboard</code> title, sometimes it gives some sensitive info like this:</p>
+<p><img src="/img/Reconn/sensitive-info.png"></p>
+<p>By analyzing commonly used paths across websites, we gain initial insight into potential entry points. However, for greater depth and precision, combining multiple dorks allows for more effective enumeration. Shifting our focus toward sensitive or context-specific paths—especially within web applications and APIs can significantly increase the likelihood of uncovering hidden endpoints or exposed files that may contain critical, overlooked information.</p>
+<h2 id="URLScan"><a href="#URLScan" class="headerlink" title="URLScan"></a>URLScan</h2><p>Playing with <code>URLs</code> we will use <a target="_blank" rel="noopener" href="https://urlscan.io/">urlscan.io</a>. A powerful tool for <code>recon</code>, <code>OSINT</code>, and <code>threat hunting</code>. It lets you search and explore historical scans of <code>URLs</code>, <code>subdomains</code>, <code>IPs</code>, and even <code>JavaScript</code> files.</p>
+<h3 id="Basic-query-in-URLScan"><a href="#Basic-query-in-URLScan" class="headerlink" title="Basic query in URLScan"></a>Basic query in URLScan</h3><p>🔹 By Domain or Subdomain:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">domain:target.com</span><br></pre></td></tr></table></figure>
+
+<p>🔹 By Hostname (e.g., subdomain):</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">page.domain:sub.target.com</span><br></pre></td></tr></table></figure>
+
+
+<p>🔹 By URL Contents (Path, Query, etc):</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">page.url:&quot;/admin&quot;</span><br><span class="line">page.url:&quot;api_key&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>In this example, I search for API’s of <code>yandex</code></p>
+<p>query:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">page.url:&quot;/api/v2/&quot; AND domain:yandex.ru</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/Reconn/urlscan.png"></p>
+<hr>
+<h2 id="Censys"><a href="#Censys" class="headerlink" title="Censys"></a>Censys</h2><p><strong>|</strong> A search engine for internet-facing infrastructure, similar to Shodan and FOFA, but with a stronger focus on TLS certificates, banners, and enterprise asset mapping.</p>
+<p><code>Censys</code> have WebUI and Cli for users. It depends on you—use whichever you’re more comfortable with.</p>
+<p>🛠️ Censys Web UI: Basic Search Examples:</p>
+<p>🔹 Search by Domain (including subdomains)</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">services.tls.certificates.leaf_data.subject.common_name: &quot;*.target.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Or:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">parsed.names: &quot;api.target.com&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>🔹 Find All Certs Issued to Domain</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">parsed.subject.common_name: &quot;target.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>🔹 Find IPs Hosting Domain</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">services.http.response.body: &quot;target.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Or:</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">services.tls.certificates.leaf_data.subject.common_name: &quot;target.com&quot;</span><br></pre></td></tr></table></figure>
+
+
+<p>🔹 Filter by Technology</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">services.http.response.html_title: &quot;Login&quot;</span><br><span class="line">services.banner: &quot;Apache&quot;</span><br><span class="line">services.service_name: &quot;https&quot;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="💻-Python-Using-Censys-CLI-for-Recon"><a href="#💻-Python-Using-Censys-CLI-for-Recon" class="headerlink" title="💻 Python: Using Censys CLI for Recon"></a>💻 Python: Using Censys CLI for Recon</h3><p>You can install Censys cli by running:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install censys</span><br></pre></td></tr></table></figure>
+
+<p>Now you have to authenticate with your account:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">censys config</span><br></pre></td></tr></table></figure>
+<p>| Enter your API ID and API Secret from <a target="_blank" rel="noopener" href="https://search.censys.io/account/api">https://search.censys.io/account/api</a></p>
+<h3 id="🔍-Censys-CLI-Usage"><a href="#🔍-Censys-CLI-Usage" class="headerlink" title="🔍 Censys CLI Usage"></a>🔍 Censys CLI Usage</h3><p>For basic host search:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">censys search <span class="string">&#x27;services.tls.certificates.leaf_data.subject.common_name: &quot;*.target.com&quot;&#x27;</span> --index hosts</span><br></pre></td></tr></table></figure>
+<p>| Finds IPs with SSL certs matching <code>*.target.com</code></p>
+<p>Extract Subdomains from Certs</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">censys search <span class="string">&#x27;parsed.names: &quot;target.com&quot;&#x27;</span> --index certificates --fields parsed.names</span><br></pre></td></tr></table></figure>
+<p>| Use this to collect wildcard subdomains and legacy cert names.</p>
+<p>Find Login Pages</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">censys search <span class="string">&#x27;services.http.response.html_title: &quot;Login&quot;&#x27;</span> --index hosts --fields ip, services.port, services.http.response.html_title</span><br></pre></td></tr></table></figure>
+
+
+<p>Check for Open Redis</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">censys search <span class="string">&#x27;services.service_name: &quot;redis&quot;&#x27;</span> --index hosts --fields ip, services.port</span><br></pre></td></tr></table></figure>
+
+
+<p>Looking for Jenkins Dashboards ?</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">censys search <span class="string">&#x27;services.http.response.html_title: &quot;Dashboard [Jenkins]&quot;&#x27;</span> --index hosts</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Combining-CLI-Tools-for-Deep-Recon-and-Content-Discovery"><a href="#Combining-CLI-Tools-for-Deep-Recon-and-Content-Discovery" class="headerlink" title="Combining CLI Tools for Deep Recon and Content Discovery"></a>Combining CLI Tools for Deep Recon and Content Discovery</h2><p>Once you’ve mapped your target domains and subdomains, the next phase is to actively extract hidden <strong>paths</strong>, <strong>parameters</strong>, <strong>endpoints</strong>, and <strong>secrets</strong>. This is where chaining multiple recon tools becomes essential. Instead of relying on a single source, we merge the power of tools like <code>waybackurls</code>, <code>gau</code>, <code>katana</code>, <code>feroxbuster</code>, <code>linkfinder</code>, <code>gf</code>, and more — allowing us to build a richer and more actionable attack surface.</p>
+<p><strong>|</strong> 🧠 The goal is not just enumeration, but triaging attack surface for real-world impact.</p>
+<hr>
+<h3 id="🧰-Key-Tools-in-This-Phase"><a href="#🧰-Key-Tools-in-This-Phase" class="headerlink" title="🧰 Key Tools in This Phase"></a>🧰 Key Tools in This Phase</h3><ul>
+<li>Collect archived and historical URLs</li>
+<li>JavaScript-aware crawler that discovers dynamic paths</li>
+<li>Directory brute-forcing</li>
+<li>Filter alive hosts and probe HTTP metadata</li>
+<li>Extract JS endpoints</li>
+<li>Find hardcoded secrets in JS files</li>
+<li>Filter interesting parameters for fuzzing</li>
+<li>Clean and mutate URLs for testing</li>
+</ul>
+<h3 id="🚀-Sample-Recon-Workflow"><a href="#🚀-Sample-Recon-Workflow" class="headerlink" title="🚀 Sample Recon Workflow"></a>🚀 Sample Recon Workflow</h3><ol>
+<li><p>🔄 Combine and Clean URLs from Passive Sources</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> subdomains.txt | waybackurls &gt; wayback.txt</span><br><span class="line"><span class="built_in">cat</span> subdomains.txt | gau &gt;&gt; wayback.txt</span><br><span class="line"><span class="built_in">cat</span> wayback.txt | <span class="built_in">sort</span> -u | uro &gt; clean_urls.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>✅ Probe for Live Endpoints</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> clean_urls.txt | httpx -silent -status-code -tech-detect -title &gt; live_urls.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>🧪 Extract JavaScript Endpoints</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> live_urls.txt | grep <span class="string">&#x27;\.js&#x27;</span> | httpx -silent &gt; js_links.txt</span><br><span class="line"><span class="built_in">cat</span> js_links.txt | xargs -n1 -P10 -I&#123;&#125; python3 linkfinder.py -i &#123;&#125; -o cli &gt;&gt; js_endpoints.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>🔐 Scan JS for Secrets</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> js_links.txt | xargs -n1 -P10 -I&#123;&#125; python3 SecretFinder.py -i &#123;&#125; -o cli &gt;&gt; secrets.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>🧩 Parameter Extraction + Filtering</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> clean_urls.txt | grep <span class="string">&#x27;=&#x27;</span> | gf xss &gt;&gt; xss.txt</span><br><span class="line"><span class="built_in">cat</span> clean_urls.txt | grep <span class="string">&#x27;=&#x27;</span> | gf sqli &gt;&gt; sqli.txt</span><br><span class="line"><span class="built_in">cat</span> clean_urls.txt | grep <span class="string">&#x27;=&#x27;</span> | gf redirect &gt;&gt; redirect.txt </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>🕷️ Crawling with Katana</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">katana -list subdomains.txt -jc -kf all -o katana.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>🌪️ Directory Bruteforcing</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ffuf -w wordlist.txt -u https://target.com/FUZZ -t 50 -mc 200,204,403</span><br></pre></td></tr></table></figure></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">feroxbuster -u https://target.com -w wordlist.txt -t 30 -o ferox.txt</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="🔥-Passive-Recon-Chain-of-tools"><a href="#🔥-Passive-Recon-Chain-of-tools" class="headerlink" title="🔥 Passive Recon Chain of tools:"></a>🔥 Passive Recon Chain of tools:</h2><h3 id="🗺️-Domain-Enumeration"><a href="#🗺️-Domain-Enumeration" class="headerlink" title="🗺️ Domain Enumeration"></a>🗺️ Domain Enumeration</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">subfinder -d target.com &gt; subs.txt</span><br><span class="line">assetfinder target.com &gt;&gt; subs.txt</span><br><span class="line">amass enum -passive -d target.com &gt;&gt; subs.txt</span><br><span class="line"></span><br><span class="line">amass enum -active -d <span class="string">&#x27;redacted.com&#x27;</span> -o amass_scan</span><br><span class="line">grep -i <span class="string">&#x27;cname&#x27;</span> amass_scan | <span class="built_in">cut</span> -d ‘ ‘ -f1 | anew subdomains.txt</span><br><span class="line">subfinder -d <span class="string">&#x27;redacted.com&#x27;</span> -all -recursive | anew subdomains.txt</span><br><span class="line"><span class="built_in">cat</span> subdomains.txt | httpx-pd -o subdomains_alive.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="🔥-Filter-hosts-in-a-target"><a href="#🔥-Filter-hosts-in-a-target" class="headerlink" title="🔥 Filter hosts in a target"></a>🔥 Filter hosts in a target</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> subs.txt | httpx -silent -title -tech-detect -status-code &gt; live.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="🧾-Screenshot-to-save-time"><a href="#🧾-Screenshot-to-save-time" class="headerlink" title="🧾 Screenshot to save time"></a>🧾 Screenshot to save time</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gowitness scan file -f subdomains_alive.txt --write-db</span><br><span class="line"></span><br><span class="line">gowitness report server</span><br></pre></td></tr></table></figure>
+
+<h3 id="🗃️-Wayback-Gau-Uro-Httpx-GF"><a href="#🗃️-Wayback-Gau-Uro-Httpx-GF" class="headerlink" title="🗃️ Wayback + Gau + Uro + Httpx + GF"></a>🗃️ Wayback + Gau + Uro + Httpx + GF</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Collect archived URLs</span></span><br><span class="line"><span class="built_in">cat</span> live.txt | waybackurls &gt; wb.txt</span><br><span class="line"><span class="built_in">cat</span> live.txt | gau &gt;&gt; wb.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Clean and deduplicate</span></span><br><span class="line"><span class="built_in">cat</span> wb.txt | uro &gt; urls.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Filter live URLs</span></span><br><span class="line"><span class="built_in">cat</span> urls.txt | httpx -silent -mc 200,403 -t 50 &gt; live.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Filter URLs with parameters (useful for fuzzing)</span></span><br><span class="line"><span class="built_in">cat</span> live.txt | grep <span class="string">&quot;=&quot;</span> | <span class="built_in">tee</span> params.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Extract XSS, SSRF, and SQLi parameters</span></span><br><span class="line"><span class="built_in">cat</span> params.txt | gf xss &gt; xss.txt</span><br><span class="line"><span class="built_in">cat</span> params.txt | gf sqli &gt; sqli.txt</span><br><span class="line"><span class="built_in">cat</span> params.txt | gf ssrf &gt; ssrf.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="🔍-Find-APIs-JS-Endpoints-from-Archived-URLs"><a href="#🔍-Find-APIs-JS-Endpoints-from-Archived-URLs" class="headerlink" title="🔍 Find APIs + JS Endpoints from Archived URLs"></a>🔍 Find APIs + JS Endpoints from Archived URLs</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> urls.txt | grep -Ei <span class="string">&quot;/api/|/v1/|/v2/|/graphql|/admin|/internal&quot;</span> &gt; apis.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Get all JS files</span></span><br><span class="line"><span class="built_in">cat</span> urls.txt | grep <span class="string">&quot;\.js$&quot;</span> | <span class="built_in">sort</span> -u &gt; js_files.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Scan JS for endpoints</span></span><br><span class="line"><span class="built_in">cat</span> js_files.txt | <span class="keyword">while</span> <span class="built_in">read</span> url; <span class="keyword">do</span></span><br><span class="line">  python3 linkfinder.py -i <span class="string">&quot;<span class="variable">$url</span>&quot;</span> -o cli</span><br><span class="line"><span class="keyword">done</span> | <span class="built_in">tee</span> js_endpoints.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="🔐-JS-Secrets-Auth-Token-Discovery"><a href="#🔐-JS-Secrets-Auth-Token-Discovery" class="headerlink" title="🔐 JS Secrets &amp; Auth Token Discovery"></a>🔐 JS Secrets &amp; Auth Token Discovery</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># SecretFinder for tokens, AWS keys, etc.</span></span><br><span class="line"><span class="built_in">cat</span> js_files.txt | <span class="keyword">while</span> <span class="built_in">read</span> url; <span class="keyword">do</span></span><br><span class="line">  python3 SecretFinder.py -i <span class="string">&quot;<span class="variable">$url</span>&quot;</span> -o cli</span><br><span class="line"><span class="keyword">done</span> | <span class="built_in">tee</span> secrets.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="🧠-4-Directory-Wordlist-Fuzzing-from-Extracted-Paths"><a href="#🧠-4-Directory-Wordlist-Fuzzing-from-Extracted-Paths" class="headerlink" title="🧠 4. Directory &amp; Wordlist Fuzzing from Extracted Paths"></a>🧠 4. Directory &amp; Wordlist Fuzzing from Extracted Paths</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extract directories from URLs</span></span><br><span class="line"><span class="built_in">cat</span> urls.txt | <span class="built_in">cut</span> -d <span class="string">&quot;/&quot;</span> -f 1-5 | <span class="built_in">sort</span> -u &gt; dirs.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run FFUF on top paths</span></span><br><span class="line"><span class="built_in">cat</span> dirs.txt | <span class="keyword">while</span> <span class="built_in">read</span> url; <span class="keyword">do</span></span><br><span class="line">  ffuf -u <span class="string">&quot;<span class="variable">$url</span>/FUZZ&quot;</span> -w ~/wordlists/raft-medium-directories.txt -mc 200,403 -t 40 -o <span class="string">&quot;ffuf_<span class="variable">$&#123;url//[^a-zA-Z0-9]/_&#125;</span>.json&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="⚙️-5-Custom-Param-Discovery-Fuzzing"><a href="#⚙️-5-Custom-Param-Discovery-Fuzzing" class="headerlink" title="⚙️ 5. Custom Param Discovery + Fuzzing"></a>⚙️ 5. Custom Param Discovery + Fuzzing</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Use paramspider for passive param discovery</span></span><br><span class="line">python3 paramspider.py -d target.com -o params/</span><br><span class="line"></span><br><span class="line"><span class="comment"># Merge with wayback</span></span><br><span class="line"><span class="built_in">cat</span> params/target.com.txt &gt;&gt; params.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Replace with payload for fuzzing</span></span><br><span class="line"><span class="built_in">cat</span> params.txt | qsreplace <span class="string">&quot;FUZZ&quot;</span> | <span class="built_in">sort</span> -u &gt; fuzzable.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run ffuf on parameter injection</span></span><br><span class="line">ffuf -u <span class="string">&quot;https://target.com/FUZZ&quot;</span> -w fuzzable.txt -t 40 -mc 200,403</span><br><span class="line"></span><br><span class="line">feroxbuster -A -u redacted_sub.com -o ferox_scan</span><br><span class="line"></span><br><span class="line">katana -u redacted_sub.com -xhr -kf -ps -d 5 -hl -sb -o katana_scan</span><br></pre></td></tr></table></figure>
+
+<h3 id="🎯-6-Deep-Crawl-JS-Extraction-with-Katana"><a href="#🎯-6-Deep-Crawl-JS-Extraction-with-Katana" class="headerlink" title="🎯 6. Deep Crawl + JS Extraction with Katana"></a>🎯 6. Deep Crawl + JS Extraction with Katana</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">katana -list subdomains.txt -jc -kf all -o katana_raw.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Filter and analyze JS endpoints</span></span><br><span class="line"><span class="built_in">cat</span> katana_raw.txt | grep <span class="string">&quot;\.js&quot;</span> | httpx -silent &gt; katana_js.txt</span><br><span class="line"><span class="built_in">cat</span> katana_js.txt | <span class="keyword">while</span> <span class="built_in">read</span> js; <span class="keyword">do</span></span><br><span class="line">  python3 linkfinder.py -i <span class="string">&quot;<span class="variable">$js</span>&quot;</span> -o cli</span><br><span class="line"><span class="keyword">done</span> | <span class="built_in">tee</span> katana_endpoints.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="⚡-7-Live-Hosts-Favicon-Hashing-Asset-Fingerprinting"><a href="#⚡-7-Live-Hosts-Favicon-Hashing-Asset-Fingerprinting" class="headerlink" title="⚡ 7. Live Hosts + Favicon Hashing (Asset Fingerprinting)"></a>⚡ 7. Live Hosts + Favicon Hashing (Asset Fingerprinting)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Favicon hash scan to detect tech</span></span><br><span class="line"><span class="built_in">cat</span> subdomains.txt | httpx -favicon -silent &gt; favicons.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Search hash in Shodan</span></span><br><span class="line"><span class="comment"># Example: https://www.shodan.io/search?query=http.favicon.hash%3A-247388890</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="🔐-Hunt-for-API-Keys"><a href="#🔐-Hunt-for-API-Keys" class="headerlink" title="🔐 Hunt for API Keys"></a>🔐 Hunt for API Keys</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">subfinder -d target.com -silent &gt; subs.txt</span><br><span class="line">httpx -l subs.txt -mc 200 -silent &gt; live_subs.txt</span><br><span class="line">gau -subs target.com | grep <span class="string">&quot;.js&quot;</span> | <span class="built_in">tee</span> js_files.txt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># explore any juicy JS files</span></span><br><span class="line"><span class="built_in">cat</span> js_files.txt | <span class="keyword">while</span> <span class="built_in">read</span> url; <span class="keyword">do</span> curl -s <span class="variable">$url</span> &gt;&gt; all_javascript_dump.txt; <span class="keyword">done</span></span><br><span class="line">grep -iE <span class="string">&quot;apikey|token|secret|authorization|bearer&quot;</span> all_javascript_dump.txt</span><br><span class="line"></span><br><span class="line"><span class="comment">#sample findings</span></span><br><span class="line">const stripeSecretKey = <span class="string">&quot;sk_live_51N0....&quot;</span>;</span><br><span class="line">const firebaseApiKey = <span class="string">&quot;AIzaSyD8a....&quot;</span>;</span><br><span class="line">Authorization: Bearer eyJhbGciOi...</span><br><span class="line"></span><br><span class="line"><span class="comment"># retrieve sensitive info with regex</span></span><br><span class="line">regex</span><br><span class="line"><span class="comment"># [&#x27;&quot;][A-Za-z0-9_\-]&#123;16,&#125;[&#x27;&quot;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># retrieve any encoded text</span></span><br><span class="line">grep -oP <span class="string">&#x27;(?&lt;=//).+&#x27;</span> all_javascript_dump.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># dir fuzzing</span></span><br><span class="line">ffuf -w common.txt -u https://target.com/assets/js/FUZZ</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Wait-are-we-done-Let’s-go-into-more-complex"><a href="#Wait-are-we-done-Let’s-go-into-more-complex" class="headerlink" title="Wait are we done ? Let’s go into more complex"></a>Wait are we done ? Let’s go into more complex</h2><h3 id="📍-Automating-Google-Dorking-with-DorkEye"><a href="#📍-Automating-Google-Dorking-with-DorkEye" class="headerlink" title="📍 Automating Google Dorking with DorkEye"></a>📍 Automating Google Dorking with DorkEye</h3><p><strong>|</strong> <code>DorkEye</code> automates Google dorking making reconnaissance faster by quickly extracting multiple <code>AWS URLs</code> for analysis.</p>
+<blockquote>
+<a href="https://github.com/BullsEye0/dorks-eye" target="_blank" rel="nofollow" class="link-preview"><div class="og-image"><img src="https://opengraph.githubassets.com/c873a1f0ce7bc690f2d0c4554f891ec88e7ac2a668e883d839a2d4533db25a92/BullsEye0/dorks-eye" alt="GitHub - BullsEye0&#x2F;dorks-eye: Dorks Eye Google Hacking Dork Scraping and Searching Script. Dorks Eye is a script I made in python 3. With this tool, you can easily find Google Dorks. Dork Eye collects potentially vulnerable web pages and applications on the Internet or other awesome info that is picked up by Google&#39;s search bots. Author: Jolanda de Koff" class="not-gallery-item" loading="lazy"></div><div class="descriptions"><div class="og-title">GitHub - BullsEye0&#x2F;dorks-eye: Dorks Eye Google Hacking Dork Scraping and Searching Script. Dorks Eye is a script I made in python 3. With this tool, you can easily find Google Dorks. Dork Eye collects potentially vulnerable web pages and applications on the Internet or other awesome info that is picked up by Google&#39;s search bots. Author: Jolanda de Koff</div><div class="og-description">Dorks Eye Google Hacking Dork Scraping and Searching Script. Dorks Eye is a scri...</div></div></a>
+</blockquote>
+<p>For example:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Google Dorking <span class="keyword">for</span> AWS S3 Buckets</span><br><span class="line">Google dorking helps uncover exposed S3 buckets. you can use the following dork to find open s3 buckets:</span><br><span class="line">site:s3.amazonaws.com <span class="string">&quot;target.com&quot;</span></span><br><span class="line">site:*.s3.amazonaws.com <span class="string">&quot;target.com&quot;</span></span><br><span class="line">site:s3-external-1.amazonaws.com <span class="string">&quot;target.com&quot;</span></span><br><span class="line">site:s3.dualstack.us-east-1.amazonaws.com <span class="string">&quot;target.com&quot;</span></span><br><span class="line">site:amazonaws.com inurl:s3.amazonaws.com </span><br><span class="line">site:s3.amazonaws.com intitle:<span class="string">&quot;index of&quot;</span>  </span><br><span class="line">site:s3.amazonaws.com inurl:<span class="string">&quot;.s3.amazonaws.com/&quot;</span>  </span><br><span class="line">site:s3.amazonaws.com intitle:<span class="string">&quot;index of&quot;</span> <span class="string">&quot;bucket&quot;</span></span><br><span class="line"></span><br><span class="line">(site:*.s3.amazonaws.com OR site:*.s3-external-1.amazonaws.com OR site:*.s3.dualstack.us-east-1.amazonaws.com OR site:*.s3.ap-south-1.amazonaws.com) <span class="string">&quot;target.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="☁️-Using-S3Misconfig-for-Fast-Bucket-Enumeration"><a href="#☁️-Using-S3Misconfig-for-Fast-Bucket-Enumeration" class="headerlink" title="☁️ Using S3Misconfig for Fast Bucket Enumeration"></a>☁️ Using S3Misconfig for Fast Bucket Enumeration</h3><p><strong>|</strong> <code>S3Misconfig</code> scans a list of URLs for open S3 buckets with listing enabled and saves the results in a user friendly HTML format for easy review.</p>
+<blockquote>
+<a href="https://github.com/Atharv834/S3BucketMisconf" target="_blank" rel="nofollow" class="link-preview"><div class="og-image"><img src="https://opengraph.githubassets.com/3d78295404d2f7cd3471c6dc0091c4caa3160cad6106cb762d3c2a516e7d125f/Atharv834/S3BucketMisconf" alt="GitHub - Atharv834&#x2F;S3BucketMisconf" class="not-gallery-item" loading="lazy"></div><div class="descriptions"><div class="og-title">GitHub - Atharv834&#x2F;S3BucketMisconf</div><div class="og-description">Contribute to Atharv834&#x2F;S3BucketMisconf development by creating an account ...</div></div></a>
+</blockquote>
+<h3 id="📦-Finding-S3-Buckets-with-HTTPX-and-Nuclei"><a href="#📦-Finding-S3-Buckets-with-HTTPX-and-Nuclei" class="headerlink" title="📦 Finding S3 Buckets with HTTPX and Nuclei"></a>📦 Finding S3 Buckets with HTTPX and Nuclei</h3><p><strong>|</strong> You can use the <code>HTTPX</code> command along with the Nuclei tool to quickly identify all S3 buckets across subdomains saving you significant time in recon.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># using subfinder+HTTPX</span></span><br><span class="line">subfinder -d target.com -all -silent | httpx-toolkit -sc -title -td | grep <span class="string">&quot;Amazon S3&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Nuclei template:</span></span><br><span class="line">subfinder -d target.com -all -silent | nuclei -t /home/coffinxp/.local/nuclei-templates/http/technologies/s3-detect.yaml</span><br></pre></td></tr></table></figure>
+
+<h3 id="🌩️-Extracting-S3-URLs-from-JavaScript-Files"><a href="#🌩️-Extracting-S3-URLs-from-JavaScript-Files" class="headerlink" title="🌩️ Extracting S3 URLs from JavaScript Files"></a>🌩️ Extracting S3 URLs from JavaScript Files</h3><p><strong>|</strong> Next we’ll use the <code>Katana</code> tool to download <code>JavaScript</code> files from target subdomains and extract <code>S3 URLs</code> using the following grep command:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">katana -u https://site.com/ -d 5 -jc | grep <span class="string">&#x27;\.js$&#x27;</span> | <span class="built_in">tee</span> alljs.txt</span><br><span class="line"><span class="built_in">cat</span> alljs.txt | xargs -I &#123;&#125; curl -s &#123;&#125; | grep -oE <span class="string">&#x27;http[s]?://[^&quot;]*\.s3\.amazonaws\.com[^&quot; ]*&#x27;</span> | <span class="built_in">sort</span> -u</span><br></pre></td></tr></table></figure>
+
+<h3 id="♨️-Using-java2s3-tool-to-find-s3-urls-in-js-files"><a href="#♨️-Using-java2s3-tool-to-find-s3-urls-in-js-files" class="headerlink" title="♨️ Using java2s3 tool to find s3 urls in js files"></a>♨️ Using java2s3 tool to find s3 urls in js files</h3><p><strong>|</strong> Alternatively you can use this powerful approach to extract all <code>S3 URLs</code> from <code>JavaScript</code> files of subdomains. First combine <code>subfinder</code> and <code>HTTPX</code> to generate the final list of subdomains then run the <code>java2s3</code> tool for extraction.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">subfinder -d target.com -all -silent | httpx-toolkit -o file.txt</span><br><span class="line"><span class="built_in">cat</span> file.txt | grep -oP <span class="string">&#x27;(?&lt;=https?:\/\/).*&#x27;</span> &gt;input.txt</span><br><span class="line">python java2s3.py input.txt target.com output.txt</span><br><span class="line"><span class="built_in">cat</span> output3.txt | grep -E <span class="string">&quot;S3 Buckets: \[&#x27;[^]]+&quot;</span></span><br><span class="line"><span class="built_in">cat</span> output.txt | grep -oP <span class="string">&#x27;https?://[a-zA-Z0-9.-]*s3(\.dualstack)?\.ap-[a-z0-9-]+\.amazonaws\.com/[^\s&quot;&lt;&gt;]+&#x27;</span> | <span class="built_in">sort</span> -u</span><br><span class="line"><span class="built_in">cat</span> output3.txt | grep -oP <span class="string">&#x27;([a-zA-Z0-9.-]+\.s3(\.dualstack)?\.[a-z0-9-]+\.amazonaws\.com)&#x27;</span> | <span class="built_in">sort</span> -u</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<a href="https://github.com/mexploit30/java2s3" target="_blank" rel="nofollow" class="link-preview"><div class="og-image"><img src="https://opengraph.githubassets.com/62e5d663fe7d1f8f50642763d9554186cb0fe5410523f719303c0121b9f51f18/mexploit30/java2s3" alt="GitHub - mexploit30&#x2F;java2s3" class="not-gallery-item" loading="lazy"></div><div class="descriptions"><div class="og-title">GitHub - mexploit30&#x2F;java2s3</div><div class="og-description">Contribute to mexploit30&#x2F;java2s3 development by creating an account on GitH...</div></div></a>
+</blockquote>
+<h3 id="🗂️-Web-Archive-Enumeration"><a href="#🗂️-Web-Archive-Enumeration" class="headerlink" title="🗂️ Web Archive Enumeration"></a>🗂️ Web Archive Enumeration</h3><p><strong>|</strong> Retrieving Archived URLs via the <code>CDX API</code></p>
+<p>A highly effective approach for passive URL enumeration is leveraging the <code>CDX API</code> from the <code>Wayback Machine</code>. This API allows you to extract a full list of historical URLs tied to a domain and its subdomains — often revealing endpoints no longer publicly accessible. Here’s a sample command to query it:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://web.archive.org/cdx/search/cdx?url=*.yourtarget.com/*&amp;collapse=urlkey&amp;output=text&amp;fl=original</span><br></pre></td></tr></table></figure>
+
+<p>For example: I use <code>DJI</code> as my target:</p>
+<p><img src="/img/Reconn/dji-wayback.png"></p>
+<h3 id="📥-Efficient-Data-Retrieval-with-cURL"><a href="#📥-Efficient-Data-Retrieval-with-cURL" class="headerlink" title="📥 Efficient Data Retrieval with cURL"></a>📥 Efficient Data Retrieval with cURL</h3><p>When working with large datasets from the <code>Wayback Machine</code>, browser-based access can be slow or unstable. A more reliable method is to use curl, which enables rapid, scriptable downloading of archive data. Below is a sample command to fetch results efficiently:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl <span class="string">&#x27;https://web.archive.org/cdx/search/cdx?url=*.dji.com/*&amp;output=text&amp;fl=original&amp;collapse=urlkey&#x27;</span> &gt; output.txt</span><br></pre></td></tr></table></figure>
+
+<p>After executing the command, all discovered URLs will be saved to output.txt. You can then use grep or similar tools to filter for <code>email addresses</code>, <code>password patterns</code>, or <code>files</code> with specific extensions.</p>
+<p>For example, to identify potentially sensitive files, you can search for URLs ending in juicy extensions such as <code>.env</code>, <code>.bak</code>, <code>.sql</code>, <code>.log</code>, or <code>.json</code> — which often contain <code>credentials</code>, <code>configuration data</code>, or <code>internal information</code>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> out.txt | uro | grep -E <span class="string">&#x27;\.xls|\.xml|\.xlsx|\.json|\.pdf|\.sql|\.doc|\.docx|\.pptx|\.txt|\.zip|\.tar\.gz|\.tgz|\.bak|\.7z|\.rar|\.log|\.cache|\.secret|\.db|\.backup|\.yml|\.gz|\.config|\.csv|\.yaml|\.md|\.md5|\.exe|\.dll|\.bin|\.ini|\.bat|\.sh|\.tar|\.deb|\.git|\.env|\.rpm|\.iso|\.img|\.apk|\.msi|\.dmg|\.tmp|\.crt|\.pem|\.key|\.pub|\.asc&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="📦-JavaScript-File-Collection-Using-LazyEgg"><a href="#📦-JavaScript-File-Collection-Using-LazyEgg" class="headerlink" title="📦 JavaScript File Collection Using LazyEgg"></a>📦 JavaScript File Collection Using LazyEgg</h3><p><strong>|</strong> Manually identifying and reviewing JavaScript files across a website can be time-consuming. To streamline this, you can use the <code>LazyEgg</code> browser extension — a tool designed to automatically extract <code>.js</code> file URLs from any page you visit.</p>
+<p><strong>|</strong> Installation:</p>
+<ol>
+<li>Install LazyEgg from the Chrome Web Store.</li>
+<li>Navigate to the target website and refresh the page.</li>
+<li>Click the <code>LazyEgg extension</code> — it will automatically list all <code>JavaScript file</code> URLs loaded by the page.</li>
+<li>Copy the extracted URLs and paste them into a multi-URL opener extension to open all JS endpoints at once.</li>
+<li>With all scripts loaded, use your browser’s Ctrl+F &#x2F; Cmd+F to search for sensitive keywords such as: <code>api</code>, <code>token</code>, <code>password</code>, <code>secret</code>, <code>key</code>, <code>jwt</code>.</li>
+</ol>
+<p><strong>|</strong> These keywords can help reveal hardcoded credentials, API endpoints, or security misconfigurations that may be valuable during your assessment.</p>
+<h3 id="🚀-Active-Crawling-with-Katana"><a href="#🚀-Active-Crawling-with-Katana" class="headerlink" title="🚀 Active Crawling with Katana"></a>🚀 Active Crawling with Katana</h3><p><strong>|</strong> katana is a fast and flexible web crawler that can automatically discover active endpoints and JavaScript files from a target domain.</p>
+<p>You can use it to enumerate all .js files for further analysis:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">katana -u https://target.com -js -kf all -silent -o js_links.txt</span><br><span class="line"></span><br><span class="line">katana -u samsung.com -d 5 -jc | grep <span class="string">&#x27;\.js$&#x27;</span> | <span class="built_in">tee</span> alljs.txt</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>js</code> enables JavaScript file extraction.</p>
+</li>
+<li><p><code>kf</code> all enables all known input collectors.</p>
+</li>
+<li><p><code>silent</code> disables extra output for cleaner results.</p>
+</li>
+</ul>
+<p>The output file <code>js_links.txt</code> will contain all discovered <code>JavaScript URLs</code>.</p>
+<h3 id="🐌-Passive-Crawling-with-GAU"><a href="#🐌-Passive-Crawling-with-GAU" class="headerlink" title="🐌 Passive Crawling with GAU"></a>🐌 Passive Crawling with GAU</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> www.samsung.com | gau | grep <span class="string">&#x27;\.js$&#x27;</span> | anew alljs.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="🐛-Refining-Results-with-HTTPX"><a href="#🐛-Refining-Results-with-HTTPX" class="headerlink" title="🐛 Refining Results with HTTPX"></a>🐛 Refining Results with HTTPX</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> alljs.txt | httpx-toolkit -mc 200 -o samsung.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="📝-Extracting-Sensitive-Information-with-JSLeak-tool"><a href="#📝-Extracting-Sensitive-Information-with-JSLeak-tool" class="headerlink" title="📝 Extracting Sensitive Information with JSLeak tool"></a>📝 Extracting Sensitive Information with JSLeak tool</h3><p><strong>|</strong> With a refined list of JavaScript endpoints, the next step is to extract all hidden links and sensitive information.</p>
+<blockquote>
+<a href="https://github.com/byt3hx/jsleak" target="_blank" rel="nofollow" class="link-preview"><div class="og-image"><img src="https://opengraph.githubassets.com/9a50dd6ba4e3514441d32d64e78a6da7b3b582c22fcf3d93cd772595afe20ede/byt3hx/jsleak" alt="GitHub - byt3hx&#x2F;jsleak: jsleak is a tool to find secret , paths or links in the source code during the recon." class="not-gallery-item" loading="lazy"></div><div class="descriptions"><div class="og-title">GitHub - byt3hx&#x2F;jsleak: jsleak is a tool to find secret , paths or links in the source code during the recon.</div><div class="og-description">jsleak is a tool to find secret , paths or links in the source code during the r...</div></div></a>
+</blockquote>
+<p>jsleaks: A tool used for analyzing JavaScript files to detect potential sensitive information or leaks.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> samsung.txt | jsleaks -s -l -k</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="🌐-Reconn-with-Nuclei-and-look-for-possible-vulnerabilities"><a href="#🌐-Reconn-with-Nuclei-and-look-for-possible-vulnerabilities" class="headerlink" title="🌐 Reconn with Nuclei and look for possible vulnerabilities"></a>🌐 Reconn with Nuclei and look for possible vulnerabilities</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nuclei -u https://yourtarget.com -tags cve, rce, lfi, xss, network, logs, config, ssrf</span><br><span class="line"></span><br><span class="line">nuclei -l target.txt -tags cve,rce,lfi,xss,network,logs,config,ssrf -t cves/,misconfiguration/,exposures/,default-logins/,exposed-panels/,technologies/,takeovers/nuclei -u https://sample.com -tags cve, rce, lfi, xss, network, logs, config, ssrf</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="💎-Another-Subdomain-Enumeration-but-with-Custom-Wordlists"><a href="#💎-Another-Subdomain-Enumeration-but-with-Custom-Wordlists" class="headerlink" title="💎 Another Subdomain Enumeration but with Custom Wordlists"></a>💎 Another Subdomain Enumeration but with Custom Wordlists</h3><p><strong>|</strong> Find subdomains others miss by brute-forcing permutations.</p>
+<p>Tools: <code>Amass</code>, <code>altdns</code>, <code>httpx</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Passive enumeration with Amass  </span></span><br><span class="line">amass enum -passive -d target.com -o subs.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate permutations (e.g., dev-api → api-dev, beta-api)  </span></span><br><span class="line">altdns -i subs.txt -o permutations.txt -w ~/bugbounty/wordlists/altdns_words.txt  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Resolve live subdomains  </span></span><br><span class="line">httpx -l permutations.txt -silent -o live_subs.txt</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="📚-Waybackurls-GF-Patterns-for-Hidden-Endpoints"><a href="#📚-Waybackurls-GF-Patterns-for-Hidden-Endpoints" class="headerlink" title="📚 Waybackurls + GF Patterns for Hidden Endpoints"></a>📚 Waybackurls + GF Patterns for Hidden Endpoints</h3><p><strong>|</strong> Extract URLs with vulnerable parameters from archived data.</p>
+<p>Tools: <code>waybackurls</code>, <code>gf</code>, <code>uro</code>.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Fetch historical URLs  </span></span><br><span class="line">waybackurls target.com &gt; urls.txt  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Filter for SSRF/XSS patterns  </span></span><br><span class="line"><span class="built_in">cat</span> urls.txt | gf ssrf | uro &gt; ssrf_urls.txt  </span><br><span class="line"><span class="built_in">cat</span> urls.txt | gf xss | uro &gt; xss_urls.txt  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Test live endpoints  </span></span><br><span class="line">httpx -l ssrf_urls.txt -status-code -title -tech-detect</span><br></pre></td></tr></table></figure>
+
+<h3 id="⛏️-Parameter-Mining-with-Arjun"><a href="#⛏️-Parameter-Mining-with-Arjun" class="headerlink" title="⛏️ Parameter Mining with Arjun"></a>⛏️ Parameter Mining with Arjun</h3><p><strong>|</strong> Discover hidden HTTP parameters.</p>
+<p>Tools: Arjun and ParamSpider</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Run Arjun with a custom wordlist:  </span></span><br><span class="line">arjun -u https://target.com/login -w ~/wordlists/params.txt -o params.json  </span><br><span class="line"></span><br><span class="line"><span class="comment"># ParamSpider automation:  </span></span><br><span class="line">python3 paramspider.py -d target.com --exclude png,jpg </span><br></pre></td></tr></table></figure>
+
+<h3 id="🛢️-Find-Live-Subdomains"><a href="#🛢️-Find-Live-Subdomains" class="headerlink" title="🛢️ Find Live Subdomains"></a>🛢️ Find Live Subdomains</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Extract Subdomains from SSL Certificates</span></span><br><span class="line">crt.sh/?q=%.target.com | <span class="built_in">tee</span> crt_subdomains.txt</span><br><span class="line"></span><br><span class="line">whois target.com | grep -i <span class="string">&quot;netrange&quot;</span></span><br><span class="line">nmap -p80,443 -iR 1000 --open -oG open_ports.txt</span><br><span class="line"></span><br><span class="line">naabu -list live_subdomains.txt -p 1-65535 -o open_ports.txt</span><br><span class="line">nmap -iL live_subdomains.txt -p- -oN nmap_results.txt</span><br><span class="line"><span class="comment"># Open ports reveal web services, admin panels, and databases</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="📡-Scan-for-Admin-Panels"><a href="#📡-Scan-for-Admin-Panels" class="headerlink" title="📡 Scan for Admin Panels"></a>📡 Scan for Admin Panels</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> open_ports.txt | httpx -silent -path /admin -path /login -path /dashboard -o possible_admins.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="📤-Open-Redirect-Testing-with-gau"><a href="#📤-Open-Redirect-Testing-with-gau" class="headerlink" title="📤 Open Redirect Testing with gau"></a>📤 Open Redirect Testing with gau</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gau target.com | grep <span class="string">&quot;redirect&quot;</span> | <span class="built_in">tee</span> open_redirect_params.txt</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h2 id="Keynote"><a href="#Keynote" class="headerlink" title="Keynote"></a>Keynote</h2><p>Combining passive sources like archived URLs with active scanning tools such as crawlers, JavaScript analyzers, and fuzzers enables a more complete and efficient discovery of hidden endpoints, sensitive data, and misconfigurations that are often missed in traditional reconnaissance.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>By automating and chaining these reconnaissance tools into a unified workflow, security practitioners can drastically reduce manual effort while increasing the depth, speed, and precision of vulnerability discovery across modern web applications.</p>
+<hr>
+<p>If you liked my article please leave a respect on my at HackTheBox <a target="_blank" rel="noopener" href="https://www.hackthebox.eu/profile/128965">Profile</a></p>
+<p><img src="https://www.hackthebox.eu/badge/image/128965" alt="Payas0" title="Payas0"></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reconnaissance-A-Guide-for-Web-App-Security-Testing"><span class="toc-number">1.</span> <span class="toc-text">Reconnaissance: A Guide for Web App Security Testing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you%E2%80%99ll-learn"><span class="toc-number">1.1.</span> <span class="toc-text">What you’ll learn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-you%E2%80%99ll-need"><span class="toc-number">1.2.</span> <span class="toc-text">What you’ll need</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tools-Cli"><span class="toc-number">1.3.</span> <span class="toc-text">Tools &#x2F; Cli</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Reconn-Phase"><span class="toc-number">2.</span> <span class="toc-text">The Reconn Phase</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%AA-Practical-Use-Cases"><span class="toc-number">2.1.</span> <span class="toc-text">🧪 Practical Use Cases</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URLScan"><span class="toc-number">3.</span> <span class="toc-text">URLScan</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-query-in-URLScan"><span class="toc-number">3.1.</span> <span class="toc-text">Basic query in URLScan</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Censys"><span class="toc-number">4.</span> <span class="toc-text">Censys</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%92%BB-Python-Using-Censys-CLI-for-Recon"><span class="toc-number">4.1.</span> <span class="toc-text">💻 Python: Using Censys CLI for Recon</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%8D-Censys-CLI-Usage"><span class="toc-number">4.2.</span> <span class="toc-text">🔍 Censys CLI Usage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Combining-CLI-Tools-for-Deep-Recon-and-Content-Discovery"><span class="toc-number">5.</span> <span class="toc-text">Combining CLI Tools for Deep Recon and Content Discovery</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%B0-Key-Tools-in-This-Phase"><span class="toc-number">5.1.</span> <span class="toc-text">🧰 Key Tools in This Phase</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9A%80-Sample-Recon-Workflow"><span class="toc-number">5.2.</span> <span class="toc-text">🚀 Sample Recon Workflow</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%94%A5-Passive-Recon-Chain-of-tools"><span class="toc-number">6.</span> <span class="toc-text">🔥 Passive Recon Chain of tools:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%97%BA%EF%B8%8F-Domain-Enumeration"><span class="toc-number">6.1.</span> <span class="toc-text">🗺️ Domain Enumeration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%A5-Filter-hosts-in-a-target"><span class="toc-number">6.2.</span> <span class="toc-text">🔥 Filter hosts in a target</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%BE-Screenshot-to-save-time"><span class="toc-number">6.3.</span> <span class="toc-text">🧾 Screenshot to save time</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%97%83%EF%B8%8F-Wayback-Gau-Uro-Httpx-GF"><span class="toc-number">6.4.</span> <span class="toc-text">🗃️ Wayback + Gau + Uro + Httpx + GF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%8D-Find-APIs-JS-Endpoints-from-Archived-URLs"><span class="toc-number">6.5.</span> <span class="toc-text">🔍 Find APIs + JS Endpoints from Archived URLs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%90-JS-Secrets-Auth-Token-Discovery"><span class="toc-number">6.6.</span> <span class="toc-text">🔐 JS Secrets &amp; Auth Token Discovery</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%A0-4-Directory-Wordlist-Fuzzing-from-Extracted-Paths"><span class="toc-number">6.7.</span> <span class="toc-text">🧠 4. Directory &amp; Wordlist Fuzzing from Extracted Paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9A%99%EF%B8%8F-5-Custom-Param-Discovery-Fuzzing"><span class="toc-number">6.8.</span> <span class="toc-text">⚙️ 5. Custom Param Discovery + Fuzzing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%AF-6-Deep-Crawl-JS-Extraction-with-Katana"><span class="toc-number">6.9.</span> <span class="toc-text">🎯 6. Deep Crawl + JS Extraction with Katana</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9A%A1-7-Live-Hosts-Favicon-Hashing-Asset-Fingerprinting"><span class="toc-number">6.10.</span> <span class="toc-text">⚡ 7. Live Hosts + Favicon Hashing (Asset Fingerprinting)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%90-Hunt-for-API-Keys"><span class="toc-number">6.11.</span> <span class="toc-text">🔐 Hunt for API Keys</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Wait-are-we-done-Let%E2%80%99s-go-into-more-complex"><span class="toc-number">7.</span> <span class="toc-text">Wait are we done ? Let’s go into more complex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8D-Automating-Google-Dorking-with-DorkEye"><span class="toc-number">7.1.</span> <span class="toc-text">📍 Automating Google Dorking with DorkEye</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%98%81%EF%B8%8F-Using-S3Misconfig-for-Fast-Bucket-Enumeration"><span class="toc-number">7.2.</span> <span class="toc-text">☁️ Using S3Misconfig for Fast Bucket Enumeration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A6-Finding-S3-Buckets-with-HTTPX-and-Nuclei"><span class="toc-number">7.3.</span> <span class="toc-text">📦 Finding S3 Buckets with HTTPX and Nuclei</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8C%A9%EF%B8%8F-Extracting-S3-URLs-from-JavaScript-Files"><span class="toc-number">7.4.</span> <span class="toc-text">🌩️ Extracting S3 URLs from JavaScript Files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%99%A8%EF%B8%8F-Using-java2s3-tool-to-find-s3-urls-in-js-files"><span class="toc-number">7.5.</span> <span class="toc-text">♨️ Using java2s3 tool to find s3 urls in js files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%97%82%EF%B8%8F-Web-Archive-Enumeration"><span class="toc-number">7.6.</span> <span class="toc-text">🗂️ Web Archive Enumeration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A5-Efficient-Data-Retrieval-with-cURL"><span class="toc-number">7.7.</span> <span class="toc-text">📥 Efficient Data Retrieval with cURL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A6-JavaScript-File-Collection-Using-LazyEgg"><span class="toc-number">7.8.</span> <span class="toc-text">📦 JavaScript File Collection Using LazyEgg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9A%80-Active-Crawling-with-Katana"><span class="toc-number">7.9.</span> <span class="toc-text">🚀 Active Crawling with Katana</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%90%8C-Passive-Crawling-with-GAU"><span class="toc-number">7.10.</span> <span class="toc-text">🐌 Passive Crawling with GAU</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%90%9B-Refining-Results-with-HTTPX"><span class="toc-number">7.11.</span> <span class="toc-text">🐛 Refining Results with HTTPX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9D-Extracting-Sensitive-Information-with-JSLeak-tool"><span class="toc-number">7.12.</span> <span class="toc-text">📝 Extracting Sensitive Information with JSLeak tool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8C%90-Reconn-with-Nuclei-and-look-for-possible-vulnerabilities"><span class="toc-number">7.13.</span> <span class="toc-text">🌐 Reconn with Nuclei and look for possible vulnerabilities</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%92%8E-Another-Subdomain-Enumeration-but-with-Custom-Wordlists"><span class="toc-number">7.14.</span> <span class="toc-text">💎 Another Subdomain Enumeration but with Custom Wordlists</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9A-Waybackurls-GF-Patterns-for-Hidden-Endpoints"><span class="toc-number">7.15.</span> <span class="toc-text">📚 Waybackurls + GF Patterns for Hidden Endpoints</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9B%8F%EF%B8%8F-Parameter-Mining-with-Arjun"><span class="toc-number">7.16.</span> <span class="toc-text">⛏️ Parameter Mining with Arjun</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9B%A2%EF%B8%8F-Find-Live-Subdomains"><span class="toc-number">7.17.</span> <span class="toc-text">🛢️ Find Live Subdomains</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A1-Scan-for-Admin-Panels"><span class="toc-number">7.18.</span> <span class="toc-text">📡 Scan for Admin Panels</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A4-Open-Redirect-Testing-with-gau"><span class="toc-number">7.19.</span> <span class="toc-text">📤 Open Redirect Testing with gau</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Keynote"><span class="toc-number">8.</span> <span class="toc-text">Keynote</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">9.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&text=Practical Guide For Reconnaissance"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&title=Practical Guide For Reconnaissance"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&is_video=false&description=Practical Guide For Reconnaissance"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Practical Guide For Reconnaissance&body=Check out this article: https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&title=Practical Guide For Reconnaissance"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&title=Practical Guide For Reconnaissance"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&title=Practical Guide For Reconnaissance"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&title=Practical Guide For Reconnaissance"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&name=Practical Guide For Reconnaissance&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://ph-payas0.github.io/2025-02-09/tools/automation/Practical-Guide-For-Reconnaissance/&t=Practical Guide For Reconnaissance"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Information Security &#64; Medz
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/search/">Search</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
+
