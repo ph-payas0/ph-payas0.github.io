@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.2.1/baffle.min.js"></script>
+    <meta name="description" content="Email Enumeration FrameworkA Practical Approach to Detect Account Existence Issues  SummaryEmail enumeration is still a common issue in many web applications. Even if developers try to hide error mess">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Email Enumeration Framework">
+<meta property="og:url" content="https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/index.html">
+<meta property="og:site_name" content="❯ ＰＡＹＡＳ０">
+<meta property="og:description" content="Email Enumeration FrameworkA Practical Approach to Detect Account Existence Issues  SummaryEmail enumeration is still a common issue in many web applications. Even if developers try to hide error mess">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-09-11T15:57:58.000Z">
+<meta property="article:modified_time" content="2026-01-01T16:35:35.796Z">
+<meta property="article:author" content="Medz">
+<meta property="article:tag" content="pentest">
+<meta property="article:tag" content="bug bounty">
+<meta property="article:tag" content="tools">
+<meta property="article:tag" content="cli">
+<meta property="article:tag" content="scripts">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon-1.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Email Enumeration Framework</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="❯ ＰＡＹＡＳ０" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2025-12-27/tools/automation/otp-based-authentication/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2025-04-17/tools/automation/collections-for-hunting/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&text=Email Enumeration Framework"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&title=Email Enumeration Framework"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&is_video=false&description=Email Enumeration Framework"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Email Enumeration Framework&body=Check out this article: https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&title=Email Enumeration Framework"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&title=Email Enumeration Framework"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&title=Email Enumeration Framework"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&title=Email Enumeration Framework"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&name=Email Enumeration Framework&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&t=Email Enumeration Framework"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Email-Enumeration-Framework"><span class="toc-number">1.</span> <span class="toc-text">Email Enumeration Framework</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Summary"><span class="toc-number">1.1.</span> <span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.2.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Objective"><span class="toc-number">1.3.</span> <span class="toc-text">Objective</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Threat-Model"><span class="toc-number">1.4.</span> <span class="toc-text">Threat Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enumeration-Flow"><span class="toc-number">1.5.</span> <span class="toc-text">Enumeration Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation"><span class="toc-number">1.6.</span> <span class="toc-text">Implementation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Security-Impact"><span class="toc-number">1.7.</span> <span class="toc-text">Security Impact</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#About-the-Validity-and-Real-Impact-of-Email-Enumeration"><span class="toc-number">2.</span> <span class="toc-text">About the Validity and Real Impact of Email Enumeration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-Email-Enumeration-Is-Often-Downplayed"><span class="toc-number">2.0.1.</span> <span class="toc-text">Why Email Enumeration Is Often Downplayed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#When-Email-Enumeration-Becomes-High-Impact"><span class="toc-number">2.0.2.</span> <span class="toc-text">When Email Enumeration Becomes High Impact</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-Attack-Chain"><span class="toc-number">2.0.3.</span> <span class="toc-text">Example Attack Chain</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-This-Changes-the-Severity"><span class="toc-number">2.0.4.</span> <span class="toc-text">Why This Changes the Severity</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">3.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+        <div class="content index py4">
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <embed src="/html/Kalimba.mp3" loop="true" autostart="true" width="2" height="0">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Email Enumeration Framework
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">❯ ＰＡＹＡＳ０</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-09-11T15:57:58.000Z" itemprop="datePublished">11-09-2025</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/tools/">tools</a> › <a class="category-link" href="/categories/tools/automation/">automation</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/bug-bounty/" rel="tag">bug bounty</a>, <a class="tag-link-link" href="/tags/cli/" rel="tag">cli</a>, <a class="tag-link-link" href="/tags/pentest/" rel="tag">pentest</a>, <a class="tag-link-link" href="/tags/scripts/" rel="tag">scripts</a>, <a class="tag-link-link" href="/tags/tools/" rel="tag">tools</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Email-Enumeration-Framework"><a href="#Email-Enumeration-Framework" class="headerlink" title="Email Enumeration Framework"></a>Email Enumeration Framework</h1><p>A Practical Approach to Detect Account Existence Issues</p>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Email enumeration is still a common issue in many web applications. Even if developers try to hide error messages, systems often leak information through small differences in how they respond.</p>
+<p>This article presents a simple email enumeration framework that works on <code>login</code>, <code>registration</code>, and <code>forgot-password</code> endpoints. Instead of relying on specific error messages, the tool checks how the application behaves when different email addresses are used.</p>
+<p>The framework is designed as a single Python script to keep it easy to review, run, and explain during security testing or internal evaluations.</p>
+<p>Based on testing, the results show that:</p>
+<ul>
+<li>Many applications still leak account existence indirectly.</li>
+<li>Same error messages do not always mean same backend behavior.</li>
+<li>Timing, response size, and keywords are enough to detect valid accounts.</li>
+</ul>
+<p>This shows why email enumeration should be handled not only on the UI level, but also on the backend logic.</p>
+<hr>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Email enumeration happens when an attacker can tell whether an email address exists in a system. This usually happens during <code>login</code>, <code>registration</code>, <code>password reset</code> or changing emails via account profile.</p>
+<p>Most applications try to fix this by using generic messages like:</p>
+<p>“If the account exists, an email will be sent.”</p>
+<p>However, even if the message is the same, the response behavior is often different.<br>These small differences can still be observed and abused.</p>
+<h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><p>The goal of this work is to build a simple tool that can:</p>
+<ul>
+<li>Test different authentication-related endpoints</li>
+<li>Accept any email domain (e.g. @gmail.com, @company.com)</li>
+<li>Detect enumeration using response behavior</li>
+</ul>
+<h2 id="Threat-Model"><a href="#Threat-Model" class="headerlink" title="Threat Model"></a>Threat Model</h2><p>The tool simulates a basic attacker who:</p>
+<ul>
+<li>Can send requests to public authentication endpoints</li>
+<li>Has a list of possible usernames or names</li>
+<li>Can observe server responses</li>
+</ul>
+<p>The attacker’s goal is to find out which email addresses are registered.</p>
+<h2 id="Enumeration-Flow"><a href="#Enumeration-Flow" class="headerlink" title="Enumeration Flow"></a>Enumeration Flow</h2><figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">Username list</span><br><span class="line">     ↓</span><br><span class="line"><span class="keyword">Create</span> email (<span class="type">name</span> + <span class="keyword">domain</span>)</span><br><span class="line">     ↓</span><br><span class="line">Send request <span class="keyword">to</span> target endpoint</span><br><span class="line">     ↓</span><br><span class="line">Observe response</span><br><span class="line">(status, size, <span class="type">time</span>, keywords)</span><br><span class="line">     ↓</span><br><span class="line">Decide result</span><br><span class="line">(<span class="keyword">EXISTS</span> / INVALID / <span class="type">UNKNOWN</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#!/usr/bin/env python3</span><br><span class="line">import requests</span><br><span class="line">import time</span><br><span class="line">import statistics</span><br><span class="line"></span><br><span class="line">HEADERS = &#123;</span><br><span class="line">    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64)&quot;,</span><br><span class="line">    &quot;Accept&quot;: &quot;*/*&quot;,</span><br><span class="line">    &quot;Content-Type&quot;: &quot;application/json&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SUCCESS_HINTS = [</span><br><span class="line">    &quot;otp sent&quot;,</span><br><span class="line">    &quot;email sent&quot;,</span><br><span class="line">    &quot;already registered&quot;,</span><br><span class="line">    &quot;exists&quot;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">FAIL_HINTS = [</span><br><span class="line">    &quot;not found&quot;,</span><br><span class="line">    &quot;does not exist&quot;,</span><br><span class="line">    &quot;invalid email&quot;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">def build_email(user, domain):</span><br><span class="line">    return f&quot;&#123;user.lower().replace(&#x27; &#x27;, &#x27;.&#x27;)&#125;&#123;domain&#125;&quot;</span><br><span class="line"></span><br><span class="line">def send_request(method, url, email):</span><br><span class="line">    payload = &#123;</span><br><span class="line">        &quot;email&quot;: email,</span><br><span class="line">        &quot;emailAddress&quot;: email,</span><br><span class="line">        &quot;username&quot;: email</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    start = time.perf_counter()</span><br><span class="line"></span><br><span class="line">    if method == &quot;GET&quot;:</span><br><span class="line">        r = requests.get(url, params=&#123;&quot;emailAddress&quot;: email&#125;, headers=HEADERS)</span><br><span class="line">    else:</span><br><span class="line">        r = requests.post(url, json=payload, headers=HEADERS)</span><br><span class="line"></span><br><span class="line">    return &#123;</span><br><span class="line">        &quot;status&quot;: r.status_code,</span><br><span class="line">        &quot;length&quot;: len(r.text),</span><br><span class="line">        &quot;time&quot;: round(time.perf_counter() - start, 3),</span><br><span class="line">        &quot;body&quot;: r.text.lower()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">def analyze(email, resp, baseline_time):</span><br><span class="line">    for k in SUCCESS_HINTS:</span><br><span class="line">        if k in resp[&quot;body&quot;]:</span><br><span class="line">            return f&quot;[+] &#123;email&#125; → EXISTS&quot;, &quot;exists&quot;</span><br><span class="line"></span><br><span class="line">    for k in FAIL_HINTS:</span><br><span class="line">        if k in resp[&quot;body&quot;]:</span><br><span class="line">            return f&quot;[-] &#123;email&#125; → INVALID&quot;, &quot;invalid&quot;</span><br><span class="line"></span><br><span class="line">    delta = round(resp[&quot;time&quot;] - baseline_time, 3)</span><br><span class="line">    return f&quot;[?] &#123;email&#125; → UNKNOWN (Δ&#123;delta&#125;s)&quot;, &quot;unknown&quot;</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    url = input(&quot;Target endpoint URL: &quot;).strip()</span><br><span class="line">    method = input(&quot;HTTP method (GET/POST): &quot;).strip().upper()</span><br><span class="line">    wordlist = input(&quot;Wordlist file: &quot;).strip()</span><br><span class="line">    domain = input(&quot;Email domain (e.g. @gmail.com): &quot;).strip()</span><br><span class="line">    delay = float(input(&quot;Delay between requests (sec): &quot;).strip())</span><br><span class="line"></span><br><span class="line">    if not domain.startswith(&quot;@&quot;):</span><br><span class="line">        domain = &quot;@&quot; + domain</span><br><span class="line"></span><br><span class="line">    users = [u.strip() for u in open(wordlist) if u.strip()]</span><br><span class="line"></span><br><span class="line">    baseline = send_request(method, url, build_email(users[0], domain))</span><br><span class="line">    baseline_time = baseline[&quot;time&quot;]</span><br><span class="line"></span><br><span class="line">    timings = []</span><br><span class="line">    results = &#123;&quot;exists&quot;: 0, &quot;invalid&quot;: 0, &quot;unknown&quot;: 0&#125;</span><br><span class="line"></span><br><span class="line">    for user in users:</span><br><span class="line">        email = build_email(user, domain)</span><br><span class="line">        resp = send_request(method, url, email)</span><br><span class="line">        timings.append(resp[&quot;time&quot;])</span><br><span class="line"></span><br><span class="line">        line, verdict = analyze(email, resp, baseline_time)</span><br><span class="line">        results[verdict] += 1</span><br><span class="line"></span><br><span class="line">        print(line)</span><br><span class="line">        time.sleep(delay)</span><br><span class="line"></span><br><span class="line">    print(&quot;\nSummary&quot;)</span><br><span class="line">    print(results)</span><br><span class="line">    print(&quot;Average response time:&quot;, statistics.mean(timings))</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Security-Impact"><a href="#Security-Impact" class="headerlink" title="Security Impact"></a>Security Impact</h2><p>Email enumeration can be used for:</p>
+<ul>
+<li>Targeted phishing</li>
+<li>Credential stuffing</li>
+<li>Account takeover preparation</li>
+<li>Privacy issues</li>
+</ul>
+<p>Knowing which emails exist makes attacks easier and faster.</p>
+<hr>
+<h1 id="About-the-Validity-and-Real-Impact-of-Email-Enumeration"><a href="#About-the-Validity-and-Real-Impact-of-Email-Enumeration" class="headerlink" title="About the Validity and Real Impact of Email Enumeration"></a>About the Validity and Real Impact of Email Enumeration</h1><p>Not all teams accept email enumeration as a valid security vulnerability.<br>In many cases, it is treated as a low-risk or informational issue, especially when it does not directly lead to account compromise.</p>
+<p>On its own, email enumeration usually does not give full access to an account.<br>It only allows an attacker to identify which email addresses are registered in the system.</p>
+<p>However, the real risk appears when email enumeration is combined with other existing weaknesses in the application.</p>
+<h3 id="Why-Email-Enumeration-Is-Often-Downplayed"><a href="#Why-Email-Enumeration-Is-Often-Downplayed" class="headerlink" title="Why Email Enumeration Is Often Downplayed"></a>Why Email Enumeration Is Often Downplayed</h3><p>Email enumeration is sometimes rejected because:</p>
+<p>-&gt; No direct account access is gained</p>
+<p>-&gt; No data is exposed</p>
+<p>-&gt; The issue looks theoretical without a clear exploit path</p>
+<p>Because of this, it is often marked as:</p>
+<ul>
+<li>“Informational”</li>
+<li>“Low Severity”</li>
+<li>“Not Applicable”</li>
+</ul>
+<h3 id="When-Email-Enumeration-Becomes-High-Impact"><a href="#When-Email-Enumeration-Becomes-High-Impact" class="headerlink" title="When Email Enumeration Becomes High Impact"></a>When Email Enumeration Becomes High Impact</h3><p>Email enumeration becomes dangerous when the application also has issues such as:</p>
+<p>-&gt; No rate limit on OTP requests</p>
+<p>-&gt; No limit on OTP verification attempts</p>
+<p>-&gt; Predictable or short OTP values</p>
+<p>-&gt; Long OTP validity period</p>
+<p>-&gt; Missing account lockout controls</p>
+<p>In these cases, enumeration acts as an enabler rather than a standalone issue.</p>
+<h3 id="Example-Attack-Chain"><a href="#Example-Attack-Chain" class="headerlink" title="Example Attack Chain"></a>Example Attack Chain</h3><figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">Email Enumeration</span><br><span class="line">        ↓</span><br><span class="line">List of valid email <span class="keyword">addresses</span></span><br><span class="line"><span class="keyword"></span>        ↓</span><br><span class="line">Unlimited OTP request endpoint</span><br><span class="line">        ↓</span><br><span class="line">OTP <span class="keyword">brute </span>force <span class="keyword">or </span>abuse</span><br><span class="line">        ↓</span><br><span class="line">Account takeover</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>Without email enumeration, the attacker would be guessing blindly.</p>
+<h3 id="Why-This-Changes-the-Severity"><a href="#Why-This-Changes-the-Severity" class="headerlink" title="Why This Changes the Severity"></a>Why This Changes the Severity</h3><p>When combined with OTP weaknesses, email enumeration:</p>
+<p>-&gt; Reduces attacker effort<br>-&gt; Increases success rate<br>-&gt; Enables automated attacks<br>-&gt; Leads directly to account takeover</p>
+<p>At this point, the issue is no longer theoretical. It becomes a <code>critical part</code> of a <code>real exploit chain</code>.</p>
+<hr>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>Email enumeration on its own is often seen as a low-risk issue, and in some cases, this assessment is reasonable. By itself, enumeration usually does not give direct access to user accounts or sensitive data. However, this work shows that email enumeration should not be evaluated in isolation. When combined with other weaknesses in the authentication flow’ such as missing rate limits on OTP requests, unlimited OTP attempts, or weak verification controls—it can become a key part of a real attack chain. In these scenarios, enumeration allows an attacker to focus only on valid accounts. This significantly lowers the effort required to perform OTP abuse or account takeover attacks and increases the overall success rate.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Email-Enumeration-Framework"><span class="toc-number">1.</span> <span class="toc-text">Email Enumeration Framework</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Summary"><span class="toc-number">1.1.</span> <span class="toc-text">Summary</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.2.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Objective"><span class="toc-number">1.3.</span> <span class="toc-text">Objective</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Threat-Model"><span class="toc-number">1.4.</span> <span class="toc-text">Threat Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Enumeration-Flow"><span class="toc-number">1.5.</span> <span class="toc-text">Enumeration Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation"><span class="toc-number">1.6.</span> <span class="toc-text">Implementation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Security-Impact"><span class="toc-number">1.7.</span> <span class="toc-text">Security Impact</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#About-the-Validity-and-Real-Impact-of-Email-Enumeration"><span class="toc-number">2.</span> <span class="toc-text">About the Validity and Real Impact of Email Enumeration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-Email-Enumeration-Is-Often-Downplayed"><span class="toc-number">2.0.1.</span> <span class="toc-text">Why Email Enumeration Is Often Downplayed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#When-Email-Enumeration-Becomes-High-Impact"><span class="toc-number">2.0.2.</span> <span class="toc-text">When Email Enumeration Becomes High Impact</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-Attack-Chain"><span class="toc-number">2.0.3.</span> <span class="toc-text">Example Attack Chain</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-This-Changes-the-Severity"><span class="toc-number">2.0.4.</span> <span class="toc-text">Why This Changes the Severity</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">3.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&text=Email Enumeration Framework"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&title=Email Enumeration Framework"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&is_video=false&description=Email Enumeration Framework"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Email Enumeration Framework&body=Check out this article: https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&title=Email Enumeration Framework"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&title=Email Enumeration Framework"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&title=Email Enumeration Framework"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&title=Email Enumeration Framework"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&name=Email Enumeration Framework&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/&t=Email Enumeration Framework"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Information Security &#64; Medz
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/search/">Search</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
+

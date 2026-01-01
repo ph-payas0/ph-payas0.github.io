@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baffle.js/0.2.1/baffle.min.js"></script>
+    <meta name="description" content="Why Rate Limiting Is Still Commonly Misconfigured in OTP-Based AuthenticationOne-time passwords (OTP) are widely used to protect user accounts. They are commonly seen in login verification, password r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OTP Based Authentication">
+<meta property="og:url" content="https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/index.html">
+<meta property="og:site_name" content="❯ ＰＡＹＡＳ０">
+<meta property="og:description" content="Why Rate Limiting Is Still Commonly Misconfigured in OTP-Based AuthenticationOne-time passwords (OTP) are widely used to protect user accounts. They are commonly seen in login verification, password r">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-12-26T20:37:17.000Z">
+<meta property="article:modified_time" content="2026-01-01T17:16:02.631Z">
+<meta property="article:author" content="Medz">
+<meta property="article:tag" content="pentest">
+<meta property="article:tag" content="bug bounty">
+<meta property="article:tag" content="tools">
+<meta property="article:tag" content="cli">
+<meta property="article:tag" content="scripts">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon-1.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/android-chrome-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>OTP Based Authentication</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="❯ ＰＡＹＡＳ０" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2025-09-11/tools/automation/framework-for-identifying-emails/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&text=OTP Based Authentication"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&title=OTP Based Authentication"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&is_video=false&description=OTP Based Authentication"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=OTP Based Authentication&body=Check out this article: https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&title=OTP Based Authentication"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&title=OTP Based Authentication"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&title=OTP Based Authentication"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&title=OTP Based Authentication"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&name=OTP Based Authentication&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&t=OTP Based Authentication"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Rate-Limiting-Is-Still-Commonly-Misconfigured-in-OTP-Based-Authentication"><span class="toc-number">1.</span> <span class="toc-text">Why Rate Limiting Is Still Commonly Misconfigured in OTP-Based Authentication</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-Rate-Limiting-Means-in-OTP-Flows"><span class="toc-number">1.2.</span> <span class="toc-text">What Rate Limiting Means in OTP Flows</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Common-OTP-Rate-Limiting-Mistakes"><span class="toc-number">1.3.</span> <span class="toc-text">Common OTP Rate Limiting Mistakes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-OTP-Issues-Combine-with-Email-Enumeration"><span class="toc-number">1.4.</span> <span class="toc-text">How OTP Issues Combine with Email Enumeration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-These-Issues-Are-Often-Missed"><span class="toc-number">1.5.</span> <span class="toc-text">Why These Issues Are Often Missed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Security-Impact"><span class="toc-number">1.6.</span> <span class="toc-text">Security Impact</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Practical-Recommendations"><span class="toc-number">1.7.</span> <span class="toc-text">Practical Recommendations</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">2.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+        <div class="content index py4">
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <embed src="/html/Kalimba.mp3" loop="true" autostart="true" width="2" height="0">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        OTP Based Authentication
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">❯ ＰＡＹＡＳ０</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-12-26T20:37:17.000Z" itemprop="datePublished">27-12-2025</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/tools/">tools</a> › <a class="category-link" href="/categories/tools/automation/">automation</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/bug-bounty/" rel="tag">bug bounty</a>, <a class="tag-link-link" href="/tags/cli/" rel="tag">cli</a>, <a class="tag-link-link" href="/tags/pentest/" rel="tag">pentest</a>, <a class="tag-link-link" href="/tags/scripts/" rel="tag">scripts</a>, <a class="tag-link-link" href="/tags/tools/" rel="tag">tools</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Why-Rate-Limiting-Is-Still-Commonly-Misconfigured-in-OTP-Based-Authentication"><a href="#Why-Rate-Limiting-Is-Still-Commonly-Misconfigured-in-OTP-Based-Authentication" class="headerlink" title="Why Rate Limiting Is Still Commonly Misconfigured in OTP-Based Authentication"></a>Why Rate Limiting Is Still Commonly Misconfigured in OTP-Based Authentication</h1><p>One-time passwords (OTP) are widely used to protect user accounts. They are commonly seen in login verification, password reset, and sensitive actions. Even if OTP is present, many applications still fail to apply proper rate limiting. This makes OTP-based authentication vulnerable to abuse, especially when combined with other issues like email enumeration.</p>
+<hr>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>OTP is often treated as a strong security control. Because of this, teams sometimes assume that OTP alone is enough to protect accounts.</p>
+<p>In reality, OTP security depends heavily on how it is implemented. Without proper limits and controls, OTP endpoints can be abused in multiple ways.</p>
+<hr>
+<h2 id="What-Rate-Limiting-Means-in-OTP-Flows"><a href="#What-Rate-Limiting-Means-in-OTP-Flows" class="headerlink" title="What Rate Limiting Means in OTP Flows"></a>What Rate Limiting Means in OTP Flows</h2><p>Rate limiting is used to control how often an action can be performed. In OTP-based authentication, rate limiting should apply to:</p>
+<ul>
+<li>OTP request attempts</li>
+<li>OTP verification attempts</li>
+<li>Requests per account</li>
+<li>Requests per IP</li>
+<li>Requests per device or session</li>
+</ul>
+<p>If these limits are missing or weak, attackers can abuse the OTP flow.</p>
+<hr>
+<h2 id="Common-OTP-Rate-Limiting-Mistakes"><a href="#Common-OTP-Rate-Limiting-Mistakes" class="headerlink" title="Common OTP Rate Limiting Mistakes"></a>Common OTP Rate Limiting Mistakes</h2><ol>
+<li><p>No Limit on OTP Requests - Some applications allow unlimited OTP requests. This allows attackers to:</p>
+<ul>
+<li>Spam OTP emails or SMS</li>
+<li>Trigger OTP generation repeatedly</li>
+<li>Abuse backend resources</li>
+</ul>
+<p>In some cases, this can also lead to OTP brute forcing or service abuse.</p>
+</li>
+<li><p>No Limit on OTP Verification Attempts - This is one of the most serious issues. If an attacker can submit OTP values without limit:</p>
+<ul>
+<li>Short OTPs (4–6 digits) can be brute forced</li>
+<li>Automation becomes easy</li>
+<li>Account takeover becomes possible</li>
+</ul>
+</li>
+</ol>
+<p>OTP without verification limits is not real protection.</p>
+<ol start="3">
+<li><p>Rate Limiting Based Only on IP - IP-based limits are weak on their own. Attackers can bypass them using:</p>
+<ul>
+<li>Proxies</li>
+<li>VPNs</li>
+<li>Cloud servers</li>
+</ul>
+</li>
+</ol>
+<p>Rate limiting should not rely only on IP address.</p>
+<ol start="4">
+<li><p>Long OTP Validity - Some OTPs remain valid for several minutes or longer. Long validity gives attackers:</p>
+<ul>
+<li>More time to brute force</li>
+<li>More chances to retry</li>
+<li>Higher success rate</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="How-OTP-Issues-Combine-with-Email-Enumeration"><a href="#How-OTP-Issues-Combine-with-Email-Enumeration" class="headerlink" title="How OTP Issues Combine with Email Enumeration"></a>How OTP Issues Combine with Email Enumeration</h2><p>On its own, OTP abuse is already dangerous. When combined with email enumeration, the impact increases.</p>
+<figure class="highlight lsl"><table><tr><td class="code"><pre><span class="line">Email Enumeration</span><br><span class="line">        ↓</span><br><span class="line">List of valid <span class="section">email</span> accounts</span><br><span class="line">        ↓</span><br><span class="line">Unlimited OTP requests</span><br><span class="line">        ↓</span><br><span class="line">Unlimited OTP verification attempts</span><br><span class="line">        ↓</span><br><span class="line">Account takeover</span><br></pre></td></tr></table></figure>
+
+<p>Email enumeration helps attackers focus only on real accounts. OTP weaknesses then allow full compromise.</p>
+<hr>
+<h2 id="Why-These-Issues-Are-Often-Missed"><a href="#Why-These-Issues-Are-Often-Missed" class="headerlink" title="Why These Issues Are Often Missed"></a>Why These Issues Are Often Missed</h2><p>OTP issues are often missed because:</p>
+<ul>
+<li>OTP is assumed to be secure by default</li>
+<li>Testing focuses only on success cases</li>
+<li>Error handling is checked, but limits are not</li>
+<li>Backend behavior is not fully reviewed</li>
+</ul>
+<p>Many teams fix UI messages but forget backend controls.</p>
+<hr>
+<h2 id="Security-Impact"><a href="#Security-Impact" class="headerlink" title="Security Impact"></a>Security Impact</h2><p>Misconfigured OTP rate limiting can lead to:</p>
+<ul>
+<li>Account takeover</li>
+<li>Targeted attacks</li>
+<li>OTP brute forcing</li>
+<li>Abuse of email or SMS services</li>
+<li>Increased infrastructure cost</li>
+</ul>
+<p>When combined with enumeration, the risk becomes high.</p>
+<hr>
+<h2 id="Practical-Recommendations"><a href="#Practical-Recommendations" class="headerlink" title="Practical Recommendations"></a>Practical Recommendations</h2><p>To secure OTP-based authentication:</p>
+<ul>
+<li>Apply strict limits on OTP requests</li>
+<li>Apply strict limits on OTP verification attempts</li>
+<li>Use per-account and per-session limits</li>
+<li>Reduce OTP validity time</li>
+<li>Lock or slow down after repeated failures</li>
+</ul>
+<p>OTP should be treated as part of a full authentication system, not a standalone feature.</p>
+<hr>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>OTP-based authentication is only as strong as its implementation. Without proper rate limiting, OTP endpoints can be abused even if the OTP logic itself works correctly.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/categories/">Categories</a></li>
+         
+          <li><a href="/search/">Search</a></li>
+         
+          <li><a href="/tags/">Tags</a></li>
+         
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Rate-Limiting-Is-Still-Commonly-Misconfigured-in-OTP-Based-Authentication"><span class="toc-number">1.</span> <span class="toc-text">Why Rate Limiting Is Still Commonly Misconfigured in OTP-Based Authentication</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-Rate-Limiting-Means-in-OTP-Flows"><span class="toc-number">1.2.</span> <span class="toc-text">What Rate Limiting Means in OTP Flows</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Common-OTP-Rate-Limiting-Mistakes"><span class="toc-number">1.3.</span> <span class="toc-text">Common OTP Rate Limiting Mistakes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-OTP-Issues-Combine-with-Email-Enumeration"><span class="toc-number">1.4.</span> <span class="toc-text">How OTP Issues Combine with Email Enumeration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-These-Issues-Are-Often-Missed"><span class="toc-number">1.5.</span> <span class="toc-text">Why These Issues Are Often Missed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Security-Impact"><span class="toc-number">1.6.</span> <span class="toc-text">Security Impact</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Practical-Recommendations"><span class="toc-number">1.7.</span> <span class="toc-text">Practical Recommendations</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">2.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&text=OTP Based Authentication"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&title=OTP Based Authentication"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&is_video=false&description=OTP Based Authentication"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=OTP Based Authentication&body=Check out this article: https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&title=OTP Based Authentication"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&title=OTP Based Authentication"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&title=OTP Based Authentication"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&title=OTP Based Authentication"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&name=OTP Based Authentication&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/&t=OTP Based Authentication"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Information Security &#64; Medz
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/categories/">Categories</a></li>
+        
+          <li><a href="/search/">Search</a></li>
+        
+          <li><a href="/tags/">Tags</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
+

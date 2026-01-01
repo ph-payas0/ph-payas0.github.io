@@ -6,7 +6,7 @@
   <link href="https://ph-payas0.github.io/atom.xml" rel="self"/>
   
   <link href="https://ph-payas0.github.io/"/>
-  <updated>2025-07-07T06:53:25.169Z</updated>
+  <updated>2026-01-01T17:16:02.631Z</updated>
   <id>https://ph-payas0.github.io/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OTP Based Authentication</title>
+    <link href="https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/"/>
+    <id>https://ph-payas0.github.io/2025-12-27/tools/automation/otp-based-authentication/</id>
+    <published>2025-12-26T20:37:17.000Z</published>
+    <updated>2026-01-01T17:16:02.631Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Why-Rate-Limiting-Is-Still-Commonly-Misconfigured-in-OTP-Based-Authentication&quot;&gt;&lt;a href=&quot;#Why-Rate-Limiting-Is-Still-Commonly-Misconfigured-in-OTP-Based-Authentication&quot; class=&quot;headerlink&quot; title=&quot;Why Rate Limiting Is Still Commonly Misconfigured in OTP-Based Authentication&quot;&gt;&lt;/a&gt;Why Rate Limiting Is Still Commonly Misconfigured in OTP-Based Authentication&lt;/h1&gt;&lt;p&gt;One-time passwords (OTP) are widely used to protect user accounts. They are commonly seen in login verification, password reset,</summary>
+        
+      
+    
+    
+    
+    <category term="tools" scheme="https://ph-payas0.github.io/categories/tools/"/>
+    
+    <category term="automation" scheme="https://ph-payas0.github.io/categories/tools/automation/"/>
+    
+    
+    <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
+    
+    <category term="bug bounty" scheme="https://ph-payas0.github.io/tags/bug-bounty/"/>
+    
+    <category term="tools" scheme="https://ph-payas0.github.io/tags/tools/"/>
+    
+    <category term="cli" scheme="https://ph-payas0.github.io/tags/cli/"/>
+    
+    <category term="scripts" scheme="https://ph-payas0.github.io/tags/scripts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Email Enumeration Framework</title>
+    <link href="https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/"/>
+    <id>https://ph-payas0.github.io/2025-09-11/tools/automation/framework-for-identifying-emails/</id>
+    <published>2025-09-11T15:57:58.000Z</published>
+    <updated>2026-01-01T16:35:35.796Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Email-Enumeration-Framework&quot;&gt;&lt;a href=&quot;#Email-Enumeration-Framework&quot; class=&quot;headerlink&quot; title=&quot;Email Enumeration Framework&quot;&gt;&lt;/a&gt;Email Enumeration Framework&lt;/h1&gt;&lt;p&gt;A Practical Approach to Detect Account Existence Issues&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;headerlink&quot; title=&quot;Summary&quot;&gt;&lt;/a&gt;Summary&lt;/h2&gt;&lt;p&gt;Email enumeration is still a common issue in many web applications. Even if developers try to hide error messages, systems often leak information through small differences in</summary>
+        
+      
+    
+    
+    
+    <category term="tools" scheme="https://ph-payas0.github.io/categories/tools/"/>
+    
+    <category term="automation" scheme="https://ph-payas0.github.io/categories/tools/automation/"/>
+    
+    
+    <category term="pentest" scheme="https://ph-payas0.github.io/tags/pentest/"/>
+    
+    <category term="bug bounty" scheme="https://ph-payas0.github.io/tags/bug-bounty/"/>
+    
+    <category term="tools" scheme="https://ph-payas0.github.io/tags/tools/"/>
+    
+    <category term="cli" scheme="https://ph-payas0.github.io/tags/cli/"/>
+    
+    <category term="scripts" scheme="https://ph-payas0.github.io/tags/scripts/"/>
+    
+  </entry>
   
   <entry>
     <title>One Liner and Automated Tools For Hunting Collections</title>
